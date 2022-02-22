@@ -1,0 +1,165 @@
+name: momly_app
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  page_view_indicators: ^2.0.0
+  carousel_slider: ^4.0.0
+  provider: ^6.0.1
+  modal_bottom_sheet: ^2.0.0
+  flutter_staggered_grid_view: ^0.4.0
+  percent_indicator: ^3.0.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - images/Icon1.png
+    - images/Brands-google.png
+    - images/apple.png
+    - images/img1.png
+    - images/Emoji.png
+    - images/Img.png
+    - images/Shape1.png
+    - images/Shape.png
+    - images/reminder.png
+    - images/BG.png
+    - images/Emoji4.png
+    - images/Emoji 02.png
+    - images/Notification.png
+    - images/Group.png
+    - images/mood.png
+    - images/Path 1342.png
+    - images/1.png
+    - images/glass.png
+    - images/Path 3565.png
+    - images/Group 13.png
+    - images/List.png
+    - images/coveroutdoor.png
+    - images/Avatar-Image.png
+    - images/StarEyes.png
+    - images/5bb48b07fa6e3840bb3afa2bc821b882.png
+    - images/icon-down.png
+    - images/Synchronize.png
+    - images/Lock (Close).png
+    - images/mood1.png
+    - images/Photo1.png
+    - images/Photo2.png
+    - images/Photo3.png
+    - images/Photo4.png
+    - images/Photo5.png
+    - images/listicon1.png
+    - images/opinoio.png
+    - images/message1.png
+    - images/Smiley Happy.png
+    - images/Smiley Happy2.png
+    - images/Heartbeat2.png
+    - images/Brain2.png
+    - images/Vector2.png
+    - images/icon5.png
+    - images/Thermometer.png
+    - images/icon-weight.png
+    - images/height2.png
+    - images/sleep2.png
+    - images/pee2.png
+    - images/poop2.png
+    - images/nutrition2.png
+    - images/water2.png
+    - images/Pill.png
+    - images/h201.png
+    - images/2.png
+    - images/Synchronize.png
+    - images/erroricon.png
+    - images/cock.png
+    - images/listdropdown.png
+    - images/prof_deniz.png
+    - images/icon-calories.png
+    - images/glass.png
+    - images/listoneicon.png
+    - images/Bar Chart Up With Border.png
+    - images/appointmentimg.png
+    - images/details_product.png
+    - images/2 image.png
+    - images/Pencil.png
+    - images/Image (Single).png
+    - images/emptyphotos.png
+    - images/Hospital Building.png
+    - images/Calendar.png
+    - images/Time Clock.png
+    - images/doctorimg.png
+    - images/Avatagirllr.png
+    - images/laptop.png
+    - images/Checkmark (Circle).png
+    - images/Checkmark (Circle)2.png
+    - images/5790-removebg-preview.png
+    - images/child.png
+    - images/Icon_24.png
+    - images/Fill.png
+    - images/Pause (Circle).png
+    - images/X-Mark (Circle).png
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+     - family: Rubik
+       fonts:
+         - asset: fonts/Rubik-Regular.ttf
+
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
