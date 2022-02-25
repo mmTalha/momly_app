@@ -34,6 +34,12 @@ dependencies:
   modal_bottom_sheet: ^2.0.0
   flutter_staggered_grid_view: ^0.4.0
   percent_indicator: ^3.0.1
+  flutter_date_pickers: ^0.2.9
+  flutter_calendar_carousel: ^2.1.0
+  intl: ^0.17.0
+  flutter_animated_dialog: ^2.0.1
+  syncfusion_flutter_charts: ^19.4.48+1
+
 
 
 dev_dependencies:
@@ -136,6 +142,20 @@ flutter:
     - images/Fill.png
     - images/Pause (Circle).png
     - images/X-Mark (Circle).png
+    - images/Filter.png
+    - images/39381-removebg-preview.png
+    - images/dailytarget.png
+    - images/achievement.png
+    - images/nutrition.png
+    - images/home_Activities_bg.png
+    - images/back-icon copy.png
+    - images/spomsored.png
+    - images/mask.png
+    - images/Share.png
+    - images/bedtime.png
+    - images/diamond.png
+    - images/periodcalendar.png
+    - images/congrats.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

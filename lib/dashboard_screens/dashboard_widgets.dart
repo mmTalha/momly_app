@@ -84,48 +84,53 @@ class dashboard_Widgets{
         children: [
 
 
-          Center(
-            child: Container(
-                // padding: EdgeInsets.only(
-                //   left: 10,
-                // ),
-                height: 60,
-                width: 300,
-                // decoration: BoxDecoration(
-                //   borderRadius: BorderRadius.circular(20),
-                //   color: Colors.white,
-                // ),
-                child: Center(
-                  child:
-                  Row(
-
-                    children: [
-                      Container(
-
-                          child:
-                          Image.asset(pic)),
-                      SizedBox(width: 5,),
-                      Column(
-                        crossAxisAlignment:
-                        CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(name,
-                              style: TextStyle(
-                                  fontSize: 13,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w600)),
-
-                          Text(field,
-                              style: TextStyle(
-                                  fontSize: 13,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w400)),
-                        ],
-                      )
-                    ],
+          Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: Center(
+              child: Container(
+                  padding: EdgeInsets.only(
+                    left: 10,
                   ),
-                )),
+                  height: 60,
+                  width: 300,
+                  // decoration: BoxDecoration(
+                  //   borderRadius: BorderRadius.circular(20),
+                  //   color: Colors.white,
+                  // ),
+                  child: Center(
+                    child:
+                    Row(
+
+                      children: [
+                        Container(
+
+                            child:
+                            Image.asset(pic)),
+                        SizedBox(width: 5,),
+                        Column(
+                          crossAxisAlignment:
+                          CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(name,
+                                style: TextStyle(
+                                    fontSize: 13,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600)),
+
+                            Text(field,
+                                style: TextStyle(
+                                    fontSize: 13,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400)),
+                          ],
+                        )
+                      ],
+                    ),
+                  )),
+            ),
           )
     ]);
 

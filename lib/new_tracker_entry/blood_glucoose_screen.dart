@@ -1,6 +1,8 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:momly_app/apptheme/buttons.dart';
+import 'package:momly_app/momly_Academy_screens/moomly_Academy_screen.dart';
 import 'package:momly_app/new_tracker_entry/widgets/skills_screen_widget.dart';
 
 class blood_glucose_screen extends StatelessWidget {
@@ -23,6 +25,7 @@ class blood_glucose_screen extends StatelessWidget {
           width: 0.0,
           style: BorderStyle.none,
         ),
+
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -207,7 +210,15 @@ class blood_glucose_screen extends StatelessWidget {
                       ),
                       Center(
                         child:
-                            buttons().largebuttons('Add Blood Glucose', () {}),
+                            buttons().largebuttons('Add Blood Glucose', () {
+
+                                Navigator.push(
+                                    context,
+                                    CupertinoPageRoute(
+                                        builder: (BuildContext context) =>
+                                            moomly_Academy_Screen()));
+
+                            }),
                       ),
                     ],
                   )),
