@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:momly_app/apptheme/buttons.dart';
 import 'package:momly_app/apptheme/modal_sheet.dart';
 import 'package:momly_app/dashboard_screens/dashboard_screen.dart';
+import 'package:momly_app/details_screen/mood_%20details.dart';
 import 'package:momly_app/new_tracker_entry/new_tracker_entry.dart';
 
 class Empty_details_screens extends StatelessWidget {
@@ -177,7 +178,7 @@ class Empty_details_screens extends StatelessWidget {
                             context,
                             CupertinoPageRoute(
                                 builder: (BuildContext context) =>
-                                    new_tracker_entry()),
+                                    mood_details()),
                           );
 
                         }),

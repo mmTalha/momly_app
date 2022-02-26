@@ -9,6 +9,7 @@ import 'package:momly_app/book_appointment_screens/appointsmenty_screen.dart';
 import 'package:momly_app/dashboard_screens/dashboard_widgets.dart';
 import 'package:momly_app/details_screen/details_emty_screen.dart';
 import 'package:momly_app/details_screen/mood_%20details.dart';
+import 'package:momly_app/home_profiles/screen22.dart';
 import 'package:momly_app/survey_screens/your_opinioin_matter_screen.dart';
 
 class dashboard_screens extends StatelessWidget {
@@ -51,9 +52,19 @@ class dashboard_screens extends StatelessWidget {
                         ),
                       ],
                     ),
-                    trailing: Image.asset(
-                      'images/Group.png',
-                      height: 24,
+                    trailing: InkWell(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (BuildContext context) =>
+                                  screen22()),
+                        );
+                      },
+                      child: Image.asset(
+                        'images/Group.png',
+                        height: 24,
+                      ),
                     ),
                     subtitle: Text(
                       'Hi, Grace',
@@ -475,7 +486,7 @@ class dashboard_screens extends StatelessWidget {
                               CupertinoPageRoute(
                                   builder: (BuildContext context) =>
                                       appointments_screens()),
-                            );;
+                            );
                           }),
                         ),
 

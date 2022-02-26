@@ -40,6 +40,12 @@ dependencies:
   flutter_animated_dialog: ^2.0.1
   syncfusion_flutter_charts: ^19.4.48+1
 
+  dotted_line: ^3.1.0
+  flutter_dropdown: ^1.0.0+hotfix.1
+  flutter_expanded_tile: ^0.3.6
+  fl_chart: ^0.45.0
+  flutter_rating_bar: ^4.0.0
+
 
 
 dev_dependencies:
@@ -156,6 +162,8 @@ flutter:
     - images/diamond.png
     - images/periodcalendar.png
     - images/congrats.png
+    - assets/
+    - images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

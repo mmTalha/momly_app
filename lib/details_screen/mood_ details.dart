@@ -176,11 +176,14 @@ class mood_details extends StatelessWidget {
                                             fontSize: 18,
                                             color: Colors.black,
                                             fontWeight: FontWeight.w600)),
-                                    Text('You do not setup a family member profile yet.\nTap the following button to setup one. ',
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            color: Color.fromRGBO(76, 89, 128, 1),
-                                            fontWeight: FontWeight.w400)),
+                                    SizedBox(
+                                      height: 30,
+                                      child: Text('You do not setup a family member profile yet.\nTap the following button to setup one. ',
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              color: Color.fromRGBO(76, 89, 128, 1),
+                                              fontWeight: FontWeight.w400)),
+                                    ),
                                     SizedBox(
                                       height:  5,
                                     ),
