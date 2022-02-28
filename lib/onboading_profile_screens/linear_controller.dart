@@ -43,17 +43,21 @@ class _LinearProgressPageIndicatorDemoState
     return Scaffold(
       backgroundColor: theme().backgroundcolour,
       appBar: CupertinoNavigationBar(
+
         leading: Icon(
           CupertinoIcons.back,
           color: Colors.black,
         ),
-        automaticallyImplyMiddle: true,
-        trailing: Text(
-          value ? 'Skip' : '',
-          style: TextStyle(
-            color: Color.fromRGBO(114, 101, 227, 1),
-            fontSize: 14,
-            fontWeight: FontWeight.w600,
+        automaticallyImplyMiddle:false,
+        trailing: Container(
+          width: 30,
+          child: Text(
+            value ? 'Skip' : '',
+            style: TextStyle(
+              color: Color.fromRGBO(114, 101, 227, 1),
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
         automaticallyImplyLeading: true,
@@ -61,6 +65,7 @@ class _LinearProgressPageIndicatorDemoState
         border: Border.all(
             color: Colors.transparent, width: 0.0, style: BorderStyle.none),
         backgroundColor: theme().backgroundcolour,
+
       ),
       body: _buildBody(),
     );
@@ -165,10 +170,10 @@ class _LinearProgressPageIndicatorDemoState
   _buildLinearProgressIndicator() {
     return Center(
       child: Container(
-        width: 120,
+        width: 100,
         height: 10  ,
         child: ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderRadius: BorderRadius.circular(30),
           child: LinearProgressPageIndicator(
             itemCount: 7,
             currentPageNotifier: _currentPageNotifier,

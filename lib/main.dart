@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:momly_app/period_tracker_screens/periodic_tracker_main_screen.dart';
 import 'package:momly_app/provider/provider.dart';
 import 'package:provider/provider.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         Colors.black,
       ),
 
-      home: on_boarding_screen(),
+      home: main_screen(),
     );
   }
 }

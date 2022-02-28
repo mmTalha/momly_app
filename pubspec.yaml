@@ -45,7 +45,7 @@ dependencies:
   flutter_expanded_tile: ^0.3.6
   fl_chart: ^0.45.0
   flutter_rating_bar: ^4.0.0
-
+  sleek_circular_slider: ^2.0.1
 
 
 dev_dependencies:
