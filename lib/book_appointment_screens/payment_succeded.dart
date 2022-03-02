@@ -11,7 +11,7 @@ class Payment_succeded extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(244, 246, 250, 1),
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -110,123 +110,120 @@ class Payment_succeded extends StatelessWidget {
                 ],
               ),
             ),
-            Expanded(
-              child: Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                color: Colors.transparent,
-                child: Center(
-                  child: new Container(
-                      height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.only(
-                        left: 30,
-                        right: 30,
-                        top: 15,
-                      ),
-                      decoration: new BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: new BorderRadius.only(
-                            topLeft: const Radius.circular(40.0),
-                            topRight: const Radius.circular(40.0),
-                          )),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Center(
-                            child: Container(
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Order ınformatıon',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        color: Color.fromRGBO(114, 101, 227, 1),
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                  dashboard_Widgets().doctorcard(
-                                      'images/prof_deniz.png',
-                                      'Prof. Dr. Deniz Konya',
-                                      'Neurosurgery'),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Container(
-                                          child: Icon(Icons.calendar_today)),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text('Thursday, 6 Feb 2020',
-                                              style: TextStyle(
-                                                  fontSize: 13,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w600)),
-                                          Text('6:30 PM - 7:30 PM',
-                                              style: TextStyle(
-                                                  fontSize: 13,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w400)),
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Container(child: Icon(Icons.credit_card)),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text('Payment Amount',
-                                              style: TextStyle(
-                                                  fontSize: 13,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w600)),
-                                          Text('\$49.99',
-                                              style: TextStyle(
-                                                  fontSize: 13,
-                                                  color: Colors.red,
-                                                  fontWeight: FontWeight.w400)),
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              color: Colors.transparent,
+              child: Center(
+                child: new Container(
+                    height: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
+                    padding: EdgeInsets.only(
+                      left: 30,
+                      right: 30,
+                      top: 15,
+                    ),
+                    decoration: new BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: new BorderRadius.only(
+                          topLeft: const Radius.circular(40.0),
+                          topRight: const Radius.circular(40.0),
+                        )),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Center(
+                          child: Container(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Order ınformatıon',
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: Color.fromRGBO(114, 101, 227, 1),
+                                      fontWeight: FontWeight.w600),
+                                ),
+                                dashboard_Widgets().doctorcard(
+                                    'images/prof_deniz.png',
+                                    'Prof. Dr. Deniz Konya',
+                                    'Neurosurgery'),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                        child: Icon(Icons.calendar_today)),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text('Thursday, 6 Feb 2020',
+                                            style: TextStyle(
+                                                fontSize: 13,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w600)),
+                                        Text('6:30 PM - 7:30 PM',
+                                            style: TextStyle(
+                                                fontSize: 13,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w400)),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  children: [
+                                    Container(child: Icon(Icons.credit_card)),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text('Payment Amount',
+                                            style: TextStyle(
+                                                fontSize: 13,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w600)),
+                                        Text('\$49.99',
+                                            style: TextStyle(
+                                                fontSize: 13,
+                                                color: Colors.red,
+                                                fontWeight: FontWeight.w400)),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
-                          Center(
-                            child: buttons()
-                                .largebuttons('My Appointments', () {
-                              Navigator.push(
-                                  context,
-                                  CupertinoPageRoute(
-                                      builder: (BuildContext context) => Doctor_details()));
-                            }),
-                          ),
-                        ],
-                      )),
-                ),
+                        ),
+                        Center(
+                          child: buttons().largebuttons('My Appointments', () {
+                            Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Doctor_details()));
+                          }),
+                        ),
+                      ],
+                    )),
               ),
             ),
           ],

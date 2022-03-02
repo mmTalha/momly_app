@@ -15,6 +15,7 @@ class healthScreen_widget {
         keyboardType: TextInputType.phone,
         decoration: InputDecoration(
             hintText: 'Search symptom',
+            hintStyle: TextStyle(color: Color(0xff9C9EB9)),
             prefixIcon: Icon(icon),
             prefixStyle: TextStyle(color: Colors.grey),
             enabledBorder: OutlineInputBorder(

@@ -10,18 +10,7 @@ import 'package:momly_app/period_tracker_screens/period_calendar2_screen.dart';
 import 'package:momly_app/period_tracker_screens/widgets/Widgets.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
+  MyHomePage({Key? key, required this.title}) : super(key: key);final String title;
 
   @override
   _MyHomePageState createState() => new _MyHomePageState();
@@ -195,228 +184,230 @@ class _MyHomePageState extends State<MyHomePage> {
           'images/Bar Chart Up With Border.png',
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            height: 25,
-          ),
-          Expanded(
-            child: Container(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              color: Colors.transparent,
-              child: new Container(
-                  decoration: new BoxDecoration(
-                      color: Color.fromRGBO(244, 246, 250, 1),
-                      borderRadius: new BorderRadius.only(
-                        topLeft: const Radius.circular(40.0),
-                        topRight: const Radius.circular(40.0),
-                      )),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            child: new Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                FlatButton(
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                        color: Colors.black,
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
-                                      width: 30,
-                                      height: 30,
-                                      child: Center(
-                                          child: Icon(
-                                        Icons.chevron_left_sharp,
-                                        color: Colors.white,
-                                      ))),
-                                  onPressed: () {
-                                    setState(() {
-                                      _targetDateTime = DateTime(
-                                          _targetDateTime.year,
-                                          _targetDateTime.month - 1);
-                                      _currentMonth = DateFormat.yMMM()
-                                          .format(_targetDateTime);
-                                    });
-                                  },
-                                ),
-                                Text(
-                                  _currentMonth,
-                                  style: TextStyle(
-                                    fontSize: 16.0,
-                                  ),
-                                ),
-                                FlatButton(
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                        color: Colors.black,
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
-                                      width: 30,
-                                      height: 30,
-                                      child: Icon(
-                                        Icons.chevron_right_sharp,
-                                        color: Colors.white,
-                                      )),
-                                  onPressed: () {
-                                    setState(() {
-                                      _targetDateTime = DateTime(
-                                          _targetDateTime.year,
-                                          _targetDateTime.month + 1);
-                                      _currentMonth = DateFormat.yMMM()
-                                          .format(_targetDateTime);
-                                    });
-                                  },
-                                )
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15, right: 15),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: Container(
-                                padding: const EdgeInsets.only(
-                                    top: 10, left: 10, right: 10),
-                                height: 250,
-                                margin: EdgeInsets.symmetric(horizontal: 16.0),
-                                child: _calendarCarouselNoHeader,
-                              ),
-                            ),
-                          ), //
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              period_Screen_widgets()
-                                  .period_name(Color(0xffF91A6C), 'Pre-Period'),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              period_Screen_widgets().period_name(
-                                  Color(0xff4C5980), 'Period Days'),
-                            ],
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              period_Screen_widgets().period_name(
-                                  Color(0xffEE17F6), 'Post-Period'),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              period_Screen_widgets().period_name(
-                                  Color(0xff06AEEF), 'Peak-Ovulation'),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Container(
-                        height: 250,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: new BoxDecoration(
-                            color: Color(0xff8C80F8),
-                            borderRadius: new BorderRadius.only(
-                              topLeft: const Radius.circular(40.0),
-                              topRight: const Radius.circular(40.0),
-                            )),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 25,
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                color: Colors.transparent,
+                child: new Container(
+                    decoration: new BoxDecoration(
+                        color: Color.fromRGBO(244, 246, 250, 1),
+                        borderRadius: new BorderRadius.only(
+                          topLeft: const Radius.circular(40.0),
+                          topRight: const Radius.circular(40.0),
+                        )),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Menstural Flow',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            Text(
-                              'How is your menstural flow for this day?',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
+                            Container(
+                              child: new Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  FlatButton(
+                                    child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.black,
+                                          borderRadius: BorderRadius.circular(20),
+                                        ),
+                                        width: 30,
+                                        height: 30,
+                                        child: Center(
+                                            child: Icon(
+                                          Icons.chevron_left_sharp,
+                                          color: Colors.white,
+                                        ))),
+                                    onPressed: () {
+                                      setState(() {
+                                        _targetDateTime = DateTime(
+                                            _targetDateTime.year,
+                                            _targetDateTime.month - 1);
+                                        _currentMonth = DateFormat.yMMM()
+                                            .format(_targetDateTime);
+                                      });
+                                    },
+                                  ),
+                                  Text(
+                                    _currentMonth,
+                                    style: TextStyle(
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
+                                  FlatButton(
+                                    child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.black,
+                                          borderRadius: BorderRadius.circular(20),
+                                        ),
+                                        width: 30,
+                                        height: 30,
+                                        child: Icon(
+                                          Icons.chevron_right_sharp,
+                                          color: Colors.white,
+                                        )),
+                                    onPressed: () {
+                                      setState(() {
+                                        _targetDateTime = DateTime(
+                                            _targetDateTime.year,
+                                            _targetDateTime.month + 1);
+                                        _currentMonth = DateFormat.yMMM()
+                                            .format(_targetDateTime);
+                                      });
+                                    },
+                                  )
+                                ],
                               ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 15, right: 15),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Container(
+                                  padding: const EdgeInsets.only(
+                                      top: 10, left: 10, right: 10),
+                                  height: 250,
+                                  margin: EdgeInsets.symmetric(horizontal: 16.0),
+                                  child: _calendarCarouselNoHeader,
+                                ),
+                              ),
+                            ), //
+                            SizedBox(
+                              height: 20,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                period_Screen_widgets().period_buttons(
-                                    'images/diamond.png', 'Light'),
+                                period_Screen_widgets()
+                                    .period_name(Color(0xffF91A6C), 'Pre-Period'),
                                 SizedBox(
                                   width: 10,
                                 ),
-                                period_Screen_widgets().period_buttons(
-                                    'images/diamond.png', 'Medium'),
+                                period_Screen_widgets().period_name(
+                                    Color(0xff4C5980), 'Period Days'),
                               ],
                             ),
-                            InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    CupertinoPageRoute(
-                                        builder: (BuildContext context) =>
-                                            period_calendar_screen_2()));
-                              },
-                              child: Center(
-                                child: Container(
-                                  width: 300,
-                                  height: 45,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(10))),
-                                  child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                          child: Image.asset(
-                                        'images/diamond.png',
-                                      )),
-                                      Container(
-                                          child: Image.asset(
-                                        'images/diamond.png',
-                                      )),
-                                      Container(
-                                          child: Image.asset(
-                                        'images/diamond.png',
-                                      )),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Text('Heavy',
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              color: Color(0xff8C80F8),
-                                              fontWeight: FontWeight.w600)),
-                                    ],
-                                  ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                period_Screen_widgets().period_name(
+                                    Color(0xffEE17F6), 'Post-Period'),
+                                SizedBox(
+                                  width: 10,
                                 ),
-                              ),
+                                period_Screen_widgets().period_name(
+                                    Color(0xff06AEEF), 'Peak-Ovulation'),
+                              ],
                             ),
                           ],
                         ),
-                      )
-                    ],
-                  )),
-            ),
+                        Container(
+                          height: 250,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: new BoxDecoration(
+                              color: Color(0xff8C80F8),
+                              borderRadius: new BorderRadius.only(
+                                topLeft: const Radius.circular(40.0),
+                                topRight: const Radius.circular(40.0),
+                              )),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                'Menstural Flow',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                              Text(
+                                'How is your menstural flow for this day?',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  period_Screen_widgets().period_buttons(
+                                      'images/diamond.png', 'Light'),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  period_Screen_widgets().period_buttons(
+                                      'images/diamond.png', 'Medium'),
+                                ],
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      CupertinoPageRoute(
+                                          builder: (BuildContext context) =>
+                                              period_calendar_screen_2()));
+                                },
+                                child: Center(
+                                  child: Container(
+                                    width: 300,
+                                    height: 45,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.all(Radius.circular(10))),
+                                    child: Row(
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                            child: Image.asset(
+                                          'images/diamond.png',
+                                        )),
+                                        Container(
+                                            child: Image.asset(
+                                          'images/diamond.png',
+                                        )),
+                                        Container(
+                                            child: Image.asset(
+                                          'images/diamond.png',
+                                        )),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Text('Heavy',
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xff8C80F8),
+                                                fontWeight: FontWeight.w600)),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    )),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

@@ -181,14 +181,14 @@ class _period_calendar_screen_2State extends State<period_calendar_screen_2> {
           'images/Bar Chart Up With Border.png',
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            height: 25,
-          ),
-          Expanded(
-            child: Container(
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: 25,
+            ),
+            Container(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               color: Colors.transparent,
@@ -401,8 +401,8 @@ class _period_calendar_screen_2State extends State<period_calendar_screen_2> {
                     ],
                   )),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

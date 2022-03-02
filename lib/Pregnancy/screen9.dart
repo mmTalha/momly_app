@@ -14,13 +14,25 @@ class _screen9State extends State<screen9> {
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: CupertinoNavigationBar(
-         padding: EdgeInsetsDirectional.only(top: 30,),
-          leading: Icon(Icons.arrow_back_ios_outlined,size:21,color: Color(0xff4C5980)),
-         automaticallyImplyLeading: false,
-           border: Border(bottom: BorderSide(color: Colors.transparent)),
-      backgroundColor: Colors.white,
+      trailing: Container(
+                        height: 20,
+                        width: 20,
+                        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                  'assets/period.png'),
+          ),
+      
       ),
-      body: SingleChildScrollView(
+    ),
+      padding: EdgeInsetsDirectional.only(top: 10,),
+      border: Border(bottom: BorderSide(color: Colors.transparent)),
+      backgroundColor: Colors.white,
+       leading: Icon(Icons.arrow_back_ios_outlined,size:17,color: Color(0xff4C5980)),
+         automaticallyImplyLeading: false,
+         
+         middle: Text("KICK COUNTER",style: TextStyle(fontSize: 10),),
+       ),body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(top:25),
           child: Container(

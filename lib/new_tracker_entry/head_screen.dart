@@ -4,8 +4,6 @@ import 'package:momly_app/apptheme/buttons.dart';
 import 'package:momly_app/new_tracker_entry/widgets/head_screen_widgets.dart';
 import 'package:momly_app/survey_screens/second_screen.dart';
 
-
-
 class head_screen extends StatelessWidget {
   const head_screen({Key? key}) : super(key: key);
 
@@ -13,6 +11,32 @@ class head_screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CupertinoNavigationBar(
+        trailing: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              height: 30,
+              width: 30,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/graph.png'),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Container(
+              height: 30,
+              width: 30,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/i.png'),
+                ),
+              ),
+            ),
+          ],
+        ),
         leading: Material(
           child: IconButton(
             icon: Icon(CupertinoIcons.back),
@@ -28,42 +52,44 @@ class head_screen extends StatelessWidget {
         ),
       ),
       body: Column(
-
         children: [
-          SizedBox(height: 10,),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('images/Notification.png'),
-              SizedBox(
-                width: 10,
-              ),
-              RichText(
-                text: TextSpan(
-                  text: 'What’s Richard’s\n',
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black),
-                  children: const <TextSpan>[
-                    TextSpan(
-                        text: 'Height ',
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 30.0),
+            child: Row(
+              children: [
+                Image.asset('images/Notification.png'),
+                SizedBox(
+                  width: 10,
+                ),
+                RichText(
+                  text: TextSpan(
+                    text: 'What’s Your ',
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black),
+                    children: const <TextSpan>[
+                      TextSpan(
+                          text: 'Head\nCircumferences ',
+                          style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w600,
+                              color: Color.fromRGBO(114, 101, 227, 1))),
+                      TextSpan(
+                        text: 'of\nRichard?',
                         style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.w600,
-                            color: Color.fromRGBO(114, 101, 227, 1))),
-                    TextSpan(
-                      text: 'today?',
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black),
-                    ),
-                  ],
+                            color: Colors.black),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           SizedBox(
             height: 25,
@@ -74,8 +100,7 @@ class head_screen extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               color: Colors.transparent,
               child: new Container(
-                padding: EdgeInsets.only(left: 30, right: 30,bottom: 15
-                ),
+                padding: EdgeInsets.only(left: 30, right: 30, bottom: 15),
                 decoration: new BoxDecoration(
                     color: Color.fromRGBO(244, 246, 250, 1),
                     borderRadius: new BorderRadius.only(
@@ -88,13 +113,12 @@ class head_screen extends StatelessWidget {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-
                       children: [
-
-
-                        head_screen_widget().head_textfield('Head Circumference', 'ft', null),
-
-                        SizedBox(height: 10,),
+                        head_screen_widget()
+                            .head_textfield('Head Circumference', 'ft', null),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Center(
                           child: Container(
                             width: 285,
@@ -102,23 +126,23 @@ class head_screen extends StatelessWidget {
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
-                              BorderRadius.all(Radius.circular(20)),
+                                  BorderRadius.all(Radius.circular(20)),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.white.withOpacity(0.5),
                                   spreadRadius: 5,
                                   blurRadius: 7,
-                                  offset: Offset(0, 3), // changes position of shadow
+                                  offset: Offset(
+                                      0, 3), // changes position of shadow
                                 ),
                               ],
                             ),
                             child: TextField(
                               maxLines: 5,
-
-
                               decoration: InputDecoration(
                                   hintText: 'Add notes or comments..',
-
+                                  hintStyle:
+                                      TextStyle(color: Color(0xff9C9EB9)),
                                   prefixStyle: TextStyle(color: Colors.grey),
                                   enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
@@ -132,29 +156,42 @@ class head_screen extends StatelessWidget {
                                       )),
                                   errorBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
-                                      borderSide: BorderSide(color: Colors.red)),
+                                      borderSide:
+                                          BorderSide(color: Colors.red)),
                                   focusedErrorBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
-                                      borderSide: BorderSide(color: Colors.red))),
+                                      borderSide:
+                                          BorderSide(color: Colors.red))),
                             ),
                           ),
                         ),
-                        SizedBox(height: 10,),
-                        Text(
-                          'Add Media',
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Color.fromRGBO(76, 89, 128, 1),
-                              fontWeight: FontWeight.bold
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10.0),
+                          child: Text(
+                            'Add Media',
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Color.fromRGBO(76, 89, 128, 1),
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
-                        SizedBox(height: 10,),
-                        Row(
-                          children: [
-                            Image.asset('images/cock.png'),
-                            SizedBox(width: 5,),
-                            Image.asset('images/cock.png'),
-                          ],
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10.0),
+                          child: Row(
+                            children: [
+                              Image.asset('images/cock.png'),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Image.asset('images/cock.png'),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -163,12 +200,11 @@ class head_screen extends StatelessWidget {
                         Navigator.push(
                             context,
                             CupertinoPageRoute(
-                                builder: (BuildContext context) => second_screen()));
-
+                                builder: (BuildContext context) =>
+                                    second_screen()));
                       }),
                     ),
                   ],
-
                 ),
               ),
             ),

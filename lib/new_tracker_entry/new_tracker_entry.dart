@@ -85,7 +85,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/Smiley Happy2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/Smiley Happy2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -116,7 +119,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/Heartbeat2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/Heartbeat2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -147,7 +153,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/Brain2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/Brain2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -166,7 +175,6 @@ class new_tracker_entry extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -179,7 +187,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/Brain2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/Brain2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -198,20 +209,21 @@ class new_tracker_entry extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
                         context,
                         CupertinoPageRoute(
-                            builder: (BuildContext context) =>
-                                pulse_screen()));
+                            builder: (BuildContext context) => pulse_screen()));
                   },
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/Vector2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/Vector2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -230,7 +242,6 @@ class new_tracker_entry extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -243,7 +254,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/icon5.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/icon5.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -262,20 +276,21 @@ class new_tracker_entry extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
                         context,
                         CupertinoPageRoute(
-                            builder: (BuildContext context) =>
-                                fever_screen()));
+                            builder: (BuildContext context) => fever_screen()));
                   },
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/Thermometer.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/Thermometer.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -306,7 +321,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/icon-weight.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/icon-weight.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -337,7 +355,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/height2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/height2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -367,7 +388,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/height2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/height2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -386,7 +410,6 @@ class new_tracker_entry extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -399,7 +422,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/sleep2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/sleep2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -430,7 +456,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/pee2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/pee2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -461,7 +490,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/poop2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/poop2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -480,7 +512,6 @@ class new_tracker_entry extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -493,7 +524,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/nutrition2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/nutrition2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -517,14 +551,16 @@ class new_tracker_entry extends StatelessWidget {
                     Navigator.push(
                         context,
                         CupertinoPageRoute(
-                            builder: (BuildContext context) =>
-                                add_water()));
+                            builder: (BuildContext context) => add_water()));
                   },
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/water2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/water2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -543,7 +579,6 @@ class new_tracker_entry extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -556,7 +591,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/Pill.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/Pill.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -575,7 +613,6 @@ class new_tracker_entry extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -588,7 +625,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/h201.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/h201.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -607,7 +647,6 @@ class new_tracker_entry extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -620,7 +659,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/2.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/2.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -639,7 +681,6 @@ class new_tracker_entry extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -652,7 +693,10 @@ class new_tracker_entry extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset('images/Synchronize.png'),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          child: Image.asset('images/Synchronize.png')),
                       SizedBox(
                         width: 10,
                       ),

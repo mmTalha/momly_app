@@ -14,6 +14,7 @@ import 'package:momly_app/notification_profile/screen13.dart';
 import 'package:momly_app/notification_profile/screen18.dart';
 import 'package:momly_app/notification_profile/screen19.dart';
 import 'package:momly_app/period_tracker_screens/period_calendar.dart';
+import 'package:momly_app/period_tracker_screens/period_calender_1.dart';
 import 'package:momly_app/stats/screen23.dart';
 import 'package:momly_app/widgets/widgets.dart';
 
@@ -37,6 +38,10 @@ class _screen22State extends State<screen22> {
             size: 21, color: Color(0xff4C5980)),
         automaticallyImplyLeading: false,
         border: Border(bottom: BorderSide(color: Colors.transparent)),
+        middle: Text(
+          "MOMLY",
+          style: TextStyle(fontSize: 15),
+        ),
         backgroundColor: Colors.white,
       ),
       body: Container(
@@ -62,7 +67,7 @@ class _screen22State extends State<screen22> {
                     child: lisst()
                         .Lisst('assets/newtrac.png', "New Tracker Entry")),
                 ExpansionTile(
-                  initiallyExpanded: true,
+                  initiallyExpanded: false,
                   tilePadding: EdgeInsets.only(right: -4),
                   childrenPadding: EdgeInsets.only(left: 30),
                   trailing: SizedBox.shrink(),
@@ -108,9 +113,8 @@ class _screen22State extends State<screen22> {
                     onTap: () => Navigator.push(
                         context,
                         CupertinoPageRoute(
-                            builder: (BuildContext context) => MyHomePage(
-                                  title: 'fuyytu',
-                                ))),
+                            builder: (BuildContext context) =>
+                                period_calendar1())),
                     child:
                         lisst().Lisst('assets/period.png', "Period Tracker")),
                 lisst().Lisst('assets/hreport.png', "Health Report"),

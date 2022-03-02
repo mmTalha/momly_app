@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
 
-
-class skilss_screen_widget{
-  Widget skills_textfield (text,icons,controller){
+class skilss_screen_widget {
+  Widget skills_textfield(text, icons, controller) {
     return Center(
       child: Container(
         width: 285,
         height: 50,
         decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius:
-            BorderRadius.all(Radius.circular(20))),
+            borderRadius: BorderRadius.all(Radius.circular(20))),
         child: TextField(
           controller: controller,
           textAlign: TextAlign.start,
           keyboardType: TextInputType.phone,
           decoration: InputDecoration(
               hintText: text,
-              suffixIcon:icons,
-
+              hintStyle: TextStyle(color: Color(0xff9C9EB9)),
+              suffixIcon: icons,
               prefixStyle: TextStyle(color: Colors.grey),
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -40,15 +38,15 @@ class skilss_screen_widget{
       ),
     );
   }
-  Widget learnmore(){
-    return  Center(
+
+  Widget learnmore() {
+    return Center(
       child: Container(
         width: 285,
         height: 45,
         decoration: BoxDecoration(
             color: Color.fromRGBO(228, 223, 255, 1),
-            borderRadius:
-            BorderRadius.all(Radius.circular(10))),
+            borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Container(
           width: 70,
           height: 40,
@@ -84,8 +82,7 @@ class skilss_screen_widget{
                         style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
-                            color: Color.fromRGBO(
-                                114, 101, 227, 1))),
+                            color: Color.fromRGBO(114, 101, 227, 1))),
                   ],
                 ),
               ),

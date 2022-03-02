@@ -14,6 +14,17 @@ class _screen1State extends State<screen1> {
   Widget build(BuildContext context) {
     return Scaffold(
     appBar: CupertinoNavigationBar(
+      trailing: Container(
+                        height: 20,
+                        width: 20,
+                        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                  'assets/i.png'),
+          ),
+      
+      ),
+    ),
       padding: EdgeInsetsDirectional.only(top: 30,),
       border: Border(bottom: BorderSide(color: Colors.transparent)),
       backgroundColor: Colors.white,
@@ -26,7 +37,7 @@ class _screen1State extends State<screen1> {
        
         color: Colors.white,
         child: Padding(
-          padding: const EdgeInsets.only(top:28.0),
+          padding: const EdgeInsets.only(top:40.0),
           child: Container(
             decoration: BoxDecoration(  color: Color(0xffF4F6FA), borderRadius: new BorderRadius.only(
                             topLeft:  const  Radius.circular(40.0),

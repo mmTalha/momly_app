@@ -20,29 +20,34 @@ class weight extends StatelessWidget {
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-
           children: [
-            SizedBox(height: 20,),
+            //SizedBox(height: 20,),
 
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Center(
-              child: Text('Weight',
+              child: Text(
+                'Weight',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 24,
-                    fontWeight: FontWeight.w500
-                ),),
+                    fontWeight: FontWeight.w500),
+              ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 40,
+            ),
             Center(
-              child: Text('Enter your current weight.',
+              child: Text(
+                'Enter your current weight.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Color.fromRGBO(76, 89, 128, 1),
                     fontSize: 14,
-                    fontWeight: FontWeight.w400
-                ),),
+                    fontWeight: FontWeight.w400),
+              ),
             ),
             // SizedBox(height: 20,),
             // Row(
@@ -97,7 +102,9 @@ class weight extends StatelessWidget {
             //     )
             //   ],
             // ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Center(
               child: Container(
                 width: 275,
@@ -109,9 +116,7 @@ class weight extends StatelessWidget {
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                       suffixStyle: TextStyle(color: Colors.grey),
-
                       prefixStyle: TextStyle(color: Colors.grey),
-
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: BorderSide(
@@ -131,7 +136,9 @@ class weight extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 30,
+            ),
             buttons,
           ],
         ),

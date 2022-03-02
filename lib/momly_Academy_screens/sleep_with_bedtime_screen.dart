@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:momly_app/apptheme/buttons.dart';
 import 'package:momly_app/dashboard_screens/dashboard_widgets.dart';
 import 'package:momly_app/momly_Academy_screens/widgets.dart';
+import 'package:momly_app/widgets/widgets.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class sleep_screen extends StatelessWidget {
@@ -66,101 +68,90 @@ class sleep_screen extends StatelessWidget {
                   Center(
                     child:
                         buttons().largebuttons('Add Optional CTA Button', () {
-                      showCupertinoDialog(
+                      showDialog(
                           context: context,
-                          builder: (context) => CupertinoAlertDialog(
-
-                                title: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Rate & review',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w600),
+                          builder: (BuildContext context) => Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: AlertDialog(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(32.0))),
+                                  content: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
                                     ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      'Share your experience to help others',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff4C5980),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Row(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
                                       children: [
-                                        Icon(
-                                          Icons.star,
-                                          size: 30,
-                                          color: Color(0xff8C80F8),
+                                        Text(
+                                          "Rate & review",
+                                          style: TextStyle(
+                                              fontSize: 22,
+                                              color: Color(0xff2D3142),
+                                              fontWeight: FontWeight.bold),
                                         ),
-                                        Icon(
-                                          Icons.star,
-                                          size: 30,
-                                          color: Color(0xff8C80F8),
+                                        SizedBox(
+                                          height: 10,
                                         ),
-                                        Icon(
-                                          Icons.star,
-                                          size: 30,
-                                          color: Color(0xff8C80F8),
+                                        Text(
+                                          "Share your experience to help others",
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color: Color(0xff2D3142),
+                                          ),
                                         ),
-                                        Icon(
-                                          Icons.star_border_rounded,
-                                          size: 30,
-                                          color: Color(0xff8C80F8),
+                                        SizedBox(
+                                          height: 8,
                                         ),
-                                        Icon(
-                                          Icons.star_border_rounded,
-                                          size: 30,
-                                          color: Color(0xff8C80F8),
+                                        RatingBar.builder(
+                                          itemSize: 40,
+                                          initialRating: 3,
+                                          minRating: 1,
+                                          direction: Axis.horizontal,
+                                          allowHalfRating: true,
+                                          itemCount: 5,
+                                          itemPadding: EdgeInsets.symmetric(
+                                              horizontal: 0.0),
+                                          itemBuilder: (context, _) => Icon(
+                                            Icons.star,
+                                            color: Color(0xff7265E3),
+                                          ),
+                                          onRatingUpdate: (rating) {},
                                         ),
-                                      ],
-                                    ),
-                                    Text(
-                                      'Optional: Write a comment',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xff4C5980),
-                                      ),
-                                    ),
-                                    Material(
-
-
-                                      color: Color(0xffF4F6FA),
-                                      child: Center(
-                                        child: Container(
-                                          width: 285,
+                                        SizedBox(
+                                          height: 18,
+                                        ),
+                                        Align(
+                                          alignment: Alignment.bottomLeft,
+                                          child: Text(
+                                            "Optional: Write a comment",
+                                            style: TextStyle(
+                                              fontSize: 14,
+                                              color: Color(0xff2D3142),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
+                                        Container(
+                                          width: 275,
                                           height: 110,
                                           decoration: BoxDecoration(
-                                            color: Color(0xffF4F6FA),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(20)),
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.white
-                                                    .withOpacity(0.5),
-                                                spreadRadius: 5,
-                                                blurRadius: 7,
-                                                offset: Offset(0,
-                                                    3), // changes position of shadow
-                                              ),
-                                            ],
-                                          ),
+                                              color: Color(0xffF4F6FA),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20))),
                                           child: TextField(
                                             maxLines: 5,
                                             decoration: InputDecoration(
-                                                hintText:
-                                                    'Add notes or comments..',
+                                                hintStyle: TextStyle(
+                                                    fontSize: 17,
+                                                    color: Color(0xff4C5980)),
+                                                hintText: 'Write your comment',
                                                 prefixStyle: TextStyle(
                                                     color: Colors.grey),
                                                 enabledBorder:
@@ -197,6 +188,30 @@ class sleep_screen extends StatelessWidget {
                                                                 Colors.red))),
                                           ),
                                         ),
+                                      ],
+                                    ),
+                                  ),
+                                  actions: [
+                                    Center(
+                                      child: InkWell(
+                                        onTap: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Container(
+                                          width: 170,
+                                          height: 60,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xff7265E3),
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                          ),
+                                          child: Center(
+                                              child: Text("Submit Review",
+                                                  style: TextStyle(
+                                                    fontSize: 16,
+                                                    color: Colors.white,
+                                                  ))),
+                                        ),
                                       ),
                                     ),
                                     SizedBox(
@@ -204,11 +219,6 @@ class sleep_screen extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                actions: [
-                                  CupertinoDialogAction(
-                                      child: Text('Close'),
-                                      onPressed: () => Navigator.pop(context)),
-                                ],
                               ));
                     }),
                   ),
@@ -466,10 +476,20 @@ class sleep_screen extends StatelessWidget {
                             )),
                       ],
                     ),
-
                   ],
                 )),
-            new CircularPercentIndicator(radius:  40, lineWidth: 5.0, percent: 0.75, center: new Text("75%", style: TextStyle(color: Color(0xFF535355))), linearGradient: LinearGradient(begin: Alignment.topRight, end: Alignment.bottomLeft, colors: <Color>[Color(0xFF1AB600),Color(0xFF6DD400)]),rotateLinearGradient: true, circularStrokeCap: CircularStrokeCap.round)
+            new CircularPercentIndicator(
+                radius: 40,
+                lineWidth: 5.0,
+                percent: 0.75,
+                center:
+                    new Text("75%", style: TextStyle(color: Color(0xFF535355))),
+                linearGradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: <Color>[Color(0xFF1AB600), Color(0xFF6DD400)]),
+                rotateLinearGradient: true,
+                circularStrokeCap: CircularStrokeCap.round)
           ],
         ),
       ),

@@ -15,13 +15,14 @@ class _screen8State extends State<screen8> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: CupertinoNavigationBar(
-         padding: EdgeInsetsDirectional.only(top: 30,),
-          leading: Icon(Icons.arrow_back_ios_outlined,size:21,color: Color(0xff4C5980)),
-         automaticallyImplyLeading: false,
-           border: Border(bottom: BorderSide(color: Colors.transparent)),
+      padding: EdgeInsetsDirectional.only(top: 10,),
+      border: Border(bottom: BorderSide(color: Colors.transparent)),
       backgroundColor: Colors.white,
-      ),
-      body: SingleChildScrollView(
+       leading: Icon(Icons.arrow_back_ios_outlined,size:17,color: Color(0xff4C5980)),
+         automaticallyImplyLeading: false,
+         
+         middle: Text("KICK COUNTER - HISTORY",style: TextStyle(fontSize: 10),),
+       ),body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(top:25),
           child: Container(

@@ -52,7 +52,7 @@ class _choose_profile_photoState extends State<choose_profile_photo> {
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 24,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w600),
               ),
             ),
             SizedBox(
@@ -85,14 +85,13 @@ class _choose_profile_photoState extends State<choose_profile_photo> {
               height: 40,
             ),
             Center(
-              child:
-              Text(
+              child: Text(
                 'Choose an emoji or select a photo\nfrom your gallery.',
                 textAlign: TextAlign.center,
                 softWrap: true,
                 style: TextStyle(
                     color: Color.fromRGBO(76, 89, 128, 1),
-                    fontSize: 14,
+                    fontSize: 16,
                     fontWeight: FontWeight.w400),
               ),
             ),

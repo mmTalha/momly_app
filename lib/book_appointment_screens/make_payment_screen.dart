@@ -5,8 +5,6 @@ import 'package:momly_app/book_appointment_screens/payment_succeded.dart';
 import 'package:momly_app/dashboard_screens/dashboard_widgets.dart';
 import 'package:momly_app/survey_screens/second_screen.dart';
 
-
-
 class Make_payment_screen extends StatefulWidget {
   const Make_payment_screen({Key? key}) : super(key: key);
 
@@ -38,11 +36,10 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
       backgroundColor: Color.fromRGBO(244, 246, 250, 1),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.only(left: 15,right: 15),
+          padding: EdgeInsets.only(left: 15, right: 15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               Text(
                 'Make Payment',
                 style: TextStyle(
@@ -50,19 +47,19 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                     color: Colors.black,
                     fontWeight: FontWeight.w600),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Center(
                 child: Container(
-                  padding: EdgeInsets.only(
-                      left: 10, right: 20, top: 30, bottom: 10),
+                  padding:
+                      EdgeInsets.only(left: 10, right: 20, top: 30, bottom: 10),
                   width: 325,
                   height: 240,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius:
-                      BorderRadius.all(Radius.circular(20))),
-                  child:
-                  Column(
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -72,7 +69,9 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                             color: Color.fromRGBO(114, 101, 227, 1),
                             fontWeight: FontWeight.w600),
                       ),
-                      SizedBox(height: 5,),
+                      SizedBox(
+                        height: 5,
+                      ),
                       Text(
                         'CLINIC APPOINTMENT',
                         style: TextStyle(
@@ -80,21 +79,21 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                             color: Colors.black,
                             fontWeight: FontWeight.w600),
                       ),
-                      dashboard_Widgets().doctorcard(
-                          'images/prof_deniz.png',
-                          'Prof. Dr. Deniz Konya',
-                          'Neurosurgery'),
-                      SizedBox(height: 5,),
+                      dashboard_Widgets().doctorcard('images/prof_deniz.png',
+                          'Prof. Dr. Deniz Konya', 'Neurosurgery'),
+                      SizedBox(
+                        height: 5,
+                      ),
                       Row(
                         children: [
                           Container(
                               margin: EdgeInsets.all(5),
-                              child:
-                              Icon(Icons.calendar_today)),
-                          SizedBox(width: 5,),
+                              child: Icon(Icons.calendar_today)),
+                          SizedBox(
+                            width: 5,
+                          ),
                           Column(
-                            crossAxisAlignment:
-                            CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text('Thursday, 6 Feb 2020',
@@ -111,17 +110,19 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                           )
                         ],
                       ),
-                      SizedBox(height: 5,),
+                      SizedBox(
+                        height: 5,
+                      ),
                       Row(
                         children: [
                           Container(
                               margin: EdgeInsets.all(5),
-                              child:
-                              Icon(Icons.credit_card)),
-                          SizedBox(width: 5,),
+                              child: Icon(Icons.credit_card)),
+                          SizedBox(
+                            width: 5,
+                          ),
                           Column(
-                            crossAxisAlignment:
-                            CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text('Payment Amount',
@@ -142,16 +143,18 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                   ),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Center(
                 child: Container(
-                  padding: EdgeInsets.only(
-                      left: 10, right: 20, top: 30, bottom: 10),
+                  padding:
+                      EdgeInsets.only(left: 10, right: 20, top: 30, bottom: 10),
                   width: 325,
                   height: 466,
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      ),
+                    color: Colors.white,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -162,7 +165,9 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                             color: Color.fromRGBO(114, 101, 227, 1),
                             fontWeight: FontWeight.w600),
                       ),
-                      SizedBox(height: 5,),
+                      SizedBox(
+                        height: 5,
+                      ),
                       Text(
                         'PAYMENT INFORMATION',
                         style: TextStyle(
@@ -173,46 +178,51 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                       TextField(
                         decoration: InputDecoration(
                             fillColor: Colors.grey.shade200,
-                            hoverColor:Colors.grey.shade200 ,
+                            hoverColor: Colors.grey.shade200,
                             focusColor: Colors.grey.shade200,
-
                             labelText: 'Name on Card',
                             hintText: 'John Doe'),
                       ),
-                      SizedBox(height: 5,),
-
+                      SizedBox(
+                        height: 5,
+                      ),
                       TextField(
                         decoration: InputDecoration(
                             fillColor: Colors.grey.shade200,
-                            hoverColor:Colors.grey.shade200 ,
+                            hoverColor: Colors.grey.shade200,
                             focusColor: Colors.grey.shade200,
-
                             labelText: 'Card Number',
                             hintText: 'xxxx-xxxx-xxxx-xxxx'),
                       ),
-                      SizedBox(height: 5,),
+                      SizedBox(
+                        height: 5,
+                      ),
                       TextField(
                         decoration: InputDecoration(
                             fillColor: Colors.grey.shade200,
-                            hoverColor:Colors.grey.shade200 ,
+                            hoverColor: Colors.grey.shade200,
                             focusColor: Colors.grey.shade200,
-
                             labelText: 'Expiration Date',
                             hintText: 'MM-YY'),
                       ),
-                      SizedBox(height: 5,),
+                      SizedBox(
+                        height: 5,
+                      ),
                       TextField(
                         decoration: InputDecoration(
                             fillColor: Colors.grey.shade200,
-                            hoverColor:Colors.grey.shade200 ,
+                            hoverColor: Colors.grey.shade200,
                             focusColor: Colors.grey.shade200,
-
-                            suffixIcon: Icon(Icons.credit_card,size: 40,) ,
-
+                            suffixIcon: Icon(
+                              Icons.credit_card,
+                              size: 40,
+                            ),
                             labelText: 'Security Code',
                             hintText: 'CCV'),
                       ),
-                      SizedBox(height: 5,),
+                      SizedBox(
+                        height: 5,
+                      ),
                       Row(
                         children: [
                           Transform.scale(
@@ -221,13 +231,10 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                               height: 25.0,
                               width: 25.0,
                               child: Checkbox(
-                                  focusColor:
-                                  Color.fromRGBO(252, 186, 24, 1),
-                                  hoverColor:
-                                  Color.fromRGBO(252, 186, 24, 1),
-                                  checkColor:
-                                  Colors.white,
-                                  activeColor:  Color.fromRGBO(114, 101, 227, 1),
+                                  focusColor: Color.fromRGBO(252, 186, 24, 1),
+                                  hoverColor: Color.fromRGBO(252, 186, 24, 1),
+                                  checkColor: Colors.white,
+                                  activeColor: Color.fromRGBO(114, 101, 227, 1),
                                   value: agree,
                                   onChanged: (value) {
                                     setState(() {
@@ -236,18 +243,25 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                                   }),
                             ),
                           ),
-                          SizedBox(width: 5,),
-                          Text('I accept terms and conditions and general policy.',style: TextStyle(fontSize: 11),),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            'I accept terms and conditions and general policy.',
+                            style: TextStyle(fontSize: 11),
+                          ),
                         ],
                       ),
-                      SizedBox(height: 20,),
+                      SizedBox(
+                        height: 20,
+                      ),
                       Center(
                         child: buttons().largebuttons('Make Payment', () {
                           Navigator.push(
                               context,
                               CupertinoPageRoute(
-                                  builder: (BuildContext context) => Payment_succeded()));
-
+                                  builder: (BuildContext context) =>
+                                      Payment_succeded()));
                         }),
                       ),
                     ],

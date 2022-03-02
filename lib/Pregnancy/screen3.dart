@@ -26,7 +26,18 @@ class _screen3State extends State<screen3> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CupertinoNavigationBar(
-      padding: EdgeInsetsDirectional.only(top: 30,),
+      trailing: Container(
+                        height: 20,
+                        width: 20,
+                        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                  'assets/i.png'),
+          ),
+      
+      ),
+    ),
+      padding: EdgeInsetsDirectional.only(top: 20,),
       border: Border(bottom: BorderSide(color: Colors.transparent)),
       backgroundColor: Colors.white,
        leading: Icon(Icons.arrow_back_ios_outlined,size:17,color: Color(0xff4C5980)),

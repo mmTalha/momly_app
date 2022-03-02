@@ -1,23 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class dashboard_Widgets{
-
-  Widget moodwidget(ontap,BuildContext context,mood,fellings,description,images,emojies,time){
-    return  InkWell(
-      onTap:
-        ontap,
-
-      child:
-      Center(
+class dashboard_Widgets {
+  Widget moodwidget(ontap, BuildContext context, mood, fellings, description,
+      images, emojies, time) {
+    return InkWell(
+      onTap: ontap,
+      child: Center(
         child: Container(
-          padding: EdgeInsets.only(left: 10,right: 10,top: 15),
+          padding: EdgeInsets.only(left: 10, right: 10, top: 15),
           height: 142,
           width: 360,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             color: Colors.white,
-
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,35 +51,33 @@ class dashboard_Widgets{
                               color: Color.fromRGBO(76, 89, 128, 1),
                               fontWeight: FontWeight.w400)),
                       SizedBox(
-                        height:  5,
+                        height: 5,
                       ),
                       Row(
                         children: [
                           Image.asset(images),
-                          SizedBox(width: 5,),
+                          SizedBox(
+                            width: 5,
+                          ),
                           Image.asset(images),
                         ],
                       )
-
                     ],
                   ),
                 ],
               ),
-
             ],
           ),
         ),
       ),
     );
   }
-  Widget doctorcard(pic,name,field){
-    return
-      Column(
+
+  Widget doctorcard(pic, name, field) {
+    return Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-
-
           Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
@@ -100,18 +94,14 @@ class dashboard_Widgets{
                   //   color: Colors.white,
                   // ),
                   child: Center(
-                    child:
-                    Row(
-
+                    child: Row(
                       children: [
-                        Container(
-
-                            child:
-                            Image.asset(pic)),
-                        SizedBox(width: 5,),
+                        Container(child: Image.asset(pic)),
+                        SizedBox(
+                          width: 5,
+                        ),
                         Column(
-                          crossAxisAlignment:
-                          CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(name,
@@ -119,7 +109,6 @@ class dashboard_Widgets{
                                     fontSize: 13,
                                     color: Colors.black,
                                     fontWeight: FontWeight.w600)),
-
                             Text(field,
                                 style: TextStyle(
                                     fontSize: 13,
@@ -132,7 +121,6 @@ class dashboard_Widgets{
                   )),
             ),
           )
-    ]);
-
+        ]);
   }
 }

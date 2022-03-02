@@ -53,12 +53,11 @@ class dashboard_screens extends StatelessWidget {
                       ],
                     ),
                     trailing: InkWell(
-                      onTap: (){
+                      onTap: () {
                         Navigator.push(
                           context,
                           CupertinoPageRoute(
-                              builder: (BuildContext context) =>
-                                  screen22()),
+                              builder: (BuildContext context) => screen22()),
                         );
                       },
                       child: Image.asset(
@@ -109,8 +108,8 @@ class dashboard_screens extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Color.fromRGBO(140, 128, 248, 1),
                             borderRadius: BorderRadius.circular(15)),
-                        height: 250,
-                        padding: const EdgeInsets.all(8),
+                        height: 300,
+                        padding: const EdgeInsets.all(5),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -145,7 +144,7 @@ class dashboard_screens extends StatelessWidget {
                             color: Color.fromRGBO(175, 142, 255, 1),
                             borderRadius: BorderRadius.circular(15)),
                         height: 250,
-                        padding: const EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(5),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -196,7 +195,7 @@ class dashboard_screens extends StatelessWidget {
                             color: Color.fromRGBO(200, 128, 248, 1),
                             borderRadius: BorderRadius.circular(15)),
                         height: 250,
-                        padding: const EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(5),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -236,7 +235,7 @@ class dashboard_screens extends StatelessWidget {
                             color: Color.fromRGBO(31, 135, 254, 1),
                             borderRadius: BorderRadius.circular(15)),
                         height: 250,
-                        padding: const EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(5),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -276,7 +275,7 @@ class dashboard_screens extends StatelessWidget {
                             color: Color.fromRGBO(128, 176, 248, 1),
                             borderRadius: BorderRadius.circular(15)),
                         height: 250,
-                        padding: const EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(5),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -316,7 +315,7 @@ class dashboard_screens extends StatelessWidget {
                             color: Color.fromRGBO(76, 89, 128, 1),
                             borderRadius: BorderRadius.circular(15)),
                         height: 250,
-                        padding: const EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(4),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -366,9 +365,8 @@ class dashboard_screens extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 0.0,
                 ),
-
                 Container(
                     width: MediaQuery.of(context).size.width,
                     height: 350,
@@ -451,12 +449,13 @@ class dashboard_screens extends StatelessWidget {
                               ),
                             ))),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Center(
                   child: Container(
                     padding: EdgeInsets.only(
-                      left: 30,right: 20,
+                      left: 30,
+                      right: 20,
                     ),
                     height: 300,
                     width: 340,
@@ -464,8 +463,7 @@ class dashboard_screens extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       color: Color.fromRGBO(244, 246, 250, 1),
                     ),
-                    child:
-                    Column(
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -477,8 +475,10 @@ class dashboard_screens extends StatelessWidget {
                                   color: Colors.black,
                                   fontWeight: FontWeight.w600)),
                         ),
-                        dashboard_Widgets().doctorcard('images/prof_deniz.png','Prof. Dr. Deniz Konya','Neurosurgery'),
-                        dashboard_Widgets().doctorcard('images/prof_deniz.png','Prof. Dr. Deniz Konya','Neurosurgery'),
+                        dashboard_Widgets().doctorcard('images/prof_deniz.png',
+                            'Prof. Dr. Deniz Konya', 'Neurosurgery'),
+                        dashboard_Widgets().doctorcard('images/prof_deniz.png',
+                            'Prof. Dr. Deniz Konya', 'Neurosurgery'),
                         Center(
                           child: buttons().largebuttons('See all Doctors', () {
                             Navigator.push(
@@ -489,8 +489,6 @@ class dashboard_screens extends StatelessWidget {
                             );
                           }),
                         ),
-
-
                       ],
                     ),
                   ),
@@ -541,6 +539,24 @@ class dashboard_screens extends StatelessWidget {
                               'images/5bb48b07fa6e3840bb3afa2bc821b882.png',
                               'images/StarEyes.png',
                               '1h ago'),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          dashboard_Widgets().moodwidget(() {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                  builder: (BuildContext context) =>
+                                      Empty_details_screens()),
+                            );
+                          },
+                              context,
+                              'HEALTH',
+                              'Headche ',
+                              'You do not setup a family member profile yet.\nTap the following button to setup one.',
+                              'images/5bb48b07fa6e3840bb3afa2bc821b882.png',
+                              'images/StarEyes.png',
+                              '8h ago'),
                           SizedBox(
                             height: 15,
                           ),

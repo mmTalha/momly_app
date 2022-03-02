@@ -22,6 +22,7 @@ class _screen20State extends State<screen20> {
             size: 21, color: Color(0xff4C5980)),
         automaticallyImplyLeading: false,
         border: Border(bottom: BorderSide(color: Colors.transparent)),
+          middle: Text("DIRECT ACCESS",style: TextStyle(fontSize: 10),),
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
@@ -146,7 +147,7 @@ class _screen20State extends State<screen20> {
                           ),
                           child: Center(
                               child: Text(
-                            "1",
+                            "2",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 18,
@@ -167,7 +168,7 @@ class _screen20State extends State<screen20> {
                     height: 10,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 30),
+                    padding: const EdgeInsets.only(left: 25),
                     child: Column(
                       children: [
                         Row(

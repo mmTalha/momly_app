@@ -26,26 +26,22 @@ class search_Academy_screen_2 extends StatelessWidget {
         ),
 
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 20),
-          Container(
-            padding: EdgeInsets.only(left: 15),
-            child: Text(
-              'Search Academy',
-              style: TextStyle(
-                  fontSize: 28,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w600),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: EdgeInsets.only(left: 15),
+              child: Text(
+                'Search Academy',
+                style: TextStyle(
+                    fontSize: 28,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600),
+              ),
             ),
-          ),
-
-          SizedBox(
-            height: 25,
-          ),
-          Expanded(
-            child: Container(
+        
+            Container(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               color: Colors.transparent,
@@ -66,7 +62,7 @@ class search_Academy_screen_2 extends StatelessWidget {
                         children: [
                           Center(
                             child: Container(
-
+        
                               height: 50,
                               decoration: BoxDecoration(
                                   color: Color.fromRGBO(244, 246, 250, 1),
@@ -78,7 +74,7 @@ class search_Academy_screen_2 extends StatelessWidget {
                                 decoration: InputDecoration(
                                     hintStyle: TextStyle(fontSize: 12),
                                     hintText: 'Type to search',
-
+        
                                     prefixStyle: TextStyle(color: Colors.grey),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(10),
@@ -113,10 +109,10 @@ class search_Academy_screen_2 extends StatelessWidget {
                           ),
                           SizedBox(height: 10,),
                           Row(
-
+        
                             children: [
                               Container(
-
+        
                                   child:
                                   Container(
                                     height:60,
@@ -133,7 +129,7 @@ class search_Academy_screen_2 extends StatelessWidget {
                                 children: [
                                  Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
+        
                                    children:  [
                                      Text('Daily target',
                                          style: TextStyle(
@@ -142,7 +138,7 @@ class search_Academy_screen_2 extends StatelessWidget {
                                              fontWeight: FontWeight.w600)),
                                      SizedBox(width: 60,),
                                      Container(
-
+        
                                        height:20,
                                        width: 80,
                                        decoration: BoxDecoration(
@@ -160,7 +156,7 @@ class search_Academy_screen_2 extends StatelessWidget {
                                    ],
                                  ),
                                   SizedBox(height: 5,),
-
+        
                                   Text('Congrats you just hit your goal!',
                                       style: TextStyle(
                                           fontSize: 14,
@@ -168,17 +164,17 @@ class search_Academy_screen_2 extends StatelessWidget {
                                           fontWeight: FontWeight.w400)),
                                 ],
                               ),
-
+        
                             ],
                           ),
                           SizedBox(height: 10,),
                           academy_Widgets().tile('images/achievement.png','Achievement','You are the first among your friends',Color.fromRGBO(31, 135,254 , 1)),
                           SizedBox(height: 10,),
                           academy_Widgets().tile('images/nutrition.png','Nutrition','Your breakfast has high cals',Color(0xff59B9FD))
-
-
-
-
+        
+        
+        
+        
                         ],
                       ),
                       Center(
@@ -207,9 +203,9 @@ class search_Academy_screen_2 extends StatelessWidget {
                               ),
                               dashboard_Widgets().doctorcard('images/prof_deniz.png','Prof. Dr. Deniz Konya','Neurosurgery'),
                               dashboard_Widgets().doctorcard('images/prof_deniz.png','Prof. Dr. Deniz Konya','Neurosurgery'),
-
-
-
+        
+        
+        
                             ],
                           ),
                         ),
@@ -217,8 +213,8 @@ class search_Academy_screen_2 extends StatelessWidget {
                     ],
                   )),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

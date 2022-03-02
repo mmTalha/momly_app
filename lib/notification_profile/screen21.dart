@@ -17,11 +17,15 @@ class _screen21State extends State<screen21> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: CupertinoNavigationBar(
-         padding: EdgeInsetsDirectional.only(top: 30,),
-          leading: Icon(Icons.arrow_back_ios_outlined,size:21,color: Color(0xff4C5980)),
-         automaticallyImplyLeading: false,
-           border: Border(bottom: BorderSide(color: Colors.transparent)),
-      backgroundColor: Colors.white,
+        padding: EdgeInsetsDirectional.only(
+          top: 30,
+        ),
+        leading: Icon(Icons.arrow_back_ios_outlined,
+            size: 21, color: Color(0xff4C5980)),
+        automaticallyImplyLeading: false,
+        border: Border(bottom: BorderSide(color: Colors.transparent)),
+          middle: Text("SIGN-IN REQUIRED",style: TextStyle(fontSize: 10),),
+        backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         child: Padding(

@@ -7,10 +7,9 @@ import 'package:momly_app/onboading_profile_screens/choose_your_gender.dart';
 import 'package:momly_app/provider/provider.dart';
 import 'package:provider/provider.dart';
 
-
 class height_screen extends StatelessWidget {
   const height_screen({Key? key, this.buttons}) : super(key: key);
-final buttons;
+  final buttons;
   @override
   Widget build(BuildContext context) {
     final gender = Provider.of<providermodel>(context);
@@ -20,29 +19,33 @@ final buttons;
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-
           children: [
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
 
             Center(
-              child: Text('Height',
+              child: Text(
+                'Height',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 24,
-                    fontWeight: FontWeight.w500
-                ),),
+                    fontWeight: FontWeight.w500),
+              ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 40,
+            ),
             Center(
-              child:
-              Text('Enter your current height.',
+              child: Text(
+                'Enter your current height.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Color.fromRGBO(76, 89, 128, 1),
                     fontSize: 14,
-                    fontWeight: FontWeight.w400
-                ),),
+                    fontWeight: FontWeight.w400),
+              ),
             ),
             // SizedBox(height: 20,),
             // Row(
@@ -96,7 +99,9 @@ final buttons;
             //     )
             //   ],
             // ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Center(
               child: Container(
                 width: 275,
@@ -108,9 +113,7 @@ final buttons;
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                       suffixStyle: TextStyle(color: Colors.grey),
-
                       prefixStyle: TextStyle(color: Colors.grey),
-
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: BorderSide(
@@ -130,7 +133,9 @@ final buttons;
                 ),
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 30,
+            ),
             buttons,
           ],
         ),
