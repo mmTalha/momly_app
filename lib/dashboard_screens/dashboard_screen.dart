@@ -31,14 +31,14 @@ class dashboard_screens extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  padding: EdgeInsets.only(left: 10, right: 10),
+                  padding: EdgeInsets.only(left: 12, right: 12),
                   child: ListTile(
                     contentPadding: EdgeInsets.all(0),
                     title: Row(
                       children: [
                         Icon(
                           Icons.wb_sunny,
-                          size: 15,
+                          size: 18,
                           color: Color.fromRGBO(114, 101, 227, 1),
                         ),
                         SizedBox(
@@ -48,6 +48,7 @@ class dashboard_screens extends StatelessWidget {
                           'TUE 13 OCT',
                           style: TextStyle(
                               color: Color.fromRGBO(114, 101, 227, 1),
+                              fontWeight: FontWeight.w700,
                               fontSize: 12),
                         ),
                       ],
@@ -75,7 +76,7 @@ class dashboard_screens extends StatelessWidget {
                   height: 15,
                 ),
                 Container(
-                  padding: EdgeInsets.only(left: 10, right: 10),
+                  padding: EdgeInsets.only(left: 12, right: 12),
                   child: Row(
                     children: [
                       Image.asset(
@@ -96,7 +97,7 @@ class dashboard_screens extends StatelessWidget {
                   height: 10,
                 ),
                 Container(
-                  padding: EdgeInsets.only(left: 10, right: 10),
+                  padding: EdgeInsets.only(left: 12, right: 12),
                   child: GridView.extent(
                     shrinkWrap: true,
                     crossAxisSpacing: 10,

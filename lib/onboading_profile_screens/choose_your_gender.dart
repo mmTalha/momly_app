@@ -149,7 +149,7 @@ class choose_your_gender extends StatelessWidget {
                 style: TextStyle(
                     color: Color.fromRGBO(114, 101, 227, 1),
                     fontSize: 18,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w700),
               ),
             ),
           ],

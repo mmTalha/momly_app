@@ -17,7 +17,7 @@ class on_boarding_screen extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -71,8 +71,13 @@ class on_boarding_screen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    buttons().onboardingbutton('images/Brands-google.png',
-                        'Continue with Google', Colors.white, Colors.black, () {
+                    buttons().onboardingbutton(
+                        'images/Brands-google.png',
+                        'Continue with Google',
+                        Colors.white,
+                        Colors.black,
+                        14.0,
+                        FontWeight.w500, () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -87,9 +92,11 @@ class on_boarding_screen extends StatelessWidget {
                         'Continue with Apple',
                         Colors.black,
                         Colors.white,
+                        16.0,
+                        FontWeight.bold,
                         () {}),
                     SizedBox(
-                      height: 15,
+                      height: 20,
                     ),
                     RichText(
                         text: TextSpan(children: <TextSpan>[
@@ -104,7 +111,7 @@ class on_boarding_screen extends StatelessWidget {
                         style: TextStyle(
                             color: Color.fromRGBO(114, 101, 227, 1),
                             fontSize: 16,
-                            fontWeight: FontWeight.w400),
+                            fontWeight: FontWeight.w700),
                       ),
                     ])),
                   ],

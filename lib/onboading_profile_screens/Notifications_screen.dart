@@ -116,6 +116,9 @@ class Notifications_screens extends StatelessWidget {
                 height: 20,
               ),
               buttons,
+              SizedBox(
+                height: 30,
+              ),
             ],
           ),
         ),

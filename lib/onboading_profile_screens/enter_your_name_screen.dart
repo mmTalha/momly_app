@@ -85,36 +85,39 @@ class Enter_Your_name_screen extends StatelessWidget {
                   buttons,
                 ],
               ),
-              RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(children: <TextSpan>[
-                    TextSpan(
-                        text: "By continuing, you agree to Momly’s",
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20.0),
+                child: RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(children: <TextSpan>[
+                      TextSpan(
+                          text: "By continuing, you agree to Momly’s",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400)),
+                      TextSpan(
+                          text: " Terms & Conditions\n",
+                          style: TextStyle(
+                              color: Color.fromRGBO(114, 101, 227, 1),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w700)),
+                      TextSpan(
+                        text: "and confirm that you have read Momly’s",
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 12,
-                            fontWeight: FontWeight.w400)),
-                    TextSpan(
-                        text: " Terms & Conditions\n",
+                            fontWeight: FontWeight.w400),
+                      ),
+                      TextSpan(
+                        text: " Privacy Policy",
                         style: TextStyle(
                             color: Color.fromRGBO(114, 101, 227, 1),
                             fontSize: 12,
-                            fontWeight: FontWeight.w400)),
-                    TextSpan(
-                      text: "and confirm that you have read Momly’s",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400),
-                    ),
-                    TextSpan(
-                      text: " Privacy Policy",
-                      style: TextStyle(
-                          color: Color.fromRGBO(114, 101, 227, 1),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ])),
+                            fontWeight: FontWeight.w700),
+                      ),
+                    ])),
+              ),
             ],
           ),
         ),

@@ -97,7 +97,7 @@ class pee_entry_screen extends StatelessWidget {
                 height: 25,
               ),
               Container(
-                height: MediaQuery.of(context).size.height,
+                height: MediaQuery.of(context).size.height * 0.87,
                 width: MediaQuery.of(context).size.width,
                 color: Colors.transparent,
                 child: new Container(

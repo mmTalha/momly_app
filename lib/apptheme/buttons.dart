@@ -2,10 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class buttons {
-  Widget onboardingbutton(img, text, color, textcolour, VoidCallback ontap) {
+  Widget onboardingbutton(
+      img, text, color, textcolour, sze, wight, VoidCallback ontap) {
     return Container(
       width: 325,
-      height: 45,
+      height: 50,
       child: CupertinoButton(
         padding: EdgeInsets.all(10),
         minSize: 2.0,
@@ -21,9 +22,10 @@ class buttons {
             Text(
               text,
               style: TextStyle(
-                fontFamily: 'Roboto',
-                color: textcolour,
-              ),
+                  fontFamily: 'Roboto',
+                  color: textcolour,
+                  fontSize: sze,
+                  fontWeight: wight),
             ),
           ],
         ),
@@ -48,7 +50,7 @@ class buttons {
           style: TextStyle(
               fontFamily: 'Roboto',
               color: Colors.white,
-              fontWeight: FontWeight.w600),
+              fontWeight: FontWeight.w700),
         ),
         color: Color.fromRGBO(114, 101, 227, 1),
         disabledColor: Colors.grey,

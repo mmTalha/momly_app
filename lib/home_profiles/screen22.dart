@@ -30,23 +30,39 @@ class _screen22State extends State<screen22> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: CupertinoNavigationBar(
-        padding: EdgeInsetsDirectional.only(
-          top: 30,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100.0),
+        child: Container(
+          height: 130,
+          child: CupertinoNavigationBar(
+            padding: EdgeInsetsDirectional.only(
+              top: 30,
+            ),
+            leading: Padding(
+              padding: const EdgeInsets.only(
+                left: 30,
+              ),
+              child: Icon(Icons.arrow_back_ios_outlined,
+                  size: 27, color: Color(0xff4C5980)),
+            ),
+            automaticallyImplyLeading: false,
+            border: Border(bottom: BorderSide(color: Colors.transparent)),
+            middle: Text(
+              "Momly",
+              style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xff2D3142)),
+            ),
+            backgroundColor: Colors.white,
+          ),
         ),
-        leading: Icon(Icons.arrow_back_ios_outlined,
-            size: 21, color: Color(0xff4C5980)),
-        automaticallyImplyLeading: false,
-        border: Border(bottom: BorderSide(color: Colors.transparent)),
-        middle: Text(
-          "MOMLY",
-          style: TextStyle(fontSize: 15),
-        ),
-        backgroundColor: Colors.white,
       ),
       body: Container(
         child: Padding(
-          padding: const EdgeInsets.only(left: 30, top: 50),
+          padding: const EdgeInsets.only(
+            left: 30,
+          ),
           child: InkWell(
             onTap: () {
               Navigator.push(
