@@ -10,7 +10,7 @@ class Notifications_screens extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: theme().backgroundcolour,
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.only(left: 20, right: 15),
           child: Column(

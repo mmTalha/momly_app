@@ -10,7 +10,7 @@ class tab_2 extends StatelessWidget {
         children: [
           RichText(
             text: TextSpan(
-                text: '1st ',
+                text: '2 ',
                 style: TextStyle(
                     color: Color(0xff76265E3),
                     fontSize: 15,

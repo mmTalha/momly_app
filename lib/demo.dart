@@ -2,28 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
-void main() {
-  return runApp(_ChartApp());
-}
-
-class _ChartApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: _MyHomePage(),
-    );
-  }
-}
-
-class _MyHomePage extends StatefulWidget {
-  _MyHomePage({Key? key}) : super(key: key);
+class graphh extends StatefulWidget {
+  graphh({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<_MyHomePage> {
+class _MyHomePageState extends State<graphh> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

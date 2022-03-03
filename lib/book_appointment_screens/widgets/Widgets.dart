@@ -53,7 +53,9 @@ class widgets_appointmentscreen {
                   margin: EdgeInsets.all(5),
                   child: pic,
                 ),
-                SizedBox(width: 5,),
+                SizedBox(
+                  width: 5,
+                ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -63,7 +65,9 @@ class widgets_appointmentscreen {
                             fontSize: 13,
                             color: Colors.black,
                             fontWeight: FontWeight.w400)),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Text(field,
                         style: TextStyle(
                             fontSize: 12,
@@ -96,12 +100,10 @@ class widgets_appointmentscreen {
               height: 15,
             ),
             Container(
-
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-
                   Container(
                     margin: EdgeInsets.all(10),
                     padding: EdgeInsets.only(left: 15, right: 15),
@@ -112,13 +114,12 @@ class widgets_appointmentscreen {
                     width: 350,
                     child: widgets_appointmentscreen().doctorcard(
                         InkWell(
-                          onTap: (){
+                          onTap: () {
                             Navigator.push(
                                 context,
                                 CupertinoPageRoute(
                                     builder: (BuildContext context) =>
                                         second_opinion_screen()));
-
                           },
                           child: Container(
                               decoration: BoxDecoration(
@@ -126,11 +127,13 @@ class widgets_appointmentscreen {
                                   borderRadius: BorderRadius.circular(10)),
                               width: 35,
                               height: 35,
-                              child: Icon(Icons.favorite_border_rounded,color: Color.fromRGBO(114, 101, 227, 1),)),
+                              child: Icon(
+                                Icons.favorite_border_rounded,
+                                color: Color.fromRGBO(114, 101, 227, 1),
+                              )),
                         ),
                         'Request a second opinion',
                         'Second Opinion'),
-
                   ),
                   Container(
                     margin: EdgeInsets.all(10),
@@ -142,7 +145,7 @@ class widgets_appointmentscreen {
                     width: 350,
                     child: widgets_appointmentscreen().doctorcard(
                         InkWell(
-                          onTap: (){
+                          onTap: () {
                             Navigator.push(
                                 context,
                                 CupertinoPageRoute(
@@ -155,7 +158,10 @@ class widgets_appointmentscreen {
                                   borderRadius: BorderRadius.circular(10)),
                               width: 35,
                               height: 35,
-                              child: Icon(Icons.calendar_view_day_outlined,color: Color.fromRGBO(114, 101, 227, 1),)),
+                              child: Icon(
+                                Icons.calendar_view_day_outlined,
+                                color: Color.fromRGBO(114, 101, 227, 1),
+                              )),
                         ),
                         'Appointment',
                         'Create new appointment'),
@@ -168,12 +174,16 @@ class widgets_appointmentscreen {
       ),
     );
   }
-  Widget speciality(controller,hint,specialty,icon){
+
+  Widget speciality(controller, hint, specialty, icon) {
     return Column(
       children: [
         Row(
           children: [
-           icon,
+            icon,
+            SizedBox(
+              width: 10,
+            ),
             Text(
               specialty,
               style: TextStyle(
@@ -183,42 +193,41 @@ class widgets_appointmentscreen {
             ),
           ],
         ),
-        SizedBox(height: 10,),
-      Container(
-      width: 325,
-      height: 50,
-      decoration: BoxDecoration(
-          color: Color.fromRGBO(244, 246, 250, 1),
-          borderRadius: BorderRadius.all(Radius.circular(20))),
-      child: TextField(
-        controller: controller,
-        textAlign: TextAlign.start,
-        keyboardType: TextInputType.phone,
-        decoration: InputDecoration(
-            hintText: hint,
-
-            prefixStyle: TextStyle(color: Colors.grey),
-            enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: BorderSide(
-                  color: Color.fromRGBO(244, 246, 250, 1),
-                )),
-            focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: BorderSide(
-                  color: Color.fromRGBO(244, 246, 250, 1),
-                )),
-            errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: BorderSide(color: Colors.red)),
-            focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: BorderSide(color: Colors.red))),
-      ),
-    ),
-
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          width: 325,
+          height: 50,
+          decoration: BoxDecoration(
+              color: Color.fromRGBO(244, 246, 250, 1),
+              borderRadius: BorderRadius.all(Radius.circular(20))),
+          child: TextField(
+            controller: controller,
+            textAlign: TextAlign.start,
+            keyboardType: TextInputType.phone,
+            decoration: InputDecoration(
+                hintText: hint,
+                prefixStyle: TextStyle(color: Colors.grey),
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(
+                      color: Color.fromRGBO(244, 246, 250, 1),
+                    )),
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(
+                      color: Color.fromRGBO(244, 246, 250, 1),
+                    )),
+                errorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(color: Colors.red)),
+                focusedErrorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(color: Colors.red))),
+          ),
+        ),
       ],
     );
-
   }
 }

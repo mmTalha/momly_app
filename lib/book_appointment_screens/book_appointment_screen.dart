@@ -130,7 +130,7 @@ class Book_Appointment_screen extends StatelessWidget {
                                 widgets_appointmentscreen().speciality(
                                   null,
                                   'Choose a speciality',
-                                  'Choose a speciality',
+                                  'Speciality',
                                   Icon(
                                     Icons.favorite_border_rounded,
                                     color: Colors.black,
@@ -237,6 +237,69 @@ class Book_Appointment_screen extends StatelessWidget {
                                 SizedBox(
                                   height: 10,
                                 ),
+                                Row(
+                                  children: [
+                                    Center(
+                                        child: Image.asset(
+                                            'images/Image (Single).png')),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      'Choose your video / photo',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  'Attach photos so your physician can review your condition better. ',
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontStyle: FontStyle.italic,
+                                      color: Color.fromRGBO(76, 89, 128, 1)
+                                          .withOpacity(0.5),
+                                      fontWeight: FontWeight.w200),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                        height: 50,
+                                        width: 50,
+                                        child: Image.asset(
+                                          'images/emptyphotos.png',
+                                        )),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Container(
+                                        height: 50,
+                                        width: 50,
+                                        child: Image.asset(
+                                          'images/emptyphotos.png',
+                                        )),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Container(
+                                        height: 50,
+                                        width: 50,
+                                        child: Image.asset(
+                                          'images/emptyphotos.png',
+                                        ))
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
                               ],
                             ),
                           ),
@@ -261,14 +324,13 @@ class Book_Appointment_screen extends StatelessWidget {
                                 ),
                                 subtitle: Text('pay with card'),
                                 trailing: InkWell(
-                                  onTap: (){
+                                  onTap: () {
                                     Navigator.push(
                                         context,
                                         CupertinoPageRoute(
                                             builder: (BuildContext context) =>
                                                 book_appointment_screen_2()));
                                   },
-
                                   child: Container(
                                     width: 80,
                                     height: 40,

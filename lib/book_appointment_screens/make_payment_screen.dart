@@ -79,15 +79,44 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                             color: Colors.black,
                             fontWeight: FontWeight.w600),
                       ),
-                      dashboard_Widgets().doctorcard('images/prof_deniz.png',
-                          'Prof. Dr. Deniz Konya', 'Neurosurgery'),
                       SizedBox(
-                        height: 5,
+                        height: 15,
                       ),
                       Row(
                         children: [
                           Container(
-                              margin: EdgeInsets.all(5),
+                              width: 35,
+                              height: 35,
+                              child: Image.asset("images/prof_deniz.png")),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('Prof. Dr. Kadir Sümerkent',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500)),
+                              Text('Neurosurgery',
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      color: Color(0xff9C9EB9),
+                                      fontWeight: FontWeight.w400)),
+                            ],
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                              width: 35,
+                              height: 35,
                               child: Icon(Icons.calendar_today)),
                           SizedBox(
                             width: 5,
@@ -98,25 +127,26 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                             children: [
                               Text('Thursday, 6 Feb 2020',
                                   style: TextStyle(
-                                      fontSize: 13,
+                                      fontSize: 16,
                                       color: Colors.black,
-                                      fontWeight: FontWeight.w600)),
+                                      fontWeight: FontWeight.w500)),
                               Text('6:30 PM - 7:30 PM',
                                   style: TextStyle(
-                                      fontSize: 13,
-                                      color: Colors.black,
+                                      fontSize: 14,
+                                      color: Color(0xff9C9EB9),
                                       fontWeight: FontWeight.w400)),
                             ],
                           )
                         ],
                       ),
                       SizedBox(
-                        height: 5,
+                        height: 10,
                       ),
                       Row(
                         children: [
                           Container(
-                              margin: EdgeInsets.all(5),
+                              width: 35,
+                              height: 35,
                               child: Icon(Icons.credit_card)),
                           SizedBox(
                             width: 5,
@@ -127,12 +157,12 @@ class _Make_payment_screenState extends State<Make_payment_screen> {
                             children: [
                               Text('Payment Amount',
                                   style: TextStyle(
-                                      fontSize: 13,
+                                      fontSize: 16,
                                       color: Colors.black,
-                                      fontWeight: FontWeight.w600)),
+                                      fontWeight: FontWeight.w500)),
                               Text('\$49.99',
                                   style: TextStyle(
-                                      fontSize: 13,
+                                      fontSize: 14,
                                       color: Colors.red,
                                       fontWeight: FontWeight.w400)),
                             ],

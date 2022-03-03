@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:momly_app/demo.dart';
+import 'package:momly_app/onboading_profile_screens/On_Boarding_screen.dart';
 import 'package:momly_app/provider/provider.dart';
 import 'package:provider/provider.dart';
-import 'onboading_profile_screens/On_Boarding_screen.dart';
 
 void main() {
   runApp(ChangeNotifierProvider<providermodel>(
