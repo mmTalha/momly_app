@@ -80,6 +80,9 @@ class dashboard_Widgets {
         children: [
           Center(
             child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15)),
                 padding: EdgeInsets.only(
                   left: 10,
                 ),

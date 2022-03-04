@@ -24,10 +24,8 @@ class appointments_screens extends StatelessWidget {
               Positioned(
                 top: 0,
                 child: Container(
-
                   width: MediaQuery.of(context).size.width,
                   height: 200,
-
                   child: Image.asset(
                     'images/2 image.png',
                     fit: BoxFit.cover,
@@ -39,7 +37,7 @@ class appointments_screens extends StatelessWidget {
                 left: 33,
                 child: InkWell(
                   onTap: () {
-                   Navigator.pop(context);
+                    Navigator.pop(context);
                   },
                   child: Container(
                     decoration: BoxDecoration(
@@ -60,7 +58,7 @@ class appointments_screens extends StatelessWidget {
                 top: 160,
                 bottom: 0,
                 child: Container(
-                    height: MediaQuery.of(context).size.height+10,
+                    height: MediaQuery.of(context).size.height + 10,
                     width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.only(
                         left: 30, right: 30, top: 30, bottom: 20),
@@ -76,7 +74,6 @@ class appointments_screens extends StatelessWidget {
                         children: [
                           Align(
                             alignment: Alignment.topLeft,
-
                             child: Text(
                               'Momly Consultıng servıces',
                               style: TextStyle(
@@ -151,20 +148,12 @@ class appointments_screens extends StatelessWidget {
                                     'images/prof_deniz.png',
                                     'Prof. Dr. Deniz Konya',
                                     'Neurosurgery'),
-                                ListTile(
-                                  subtitle: Text(
-                                    '6:30 PM - 7:30 PM',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        color: Color.fromRGBO(156, 158, 185, 1),
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                  leading: Icon(Icons.calendar_today),
-                                  title: Text('Thursday, 6 Feb 2020'),
-                                ),
+                                dashboard_Widgets().doctorcard(
+                                    'images/Calendar.png',
+                                    'Thursday, 6 Feb 2020',
+                                    '6:30 PM - 7:30 PM'),
                                 Center(
-                                  child:
-                                  Container(
+                                  child: Container(
                                     width: 180,
                                     height: 40,
                                     decoration: BoxDecoration(
@@ -212,21 +201,31 @@ class appointments_screens extends StatelessWidget {
                                   height: 10,
                                 ),
                                 widgets_appointmentscreen().doctorcard(
-                                    Image.asset('images/prof_deniz.png'),
+                                    Container(
+                                        height: 25,
+                                        width: 30,
+                                        child: Image.asset(
+                                            'images/prof_deniz.png')),
                                     'Prof. Dr. Deniz Konya',
                                     'Neurosurgery'),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 widgets_appointmentscreen().doctorcard(
-                                    Icon(Icons.calendar_today),
+                                    Container(
+                                        height: 25,
+                                        width: 30,
+                                        child: Icon(Icons.calendar_today)),
                                     '6:30 PM - 7:30 PM',
                                     'Thursday, 6 Feb 2020'),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 widgets_appointmentscreen().doctorcard(
-                                    Icon(Icons.location_on),
+                                    Container(
+                                        height: 25,
+                                        width: 30,
+                                        child: Icon(Icons.location_on)),
                                     '110 The Embarcadero, San Fransisco',
                                     'Commonwealth Club'),
                                 Center(
@@ -278,21 +277,31 @@ class appointments_screens extends StatelessWidget {
                                   height: 10,
                                 ),
                                 widgets_appointmentscreen().doctorcard(
-                                    Image.asset('images/prof_deniz.png'),
+                                    Container(
+                                        height: 25,
+                                        width: 30,
+                                        child: Image.asset(
+                                            'images/prof_deniz.png')),
                                     'Prof. Dr. Deniz Konya',
                                     'Neurosurgery'),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 widgets_appointmentscreen().doctorcard(
-                                    Icon(Icons.calendar_today),
+                                    Container(
+                                        height: 25,
+                                        width: 30,
+                                        child: Icon(Icons.calendar_today)),
                                     '6:30 PM - 7:30 PM',
                                     'Thursday, 6 Feb 2020'),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 widgets_appointmentscreen().doctorcard(
-                                    Icon(Icons.location_on),
+                                    Container(
+                                        height: 25,
+                                        width: 30,
+                                        child: Icon(Icons.location_on)),
                                     '110 The Embarcadero, San Fransisco',
                                     'Commonwealth Club'),
                                 SizedBox(

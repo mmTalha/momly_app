@@ -50,7 +50,7 @@ class _choose_profile_photoState extends State<choose_profile_photo> {
                 'Profile Photo',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Colors.black,
+                    color: Color(0xff2D3142),
                     fontSize: 24,
                     fontWeight: FontWeight.w600),
               ),

@@ -41,7 +41,7 @@ class congrats_screen extends StatelessWidget {
                         'Richard',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: Colors.black,
+                            color: Color(0xff2D3142),
                             fontSize: 24,
                             fontWeight: FontWeight.w500),
                       ),
@@ -55,7 +55,7 @@ class congrats_screen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Color.fromRGBO(76, 89, 128, 1),
-                            fontSize: 14,
+                            fontSize: 16,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
@@ -71,7 +71,7 @@ class congrats_screen extends StatelessWidget {
                 'Congratulations',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Color.fromRGBO(76, 89, 128, 1),
+                    color: Color(0xff4C5980),
                     fontSize: 24,
                     fontWeight: FontWeight.w600),
               ),
@@ -84,7 +84,7 @@ class congrats_screen extends StatelessWidget {
                 'You created a new profile. ',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Color.fromRGBO(76, 89, 128, 1),
+                    color: Color(0xff4C5980),
                     fontSize: 16,
                     fontWeight: FontWeight.w400),
               ),
@@ -97,7 +97,7 @@ class congrats_screen extends StatelessWidget {
                 'Tap the button below to see the\n profile overview & start creating\n tracker entries for Richard.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Color.fromRGBO(76, 89, 128, 1),
+                    color: Color(0xff4C5980),
                     fontSize: 16,
                     fontWeight: FontWeight.w400),
               ),

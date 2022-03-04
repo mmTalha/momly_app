@@ -31,9 +31,9 @@ class choose_your_gender extends StatelessWidget {
                     'Choose your Gender',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        color: Colors.black,
+                        color: Color(0xff2D3142),
                         fontSize: 24,
-                        fontWeight: FontWeight.w500),
+                        fontWeight: FontWeight.w600),
                   ),
                 ),
                 SizedBox(

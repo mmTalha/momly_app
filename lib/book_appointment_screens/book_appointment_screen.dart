@@ -169,6 +169,9 @@ class Book_Appointment_screen extends StatelessWidget {
                                 Row(
                                   children: [
                                     Image.asset('images/Pencil.png'),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
                                     Text(
                                       'Write your questions',
                                       style: TextStyle(

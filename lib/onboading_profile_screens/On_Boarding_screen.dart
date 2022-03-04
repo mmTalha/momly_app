@@ -48,7 +48,7 @@ class on_boarding_screen extends StatelessWidget {
                           ),
                         )),
                     Align(
-                        alignment: Alignment.center,
+                        alignment: Alignment.topCenter,
                         child: Image.asset('images/Icon1.png')),
                     Text(
                       'Momly',
@@ -109,7 +109,7 @@ class on_boarding_screen extends StatelessWidget {
                       TextSpan(
                         text: " Continue as Guest",
                         style: TextStyle(
-                            color: Color.fromRGBO(114, 101, 227, 1),
+                            color: Color(0xff7265E3),
                             fontSize: 16,
                             fontWeight: FontWeight.w700),
                       ),

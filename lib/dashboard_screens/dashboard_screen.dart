@@ -68,7 +68,10 @@ class dashboard_screens extends StatelessWidget {
                     ),
                     subtitle: Text(
                       'Hi, Grace',
-                      style: TextStyle(color: Colors.black, fontSize: 32),
+                      style: TextStyle(
+                          color: Color(0xff2D3142),
+                          fontSize: 32,
+                          fontWeight: FontWeight.w600),
                     ),
                   ),
                 ),
@@ -84,11 +87,22 @@ class dashboard_screens extends StatelessWidget {
                         height: 30,
                       ),
                       SizedBox(
-                        width: 5,
+                        width: 8,
                       ),
                       Text(
                         'Today’s Summary',
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(
+                            fontSize: 24,
+                            color: Color(0xff2D3142),
+                            fontWeight: FontWeight.w500),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Icon(
+                        Icons.keyboard_arrow_down,
+                        color: Color(0xff4C5980),
+                        size: 30,
                       ),
                     ],
                   ),
@@ -357,6 +371,9 @@ class dashboard_screens extends StatelessWidget {
                   child: Row(
                     children: [
                       Image.asset('images/List.png'),
+                      SizedBox(
+                        width: 8,
+                      ),
                       Text('Momly Academy',
                           style: TextStyle(
                               fontSize: 24,
@@ -399,7 +416,7 @@ class dashboard_screens extends StatelessWidget {
                                     ),
                                     Container(
                                       padding:
-                                          EdgeInsets.only(left: 25, right: 25),
+                                          EdgeInsets.only(left: 25, right: 30),
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -439,7 +456,10 @@ class dashboard_screens extends StatelessWidget {
                                                               FontWeight.w400)),
                                                 ],
                                               ),
-                                              Icon(Icons.favorite_border)
+                                              Icon(
+                                                Icons.favorite,
+                                                color: Color(0xffD6D9E0),
+                                              )
                                             ],
                                           )
                                         ],

@@ -23,15 +23,14 @@ class height_screen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-
             Center(
               child: Text(
                 'Height',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Colors.black,
+                    color: Color(0xff2D3142),
                     fontSize: 24,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w600),
               ),
             ),
             SizedBox(
@@ -43,72 +42,28 @@ class height_screen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Color.fromRGBO(76, 89, 128, 1),
-                    fontSize: 14,
+                    fontSize: 16,
                     fontWeight: FontWeight.w400),
               ),
             ),
-            // SizedBox(height: 20,),
-            // Row(
-            //   crossAxisAlignment: CrossAxisAlignment.center,
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     InkWell(
-            //       onTap: (){
-            //         gender.gender();
-            //       },
-            //       child: Container(
-            //         height: 50,
-            //         width: 80,
-            //         decoration: BoxDecoration(
-            //             borderRadius: BorderRadius.circular(10),
-            //             color: gender.animation? Color.fromRGBO(114, 101, 227, 1):Colors.white
-            //         ),
-            //         child:   Center(
-            //           child: Text('ft',
-            //             textAlign: TextAlign.center,
-            //             style: TextStyle(
-            //                 color:gender.animation?Colors.white: Color.fromRGBO(156, 158, 185, 1),
-            //                 fontSize: 14,
-            //                 fontWeight: FontWeight.w600
-            //             ),),
-            //         ),
-            //       ),
-            //     ),
-            //     SizedBox(width: 10,),
-            //     InkWell(
-            //       onTap: (){
-            //         gender.changegender();
-            //       },
-            //       child: Container(
-            //         height: 50,
-            //         width: 80,
-            //         decoration: BoxDecoration(
-            //             borderRadius: BorderRadius.circular(10),
-            //             color: gender.female? Color.fromRGBO(114, 101, 227, 1):Colors.white
-            //         ),
-            //         child:   Center(
-            //           child: Text('cm',
-            //             textAlign: TextAlign.center,
-            //             style: TextStyle(
-            //                 color:gender.female?Colors.white: Color.fromRGBO(156, 158, 185, 1),
-            //                 fontSize: 14,
-            //                 fontWeight: FontWeight.w600
-            //             ),),
-            //         ),
-            //       ),
-            //     )
-            //   ],
-            // ),
             SizedBox(
               height: 20,
             ),
             Center(
               child: Container(
                 width: 275,
-                height: 50,
+                height: 58,
                 decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xff4075CD).withOpacity(0.2),
+                        spreadRadius: 1,
+                        blurRadius: 20,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                     color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
                 child: TextField(
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(

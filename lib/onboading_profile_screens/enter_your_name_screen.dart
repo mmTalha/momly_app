@@ -15,7 +15,7 @@ class Enter_Your_name_screen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height * 0.83,
-          padding: EdgeInsets.only(top: 15, bottom: 15),
+          padding: EdgeInsets.only(top: 25, bottom: 15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -27,7 +27,7 @@ class Enter_Your_name_screen extends StatelessWidget {
                       'Let’s start with your\n Name',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Color(0xff2D3142),
                           fontSize: 24,
                           fontWeight: FontWeight.w600),
                     ),
@@ -53,8 +53,17 @@ class Enter_Your_name_screen extends StatelessWidget {
                       width: 275,
                       height: 58,
                       decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0xff4075CD).withOpacity(0.2),
+                              spreadRadius: 1,
+                              blurRadius: 20,
+                              offset:
+                                  Offset(0, 3), // changes position of shadow
+                            ),
+                          ],
                           color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
                       child: TextField(
                         keyboardType: TextInputType.phone,
                         decoration: InputDecoration(
@@ -86,7 +95,7 @@ class Enter_Your_name_screen extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 20.0),
+                padding: const EdgeInsets.only(bottom: 30.0),
                 child: RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(children: <TextSpan>[

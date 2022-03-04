@@ -19,7 +19,10 @@ class name_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: LinearProgressPageIndicatorDemo(),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 12.0),
+        child: LinearProgressPageIndicatorDemo(),
+      ),
     );
   }
 }

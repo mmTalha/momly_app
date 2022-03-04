@@ -22,7 +22,7 @@ class Notifications_screens extends StatelessWidget {
                   'Do you want to turn\n on notifications?',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Color(0xff2D3142),
                       fontSize: 24,
                       fontWeight: FontWeight.w600),
                 ),

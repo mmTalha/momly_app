@@ -23,13 +23,13 @@ class date_of_birth_screen extends StatelessWidget {
                 'When did you born?',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Colors.black,
+                    color: Color(0xff2D3142),
                     fontSize: 24,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w600),
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 38,
             ),
             Center(
               child: Text(
@@ -47,10 +47,18 @@ class date_of_birth_screen extends StatelessWidget {
             Center(
               child: Container(
                 width: 275,
-                height: 60,
+                height: 58,
                 decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xff4075CD).withOpacity(0.2),
+                        spreadRadius: 1,
+                        blurRadius: 20,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                     color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
                 child: TextField(
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
