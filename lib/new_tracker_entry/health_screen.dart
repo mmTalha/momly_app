@@ -70,7 +70,7 @@ class health_screen extends StatelessWidget {
                 height: 25,
               ),
               Container(
-                height: MediaQuery.of(context).size.height,
+                // height: 500,
                 width: MediaQuery.of(context).size.width,
                 color: Colors.transparent,
                 child: new Container(
@@ -85,28 +85,62 @@ class health_screen extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      SizedBox(
+                        height: 20,
+                      ),
                       healthScreen_widget().textfieldcontroller(
                           'Searchsymptom', Icons.search, null),
+                      SizedBox(
+                        height: 13,
+                      ),
                       Container(
                           padding:
                               EdgeInsets.only(left: 10, right: 10, top: 20),
                           width: 300,
-                          height: 650,
+                          height: 400,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20))),
-                          child: Column(
-                            children: [
-                              InkWell(
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      CupertinoPageRoute(
-                                          builder: (BuildContext context) =>
-                                              headchee_screen()));
-                                },
-                                child: Row(
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        CupertinoPageRoute(
+                                            builder: (BuildContext context) =>
+                                                headchee_screen()));
+                                  },
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Headache',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: Color.fromRGBO(76, 89, 128, 1),
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.arrow_forward_ios_outlined,
+                                        color: Color.fromRGBO(228, 223, 255, 1),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Divider(
+                                  thickness: 0.2,
+                                ),
+                                Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -124,54 +158,36 @@ class health_screen extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                              ),
-                              Divider(
-                                thickness: 0.2,
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Headache',
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      color: Color.fromRGBO(76, 89, 128, 1),
+                                Divider(
+                                  thickness: 0.2,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Headache',
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        color: Color.fromRGBO(76, 89, 128, 1),
+                                      ),
                                     ),
-                                  ),
-                                  Icon(
-                                    Icons.arrow_forward_ios_outlined,
-                                    color: Color.fromRGBO(228, 223, 255, 1),
-                                  ),
-                                ],
-                              ),
-                              Divider(
-                                thickness: 0.2,
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Headache',
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      color: Color.fromRGBO(76, 89, 128, 1),
+                                    Icon(
+                                      Icons.arrow_forward_ios_outlined,
+                                      color: Color.fromRGBO(228, 223, 255, 1),
                                     ),
-                                  ),
-                                  Icon(
-                                    Icons.arrow_forward_ios_outlined,
-                                    color: Color.fromRGBO(228, 223, 255, 1),
-                                  ),
-                                ],
-                              ),
-                              Divider(
-                                thickness: 0.2,
-                              ),
-                            ],
-                          ))
+                                  ],
+                                ),
+                                Divider(
+                                  thickness: 0.2,
+                                ),
+                              ],
+                            ),
+                          )),
+                      SizedBox(
+                        height: 100,
+                      ),
                     ],
                   ),
                 ),

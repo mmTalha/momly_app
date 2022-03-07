@@ -72,7 +72,7 @@ class choose_your_gender extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.asset('images/img1.png'),
+                              Image.asset('assets/male.png'),
                               SizedBox(
                                 height: 10,
                               ),

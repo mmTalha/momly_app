@@ -129,7 +129,7 @@ class _LinearProgressPageIndicatorDemoState
                 );
               }),
             ),
-            height_screen(
+            weight(
               buttons: buttons().largebuttons('Continue', () {
                 _pageController.nextPage(
                   duration: Duration(milliseconds: 50),
@@ -137,7 +137,7 @@ class _LinearProgressPageIndicatorDemoState
                 );
               }),
             ),
-            weight(
+            height_screen(
               buttons: buttons().largebuttons('Continue', () {
                 _pageController.nextPage(
                   duration: Duration(milliseconds: 50),

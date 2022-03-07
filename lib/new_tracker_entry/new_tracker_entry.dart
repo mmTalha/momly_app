@@ -28,20 +28,48 @@ class new_tracker_entry extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: theme().backgroundcolour,
-      appBar: CupertinoNavigationBar(
-        backgroundColor: theme().backgroundcolour,
-        leading: Icon(CupertinoIcons.back),
-        middle: Text(
-          'Create',
-          style: TextStyle(
-              color: Colors.black, fontSize: 28, fontWeight: FontWeight.w600),
-        ),
-        border: Border.all(
-          color: Colors.transparent,
-          width: 0.0,
-          style: BorderStyle.none,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100.0),
+        child: Container(
+          height: 130,
+          child: CupertinoNavigationBar(
+            padding: EdgeInsetsDirectional.only(
+              top: 30,
+            ),
+            leading: Padding(
+              padding: const EdgeInsets.only(
+                left: 20,
+              ),
+              child:
+                  Icon(CupertinoIcons.back, size: 27, color: Color(0xff4C5980)),
+            ),
+            automaticallyImplyLeading: false,
+            border: Border(bottom: BorderSide(color: Colors.transparent)),
+            middle: Text(
+              'Create',
+              style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black),
+            ),
+            backgroundColor: theme().backgroundcolour,
+          ),
         ),
       ),
+      // appBar: CupertinoNavigationBar(
+      //   backgroundColor: theme().backgroundcolour,
+      //   leading: Icon(CupertinoIcons.back),
+      //   middle: Text(
+      //     'Create',
+      //     style: TextStyle(
+      //         color: Colors.black, fontSize: 28, fontWeight: FontWeight.w600),
+      //   ),
+      //   border: Border.all(
+      //     color: Colors.transparent,
+      //     width: 0.0,
+      //     style: BorderStyle.none,
+      //   ),
+      // ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
@@ -69,6 +97,15 @@ class new_tracker_entry extends StatelessWidget {
                     height: 30,
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 40),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 30,
@@ -101,8 +138,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -135,8 +175,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -169,8 +212,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -203,8 +249,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -236,8 +285,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -270,8 +322,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -303,8 +358,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -337,8 +395,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -371,8 +432,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -404,8 +468,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -438,8 +505,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -472,8 +542,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -506,8 +579,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -540,8 +616,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -573,8 +652,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -607,8 +689,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -641,8 +726,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -675,8 +763,11 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -709,6 +800,9 @@ class new_tracker_entry extends StatelessWidget {
                       ),
                     ],
                   )),
+              SizedBox(
+                height: 100,
+              ),
             ],
           ),
         ),

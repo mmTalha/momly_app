@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class healthScreen_widget {
   Widget textfieldcontroller(Searchsymptom, icon, controller) {
     return Container(
-      width: 275,
+      width: 285,
       height: 50,
       decoration: BoxDecoration(
           color: Colors.white,

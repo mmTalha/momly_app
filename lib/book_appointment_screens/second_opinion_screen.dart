@@ -121,7 +121,7 @@ class second_opinion_screen extends StatelessWidget {
                                       fontWeight: FontWeight.w200),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 30,
                                 ),
                                 widgets_appointmentscreen().speciality(
                                   null,
@@ -160,7 +160,7 @@ class second_opinion_screen extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       color: Color.fromRGBO(244, 246, 250, 1),
                                       borderRadius:
-                                          BorderRadius.all(Radius.circular(20)),
+                                          BorderRadius.all(Radius.circular(15)),
                                       boxShadow: [
                                         BoxShadow(
                                           color: Colors.white.withOpacity(0.5),
@@ -241,9 +241,17 @@ class second_opinion_screen extends StatelessWidget {
                                 SizedBox(
                                   height: 40,
                                 ),
-                                Center(
-                                    child:
-                                        Image.asset('images/emptyphotos.png')),
+                                Container(
+                                  width: double.infinity,
+                                  height: 280,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      border:
+                                          Border.all(color: Color(0xffF4F6FA))),
+                                  child: Center(
+                                      child: Image.asset(
+                                          'images/emptyphotos.png')),
+                                ),
                                 SizedBox(
                                   height: 50,
                                 ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:momly_app/demo.dart';
 import 'package:momly_app/onboading_profile_screens/On_Boarding_screen.dart';
 import 'package:momly_app/provider/provider.dart';
 import 'package:provider/provider.dart';

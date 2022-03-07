@@ -16,27 +16,48 @@ class moomly_Academy_Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: theme().backgroundcolour,
-      appBar: CupertinoNavigationBar(
-        backgroundColor: theme().backgroundcolour,
-        leading: Icon(CupertinoIcons.back),
-        trailing: Icon(CupertinoIcons.search),
-        border: Border.all(
-          color: Colors.transparent,
-          width: 0.0,
-          style: BorderStyle.none,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100.0),
+        child: Container(
+          height: 80,
+          child: CupertinoNavigationBar(
+            padding: EdgeInsetsDirectional.only(
+              top: 30,
+            ),
+            leading: Padding(
+              padding: const EdgeInsets.only(
+                left: 20,
+              ),
+              child:
+                  Icon(CupertinoIcons.back, size: 27, color: Color(0xff4C5980)),
+            ),
+            trailing: Padding(
+                padding: const EdgeInsets.only(
+                  right: 20,
+                ),
+                child:
+                    Icon(CupertinoIcons.search, size: 27, color: Colors.black)),
+            automaticallyImplyLeading: false,
+            border: Border(bottom: BorderSide(color: Colors.transparent)),
+            backgroundColor: theme().backgroundcolour,
+          ),
         ),
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+          padding: EdgeInsets.only(left: 25, right: 20, top: 10, bottom: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              SizedBox(
+                height: 5,
+              ),
               Text(
                 'Momly Academy',
                 style: TextStyle(
                     fontSize: 28,
-                    color: Colors.black,
+                    color: Color(0xff2D3142),
                     fontWeight: FontWeight.w600),
               ),
               SizedBox(
@@ -47,7 +68,8 @@ class moomly_Academy_Screen extends StatelessWidget {
                     Navigator.push(
                       context,
                       CupertinoPageRoute(
-                          builder: (BuildContext context) => Search_Academy_Screen()),
+                          builder: (BuildContext context) =>
+                              Search_Academy_Screen()),
                     );
                   },
                   child: Row(
@@ -72,15 +94,19 @@ class moomly_Academy_Screen extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
                       CupertinoPageRoute(
-                          builder: (BuildContext context) =>  search_Academy_screen_2()),
+                          builder: (BuildContext context) =>
+                              search_Academy_screen_2()),
                     );
                   },
                   child: Row(
@@ -105,10 +131,12 @@ class moomly_Academy_Screen extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -142,8 +170,11 @@ class moomly_Academy_Screen extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               GestureDetector(
                   onTap: () {
@@ -175,15 +206,19 @@ class moomly_Academy_Screen extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
                       CupertinoPageRoute(
-                          builder: (BuildContext context) => Home_Activities_Screen()),
+                          builder: (BuildContext context) =>
+                              Home_Activities_Screen()),
                     );
                   },
                   child: Row(
@@ -207,8 +242,11 @@ class moomly_Academy_Screen extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               GestureDetector(
                   onTap: () {
@@ -243,8 +281,11 @@ class moomly_Academy_Screen extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               GestureDetector(
                   onTap: () {
@@ -280,8 +321,11 @@ class moomly_Academy_Screen extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Divider(
+                  thickness: 0.5,
+                ),
               ),
               GestureDetector(
                   onTap: () {
@@ -316,8 +360,8 @@ class moomly_Academy_Screen extends StatelessWidget {
                       ),
                     ],
                   )),
-              Divider(
-                thickness: 0.5,
+              SizedBox(
+                height: 100,
               ),
             ],
           ),

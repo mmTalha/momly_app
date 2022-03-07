@@ -198,10 +198,10 @@ class widgets_appointmentscreen {
         ),
         Container(
           width: 325,
-          height: 50,
+          height: 60,
           decoration: BoxDecoration(
               color: Color.fromRGBO(244, 246, 250, 1),
-              borderRadius: BorderRadius.all(Radius.circular(20))),
+              borderRadius: BorderRadius.all(Radius.circular(15))),
           child: TextField(
             controller: controller,
             textAlign: TextAlign.start,

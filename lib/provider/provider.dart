@@ -1,24 +1,32 @@
 import 'package:flutter/foundation.dart';
 
-class providermodel with ChangeNotifier{
-
+class providermodel with ChangeNotifier {
   bool animation = false;
-  bool female  = false;
+  bool female = false;
   bool weightlbs = false;
   bool weightkg = false;
 
-  gender(){
-  animation = true ;
-  female = false;
-  notifyListeners();
-}
+  gender() {
+    animation = true;
+    female = false;
+    notifyListeners();
+  }
 
-  changegender(){
-    animation = false ;
+  changegender() {
+    animation = false;
     female = true;
     notifyListeners();
   }
 
+  weight() {
+    animation = true;
+    female = false;
+    notifyListeners();
+  }
 
+  changeweight() {
+    animation = false;
+    female = true;
+    notifyListeners();
+  }
 }
-
