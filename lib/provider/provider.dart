@@ -29,4 +29,9 @@ class providermodel with ChangeNotifier {
     female = true;
     notifyListeners();
   }
+
+  iconss() {
+    animation = true;
+    notifyListeners();
+  }
 }
