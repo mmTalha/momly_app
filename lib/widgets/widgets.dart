@@ -118,12 +118,11 @@ class lisst {
         Row(
           children: [
             Container(
-              height: 15,
-              width: 15,
+              height: 25,
+              width: 25,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(name),
-                  fit: BoxFit.fill,
                 ),
               ),
             ),

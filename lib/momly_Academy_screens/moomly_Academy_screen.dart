@@ -142,6 +142,42 @@ class moomly_Academy_Screen extends StatelessWidget {
                     Navigator.push(
                       context,
                       CupertinoPageRoute(
+                          builder: (BuildContext context) =>
+                              Home_Activities_Screen()),
+                    );
+                  },
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                          width: 40, child: Image.asset('images/Brain2.png')),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                        width: 250,
+                        child: Text(
+                          'Know your child  ',
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Color.fromRGBO(45, 49, 66, 1),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )),
+              Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Divider(
+                  thickness: 0.5,
+                ),
+              ),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
                           builder: (BuildContext context) => mood_screen()),
                     );
                   },
@@ -190,78 +226,6 @@ class moomly_Academy_Screen extends StatelessWidget {
                     children: [
                       Container(
                           width: 40,
-                          child: Image.asset('images/Heartbeat2.png')),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                        width: 250,
-                        child: Text(
-                          'Behavior',
-                          style: TextStyle(
-                            fontSize: 24,
-                            color: Color.fromRGBO(45, 49, 66, 1),
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
-              Padding(
-                padding: const EdgeInsets.only(left: 50),
-                child: Divider(
-                  thickness: 0.5,
-                ),
-              ),
-              GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                          builder: (BuildContext context) =>
-                              Home_Activities_Screen()),
-                    );
-                  },
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                          width: 40, child: Image.asset('images/Brain2.png')),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                        width: 250,
-                        child: Text(
-                          'Know your child  ',
-                          style: TextStyle(
-                            fontSize: 24,
-                            color: Color.fromRGBO(45, 49, 66, 1),
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
-              Padding(
-                padding: const EdgeInsets.only(left: 50),
-                child: Divider(
-                  thickness: 0.5,
-                ),
-              ),
-              GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                          builder: (BuildContext context) => mood_screen()),
-                    );
-                  },
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                          width: 40,
                           child: Image.asset(
                             'images/Vector2.png',
                             color: Colors.black,
@@ -272,7 +236,8 @@ class moomly_Academy_Screen extends StatelessWidget {
                       Container(
                         width: 250,
                         child: Text(
-                          'Category y',
+                          'Category '
+                          'y',
                           style: TextStyle(
                             fontSize: 24,
                             color: Color.fromRGBO(45, 49, 66, 1),
@@ -302,7 +267,7 @@ class moomly_Academy_Screen extends StatelessWidget {
                       Container(
                           width: 40,
                           child: Image.asset(
-                            'images/icon-weight.png',
+                            'images/z.png',
                             color: Colors.black,
                           )),
                       SizedBox(
@@ -342,7 +307,7 @@ class moomly_Academy_Screen extends StatelessWidget {
                       Container(
                           width: 40,
                           child: Image.asset(
-                            'images/icon-weight.png',
+                            'images/sec.png',
                             color: Colors.black,
                           )),
                       SizedBox(

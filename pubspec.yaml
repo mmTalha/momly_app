@@ -88,6 +88,8 @@ flutter:
     - images/Path 3565.png
     - images/Group 13.png
     - images/List.png
+    - images/pressure.png
+    - images/Syringe.png
     - images/coveroutdoor.png
     - images/Avatar-Image.png
     - images/StarEyes.png
@@ -97,6 +99,8 @@ flutter:
     - images/Lock (Close).png
     - images/mood1.png
     - images/Photo1.png
+    - images/sec.png
+    - images/z.png
     - images/Photo2.png
     - images/Photo3.png
     - images/Photo4.png

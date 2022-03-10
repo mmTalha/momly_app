@@ -87,7 +87,7 @@ class _screen22State extends State<screen22> {
                   tilePadding: EdgeInsets.only(right: -4),
                   childrenPadding: EdgeInsets.only(left: 30),
                   trailing: SizedBox.shrink(),
-                  title: lisst().Lisst('assets/newtrac.png', "Pregnancy"),
+                  title: lisst().Lisst('assets/preg.png', "Pregnancy"),
                   children: [
                     InkWell(
                         onTap: () => Navigator.push(
@@ -166,7 +166,8 @@ class _screen22State extends State<screen22> {
                         context,
                         CupertinoPageRoute(
                             builder: (BuildContext context) => screen18())),
-                    child: lisst().Lisst('assets/track.png', "Membership")),
+                    child:
+                        lisst().Lisst('assets/membership.png', "Membership")),
               ],
             ),
           ),

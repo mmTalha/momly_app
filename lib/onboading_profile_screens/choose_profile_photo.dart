@@ -21,11 +21,37 @@ class _choose_profile_photoState extends State<choose_profile_photo> {
   Widget build(BuildContext context) {
     final iconsss = Provider.of<providermodel>(context);
     int _index = 0;
-    bool lodaing1 = false;
+    List product = [
+      {
+        "picture": "images/Emoji.png",
+        "color": Colors.white,
+      },
+      {
+        "picture": "images/Emoji.png",
+        "color": Colors.white,
+      },
+      {
+        "picture": "images/Emoji.png",
+        "color": Colors.white,
+      },
+      {
+        "picture": "images/Emoji.png",
+        "color": Colors.white,
+      },
+      {
+        "picture": "images/Emoji.png",
+        "color": Colors.white,
+      },
+      {
+        "picture": "images/Emoji.png",
+        "color": Colors.white,
+      },
+      {
+        "picture": "images/Emoji.png",
+        "color": Colors.white,
+      }
+    ];
 
-    final PageController _controller = PageController(viewportFraction: 0.3333);
-    int _focusedIndex = 0;
-    List colors = [Colors.white, Colors.white, Colors.white, Colors.white];
     final List images = [
       'images/Emoji.png',
       'images/Emoji4.png',
@@ -38,53 +64,11 @@ class _choose_profile_photoState extends State<choose_profile_photo> {
       'images/Emoji 02.png',
     ];
     List<int> data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    void _onItemFocus(int index) {
-      setState(() {
-        _focusedIndex = index;
-        if (_focusedIndex == index) {
-          Colors.red;
-        }
-      });
-    }
 
-    Widget _buildItemDetail() {
-      if (images.length > _focusedIndex)
-        return Container(
-          height: 150,
-          child: Text("index $_focusedIndex: ${data[_focusedIndex]}"),
-        );
+    int? _selectedIndex = 0;
 
-      return Container(
-        height: 150,
-        child: Text("No Data"),
-      );
-    }
-
-    Widget _buildItemList(BuildContext context, int index) {
-      if (index == data.length)
-        return Center(
-          child: CircularProgressIndicator(),
-        );
-      print(data[index]);
-      return Container(
-        width: 150,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              color: index == data[index] ? Colors.yellow : Colors.red,
-              width: 150,
-              height: 200,
-              child: Center(
-                child: Text(
-                  '${data[index]}',
-                  style: TextStyle(fontSize: 50.0, color: Colors.black),
-                ),
-              ),
-            ),
-          ],
-        ),
-      );
+    _onSelected(int index) {
+      setState(() => _selectedIndex = index);
     }
 
     return Scaffold(
@@ -116,16 +100,23 @@ class _choose_profile_photoState extends State<choose_profile_photo> {
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(
                     onTap: () {
-                      iconsss.iconss();
+                      _onSelected(index);
+                      print('update');
                     },
                     child: Container(
                       height: 100,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: iconsss.animation
-                              ? Color.fromRGBO(114, 101, 227, 1)
-                              : Colors.white),
-                      child: InkWell(child: Image.asset(images[index])),
+                        borderRadius: BorderRadius.circular(20),
+                        color: _selectedIndex != null && index == index
+                            ? Color.fromRGBO(114, 101, 227, 1)
+                            : Colors.white,
+                      ),
+                      child: InkWell(
+                          onTap: () {
+                            _onSelected(index);
+                            print('update');
+                          },
+                          child: Image.asset(images[index])),
                     ),
                   );
                 },
@@ -134,11 +125,10 @@ class _choose_profile_photoState extends State<choose_profile_photo> {
                 onReachEnd: () {
                   print('Done!');
                 },
-                itemCount: data.length,
+                itemCount: images.length,
                 onItemFocus: (int) {
-                  setState(() {
-                    print(int);
-                  });
+                  _index = int;
+                  print(_index);
                 },
               ),
             ),

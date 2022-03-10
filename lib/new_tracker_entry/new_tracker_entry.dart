@@ -234,9 +234,9 @@ class new_tracker_entry extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
-                          height: 30,
-                          width: 30,
-                          child: Image.asset('images/Brain2.png')),
+                          height: 27,
+                          width: 27,
+                          child: Image.asset('images/pressure.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -787,7 +787,7 @@ class new_tracker_entry extends StatelessWidget {
                       Container(
                           height: 30,
                           width: 30,
-                          child: Image.asset('images/Synchronize.png')),
+                          child: Image.asset('images/Syringe.png')),
                       SizedBox(
                         width: 10,
                       ),
