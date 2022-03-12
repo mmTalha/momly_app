@@ -11,10 +11,11 @@ class Empty_details_screens extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+    final GlobalKey<ScaffoldState> _scaffoldKey =
+        new GlobalKey<ScaffoldState>();
 
     return Scaffold(
-      key:_scaffoldKey ,
+      key: _scaffoldKey,
       appBar: CupertinoNavigationBar(
         leading: IconButton(
           icon: Icon(CupertinoIcons.back),
@@ -29,91 +30,93 @@ class Empty_details_screens extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Center(
-              child: Container(
-                child: Image.asset('images/Notification.png'),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 28.0),
+          child: Column(
+            children: [
+              Center(
+                child: Container(
+                  child: Image.asset('images/Notification.png'),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                InkWell(
-                   onTap: (){
-                     modelsheet().filterevents(context);
-                   },
-                  child: Container(
-                    margin: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        color: Color.fromRGBO(244, 246, 250, 1),
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    height: 45,
-                    width: 150,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Everything',
-                          textAlign: TextAlign.center,
-                          softWrap: true,
-                          style: TextStyle(
-                              color: Color.fromRGBO(156, 158, 185, 1),
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Icon(
-                          Icons.arrow_drop_down_outlined,
-                          color: Color.fromRGBO(156, 158, 185, 1),
-                        )
-                      ],
+              SizedBox(
+                height: 15,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      modelsheet().filterevents(context);
+                    },
+                    child: Container(
+                      margin: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(244, 246, 250, 1),
+                          borderRadius: BorderRadius.all(Radius.circular(10))),
+                      height: 45,
+                      width: 150,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Everything',
+                            textAlign: TextAlign.center,
+                            softWrap: true,
+                            style: TextStyle(
+                                color: Color.fromRGBO(156, 158, 185, 1),
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Icon(
+                            Icons.arrow_drop_down_outlined,
+                            color: Color.fromRGBO(156, 158, 185, 1),
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                InkWell(
-                  onTap: (){
-                    modelsheet().choosedaterange(context);
-                  },
-                  child: Container(
-                    margin: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        color: Color.fromRGBO(244, 246, 250, 1),
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    height: 45,
-                    width: 150,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'This Month',
-                          textAlign: TextAlign.center,
-                          softWrap: true,
-                          style: TextStyle(
-                              color: Color.fromRGBO(156, 158, 185, 1),
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Icon(
-                          Icons.arrow_drop_down_outlined,
-                          color: Color.fromRGBO(156, 158, 185, 1),
-                        )
-                      ],
+                  InkWell(
+                    onTap: () {
+                      modelsheet().choosedaterange(context);
+                    },
+                    child: Container(
+                      margin: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(244, 246, 250, 1),
+                          borderRadius: BorderRadius.all(Radius.circular(10))),
+                      height: 45,
+                      width: 150,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'This Month',
+                            textAlign: TextAlign.center,
+                            softWrap: true,
+                            style: TextStyle(
+                                color: Color.fromRGBO(156, 158, 185, 1),
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Icon(
+                            Icons.arrow_drop_down_outlined,
+                            color: Color.fromRGBO(156, 158, 185, 1),
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 25,
-            ),
-            Container(
-                 height: MediaQuery.of(context).size.height,
+                ],
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Container(
+                height: 500,
                 width: MediaQuery.of(context).size.width,
                 color: Colors.transparent,
                 child: new Container(
@@ -125,8 +128,6 @@ class Empty_details_screens extends StatelessWidget {
                         topRight: const Radius.circular(40.0),
                       )),
                   child: Column(
-
-
                     children: [
                       Image.asset('images/Lock (Close).png'),
                       SizedBox(
@@ -146,7 +147,6 @@ class Empty_details_screens extends StatelessWidget {
                       ),
                       Text(
                         'You do not have a tracker entry matching with the given filters. ',
-
                         textAlign: TextAlign.center,
                         softWrap: true,
                         style: TextStyle(
@@ -159,7 +159,6 @@ class Empty_details_screens extends StatelessWidget {
                       ),
                       Text(
                         'Tap the button below to create a new tracker entry.',
-
                         textAlign: TextAlign.center,
                         softWrap: true,
                         style: TextStyle(
@@ -168,28 +167,25 @@ class Empty_details_screens extends StatelessWidget {
                             fontWeight: FontWeight.w400),
                       ),
                       SizedBox(
-                        height: 40,
+                        height: 100,
                       ),
                       Align(
-
-                        child: buttons().largebuttons('Create New Tracker Entry', () {
-
+                        child: buttons()
+                            .largebuttons('Create New Tracker Entry', () {
                           Navigator.push(
                             context,
                             CupertinoPageRoute(
                                 builder: (BuildContext context) =>
                                     mood_details()),
                           );
-
                         }),
                       ),
                     ],
                   ),
                 ),
-
-            )
-
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );

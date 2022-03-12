@@ -144,14 +144,24 @@ class appointments_screens extends StatelessWidget {
                                       color: Color.fromRGBO(114, 101, 227, 1),
                                       fontWeight: FontWeight.w600),
                                 ),
-                                dashboard_Widgets().doctorcard(
-                                    'images/prof_deniz.png',
+                                widgets_appointmentscreen().doctorcard(
+                                    Container(
+                                        height: 25,
+                                        width: 30,
+                                        child: Image.asset('assets/dorr.png')),
                                     'Prof. Dr. Deniz Konya',
                                     'Neurosurgery'),
-                                dashboard_Widgets().doctorcard(
-                                    'images/Calendar.png',
-                                    'Thursday, 6 Feb 2020',
-                                    '6:30 PM - 7:30 PM'),
+                                widgets_appointmentscreen().doctorcard(
+                                  Container(
+                                      height: 25,
+                                      width: 30,
+                                      child: Icon(Icons.calendar_today)),
+                                  'Thursday, 6 Feb 2020',
+                                  '6:30 PM - 7:30 PM',
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
                                 Center(
                                   child: Container(
                                     width: 180,
@@ -204,30 +214,32 @@ class appointments_screens extends StatelessWidget {
                                     Container(
                                         height: 25,
                                         width: 30,
-                                        child: Image.asset(
-                                            'images/prof_deniz.png')),
+                                        child: Image.asset('assets/dorr.png')),
                                     'Prof. Dr. Deniz Konya',
                                     'Neurosurgery'),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 widgets_appointmentscreen().doctorcard(
-                                    Container(
-                                        height: 25,
-                                        width: 30,
-                                        child: Icon(Icons.calendar_today)),
-                                    '6:30 PM - 7:30 PM',
-                                    'Thursday, 6 Feb 2020'),
+                                  Container(
+                                      height: 25,
+                                      width: 30,
+                                      child: Icon(Icons.calendar_today)),
+                                  'Thursday, 6 Feb 2020',
+                                  '6:30 PM - 7:30 PM',
+                                ),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 widgets_appointmentscreen().doctorcard(
-                                    Container(
-                                        height: 25,
-                                        width: 30,
-                                        child: Icon(Icons.location_on)),
-                                    '110 The Embarcadero, San Fransisco',
-                                    'Commonwealth Club'),
+                                  Container(
+                                      height: 25,
+                                      width: 30,
+                                      child: Icon(Icons.location_on)),
+                                  'Commonwealth Club',
+                                  '110 The Embarcadero, San Fransisco',
+                                ),
+                                SizedBox(height: 11),
                                 Center(
                                   child: Container(
                                     width: 180,
@@ -258,7 +270,7 @@ class appointments_screens extends StatelessWidget {
                             padding: EdgeInsets.only(
                                 left: 10, right: 10, top: 30, bottom: 15),
                             width: 325,
-                            height: 250,
+                            height: 210,
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius:
@@ -267,7 +279,7 @@ class appointments_screens extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'CLINIC APPOINTMENT',
+                                  'Second Opinion',
                                   style: TextStyle(
                                       fontSize: 12,
                                       color: Color.fromRGBO(114, 101, 227, 1),
@@ -280,30 +292,20 @@ class appointments_screens extends StatelessWidget {
                                     Container(
                                         height: 25,
                                         width: 30,
-                                        child: Image.asset(
-                                            'images/prof_deniz.png')),
+                                        child: Image.asset('assets/dorr.png')),
                                     'Prof. Dr. Deniz Konya',
                                     'Neurosurgery'),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 widgets_appointmentscreen().doctorcard(
-                                    Container(
-                                        height: 25,
-                                        width: 30,
-                                        child: Icon(Icons.calendar_today)),
-                                    '6:30 PM - 7:30 PM',
-                                    'Thursday, 6 Feb 2020'),
-                                SizedBox(
-                                  height: 10,
+                                  Container(
+                                      height: 25,
+                                      width: 30,
+                                      child: Icon(Icons.calendar_today)),
+                                  'Thursday, 6 Feb 2020',
+                                  '6:30 PM - 7:30 PM',
                                 ),
-                                widgets_appointmentscreen().doctorcard(
-                                    Container(
-                                        height: 25,
-                                        width: 30,
-                                        child: Icon(Icons.location_on)),
-                                    '110 The Embarcadero, San Fransisco',
-                                    'Commonwealth Club'),
                                 SizedBox(
                                   height: 10,
                                 ),

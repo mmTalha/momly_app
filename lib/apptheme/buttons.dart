@@ -38,24 +38,53 @@ class buttons {
   }
 
   Widget largebuttons(text, VoidCallback ontap) {
-    return Container(
-      width: 230,
-      height: 50,
-      child: CupertinoButton(
-        padding: EdgeInsets.all(10),
-        minSize: 2.0,
-        onPressed: ontap,
-        child: Text(
-          text,
-          style: TextStyle(
-              fontFamily: 'Roboto',
-              color: Colors.white,
-              fontWeight: FontWeight.w700),
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10),
+      child: Container(
+        width: double.infinity,
+        height: 60,
+        child: CupertinoButton(
+          padding: EdgeInsets.all(10),
+          minSize: 2.0,
+          onPressed: ontap,
+          child: Text(
+            text,
+            style: TextStyle(
+                fontFamily: 'Roboto',
+                color: Colors.white,
+                fontWeight: FontWeight.w700),
+          ),
+          color: Color.fromRGBO(114, 101, 227, 1),
+          disabledColor: Colors.grey,
+          pressedOpacity: 0.6,
+          borderRadius: BorderRadius.all(Radius.circular(15.0)),
         ),
-        color: Color.fromRGBO(114, 101, 227, 1),
-        disabledColor: Colors.grey,
-        pressedOpacity: 0.6,
-        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+      ),
+    );
+  }
+
+  Widget momlybuttons(text, VoidCallback ontap) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 60, right: 60),
+      child: Container(
+        width: double.infinity,
+        height: 60,
+        child: CupertinoButton(
+          padding: EdgeInsets.all(10),
+          minSize: 2.0,
+          onPressed: ontap,
+          child: Text(
+            text,
+            style: TextStyle(
+                fontFamily: 'Roboto',
+                color: Colors.white,
+                fontWeight: FontWeight.w700),
+          ),
+          color: Color.fromRGBO(114, 101, 227, 1),
+          disabledColor: Colors.grey,
+          pressedOpacity: 0.6,
+          borderRadius: BorderRadius.all(Radius.circular(15.0)),
+        ),
       ),
     );
   }

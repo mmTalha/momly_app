@@ -1,9 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:momly_app/apptheme/buttons.dart';
 import 'package:momly_app/apptheme/colortheme.dart';
-
-import 'enter_your_date_of_birth_screen.dart';
 
 class Enter_Your_name_screen extends StatelessWidget {
   const Enter_Your_name_screen({Key? key, this.buttons}) : super(key: key);
@@ -91,7 +87,7 @@ class Enter_Your_name_screen extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  buttons,
+                  buttons
                 ],
               ),
               Padding(

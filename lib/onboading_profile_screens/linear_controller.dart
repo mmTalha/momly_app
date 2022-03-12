@@ -98,7 +98,7 @@ class _LinearProgressPageIndicatorDemoState
           controller: _pageController,
           children: [
             Enter_Your_name_screen(
-              buttons: buttons().largebuttons('Continue', () {
+              buttons: buttons().momlybuttons('Continue', () {
                 _pageController.nextPage(
                   duration: Duration(milliseconds: 50),
                   curve: Curves.easeIn,
@@ -106,7 +106,7 @@ class _LinearProgressPageIndicatorDemoState
               }),
             ),
             date_of_birth_screen(
-              buttons: buttons().largebuttons('Continue', () {
+              buttons: buttons().momlybuttons('Continue', () {
                 _pageController.nextPage(
                   duration: Duration(milliseconds: 50),
                   curve: Curves.easeIn,
@@ -114,7 +114,7 @@ class _LinearProgressPageIndicatorDemoState
               }),
             ),
             choose_your_gender(
-              buttons: buttons().largebuttons('Continue', () {
+              buttons: buttons().momlybuttons('Continue', () {
                 _pageController.nextPage(
                   duration: Duration(milliseconds: 50),
                   curve: Curves.easeIn,
@@ -122,7 +122,7 @@ class _LinearProgressPageIndicatorDemoState
               }),
             ),
             choose_profile_photo(
-              buttons: buttons().largebuttons('Continue', () {
+              buttons: buttons().momlybuttons('Continue', () {
                 _pageController.nextPage(
                   duration: Duration(milliseconds: 50),
                   curve: Curves.easeIn,
@@ -130,7 +130,7 @@ class _LinearProgressPageIndicatorDemoState
               }),
             ),
             weight(
-              buttons: buttons().largebuttons('Continue', () {
+              buttons: buttons().momlybuttons('Continue', () {
                 _pageController.nextPage(
                   duration: Duration(milliseconds: 50),
                   curve: Curves.easeIn,
@@ -138,7 +138,7 @@ class _LinearProgressPageIndicatorDemoState
               }),
             ),
             height_screen(
-              buttons: buttons().largebuttons('Continue', () {
+              buttons: buttons().momlybuttons('Continue', () {
                 _pageController.nextPage(
                   duration: Duration(milliseconds: 50),
                   curve: Curves.easeIn,
@@ -146,7 +146,7 @@ class _LinearProgressPageIndicatorDemoState
               }),
             ),
             Notifications_screens(
-                buttons: buttons().largebuttons('Allow', () {
+                buttons: buttons().momlybuttons('Allow', () {
               Navigator.push(
                   context,
                   CupertinoPageRoute(

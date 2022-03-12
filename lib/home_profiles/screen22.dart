@@ -168,6 +168,20 @@ class _screen22State extends State<screen22> {
                             builder: (BuildContext context) => screen18())),
                     child:
                         lisst().Lisst('assets/membership.png', "Membership")),
+                Padding(
+                  padding: const EdgeInsets.only(left: 40, top: 40),
+                  child: Text(
+                    "Logout",
+                    style: TextStyle(fontSize: 24, color: Color(0xff707070)),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 50, top: 10, bottom: 10),
+                  child: Text(
+                    "Terms   •   Privacy   •   momly.org",
+                    style: TextStyle(fontSize: 14, color: Colors.black),
+                  ),
+                )
               ],
             ),
           ),

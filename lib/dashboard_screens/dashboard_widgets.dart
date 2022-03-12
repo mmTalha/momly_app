@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class dashboard_Widgets {
   Widget moodwidget(ontap, BuildContext context, mood, fellings, description,
-      images, emojies, time) {
+      images, emojies, time, imagesa) {
     return InkWell(
       onTap: ontap,
       child: Center(
@@ -21,11 +21,15 @@ class dashboard_Widgets {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(mood,
-                      style: TextStyle(
-                          fontSize: 14,
-                          color: Color.fromRGBO(114, 101, 227, 1),
-                          fontWeight: FontWeight.w400)),
+                  Row(
+                    children: [
+                      Text(mood,
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: Color.fromRGBO(114, 101, 227, 1),
+                              fontWeight: FontWeight.w400)),
+                    ],
+                  ),
                   Text(time,
                       style: TextStyle(
                           fontSize: 12,
@@ -36,7 +40,10 @@ class dashboard_Widgets {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(emojies),
+                  Container(width: 25, height: 25, child: Image.asset(emojies)),
+                  SizedBox(
+                    width: 10,
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -59,7 +66,7 @@ class dashboard_Widgets {
                           SizedBox(
                             width: 5,
                           ),
-                          Image.asset(images),
+                          Image.asset(imagesa),
                         ],
                       )
                     ],

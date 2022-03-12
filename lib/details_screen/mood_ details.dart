@@ -131,164 +131,454 @@ class mood_details extends StatelessWidget {
                         Image.asset('images/listicon1.png'),
                       ],
                     ),
-                    for (var i = 0; i < 3; i++)
-                      Center(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          padding:
-                              EdgeInsets.only(left: 10, right: 10, top: 15),
-                          height: 142,
-                          width: 360,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.white,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text('MOOD',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          color:
-                                              Color.fromRGBO(114, 101, 227, 1),
-                                          fontWeight: FontWeight.w400)),
-                                  Text('1h ago',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          color:
-                                              Color.fromRGBO(156, 158, 185, 1),
-                                          fontWeight: FontWeight.w400)),
-                                ],
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Image.asset('images/StarEyes.png'),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text('I feel Great',
-                                          style: TextStyle(
-                                              fontSize: 18,
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.w600)),
-                                      SizedBox(
-                                        height: 30,
-                                        child: Text(
-                                            'You do not setup a family member profile yet.\nTap the following button to setup one. ',
-                                            style: TextStyle(
-                                                fontSize: 11,
-                                                color: Color.fromRGBO(
-                                                    76, 89, 128, 1),
-                                                fontWeight: FontWeight.w400)),
-                                      ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Image.asset(
-                                              'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
-                                          SizedBox(
-                                            width: 5,
-                                          ),
-                                          Image.asset(
-                                              'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                    Center(
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
+                        height: 142,
+                        width: 360,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
                         ),
-                      ),
-                    Text('Yesterday',
-                        style: TextStyle(
-                            fontSize: 24,
-                            color: Color.fromRGBO(76, 89, 128, 1),
-                            fontWeight: FontWeight.w400)),
-                    for (var i = 0; i < 2; i++)
-                      Center(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          padding:
-                              EdgeInsets.only(left: 10, right: 10, top: 15),
-                          height: 142,
-                          width: 360,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.white,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text('MOOD',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          color:
-                                              Color.fromRGBO(114, 101, 227, 1),
-                                          fontWeight: FontWeight.w400)),
-                                  Text('1h ago',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          color:
-                                              Color.fromRGBO(156, 158, 185, 1),
-                                          fontWeight: FontWeight.w400)),
-                                ],
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Image.asset('images/StarEyes.png'),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text('I feel Great',
-                                          style: TextStyle(
-                                              fontSize: 18,
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.w600)),
-                                      Text(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text('MOOD',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color.fromRGBO(114, 101, 227, 1),
+                                        fontWeight: FontWeight.w400)),
+                                Text('1h ago',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: Color.fromRGBO(156, 158, 185, 1),
+                                        fontWeight: FontWeight.w400)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset('images/StarEyes.png'),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('I feel Great',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w600)),
+                                    SizedBox(
+                                      height: 30,
+                                      child: Text(
                                           'You do not setup a family member profile yet.\nTap the following button to setup one. ',
                                           style: TextStyle(
                                               fontSize: 11,
                                               color: Color.fromRGBO(
                                                   76, 89, 128, 1),
                                               fontWeight: FontWeight.w400)),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Image.asset(
-                                              'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
-                                          SizedBox(
-                                            width: 5,
-                                          ),
-                                          Image.asset(
-                                              'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Image.asset(
+                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Image.asset('assets/cut.png'),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
+                    ),
+                    Center(
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
+                        height: 142,
+                        width: 360,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text('HEALTH',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color.fromRGBO(114, 101, 227, 1),
+                                        fontWeight: FontWeight.w400)),
+                                Text('8h ago',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: Color.fromRGBO(156, 158, 185, 1),
+                                        fontWeight: FontWeight.w400)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset('images/Photo1.png'),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Headche⭐⭐⭐⭐⭐',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w600)),
+                                    SizedBox(
+                                      height: 30,
+                                      child: Text(
+                                          'You do not setup a family member profile yet.\nTap the following button to setup one. ',
+                                          style: TextStyle(
+                                              fontSize: 11,
+                                              color: Color.fromRGBO(
+                                                  76, 89, 128, 1),
+                                              fontWeight: FontWeight.w400)),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Image.asset(
+                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Image.asset('assets/cut.png'),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Text('Yesterday',
+                        style: TextStyle(
+                            fontSize: 24,
+                            color: Color.fromRGBO(76, 89, 128, 1),
+                            fontWeight: FontWeight.w400)),
+                    Center(
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
+                        height: 142,
+                        width: 360,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text('Weight',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color.fromRGBO(114, 101, 227, 1),
+                                        fontWeight: FontWeight.w400)),
+                                Text('1d ago',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: Color.fromRGBO(156, 158, 185, 1),
+                                        fontWeight: FontWeight.w400)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset(
+                                  'images/icon-weight.png',
+                                  color: Color(0xff8FACFF),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('42.8 kg',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w600)),
+                                    Text('+1.2kg since your last measurement.',
+                                        style: TextStyle(
+                                            fontSize: 11,
+                                            color:
+                                                Color.fromRGBO(76, 89, 128, 1),
+                                            fontWeight: FontWeight.w400)),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Image.asset(
+                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Image.asset('assets/cut.png'),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
+                        height: 142,
+                        width: 360,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text('Water',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color.fromRGBO(114, 101, 227, 1),
+                                        fontWeight: FontWeight.w400)),
+                                Text('1d ago',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: Color.fromRGBO(156, 158, 185, 1),
+                                        fontWeight: FontWeight.w400)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("💧",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                    )),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('1x Glass (200ml)',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w600)),
+                                    Text(
+                                        "You reached your daily hydration target.",
+                                        style: TextStyle(
+                                            fontSize: 11,
+                                            color:
+                                                Color.fromRGBO(76, 89, 128, 1),
+                                            fontWeight: FontWeight.w400)),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Image.asset(
+                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Image.asset('assets/cut.png'),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
+                        height: 142,
+                        width: 360,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text('Nutrition',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color.fromRGBO(114, 101, 227, 1),
+                                        fontWeight: FontWeight.w400)),
+                                Text('1d ago',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: Color.fromRGBO(156, 158, 185, 1),
+                                        fontWeight: FontWeight.w400)),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset(
+                                  'images/nutrition.png',
+                                  color: Colors.grey,
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                        'Salad with wheat and white\negg breakfast',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w600)),
+                                    Text('345 kcal',
+                                        style: TextStyle(
+                                            fontSize: 11,
+                                            color:
+                                                Color.fromRGBO(76, 89, 128, 1),
+                                            fontWeight: FontWeight.w400)),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Image.asset(
+                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Image.asset('assets/cut.png'),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
+                        height: 142,
+                        width: 360,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text('Medication',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color.fromRGBO(114, 101, 227, 1),
+                                        fontWeight: FontWeight.w400)),
+                                Text('1d ago',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: Color.fromRGBO(156, 158, 185, 1),
+                                        fontWeight: FontWeight.w400)),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset('images/Pill.png',
+                                    color: Colors.grey),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Paracetamol',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w600)),
+                                    Text('200mg. Daily intake: 800mg',
+                                        style: TextStyle(
+                                            fontSize: 11,
+                                            color:
+                                                Color.fromRGBO(76, 89, 128, 1),
+                                            fontWeight: FontWeight.w400)),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Image.asset(
+                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Image.asset('assets/cut.png'),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

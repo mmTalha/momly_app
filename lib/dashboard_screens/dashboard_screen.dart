@@ -112,254 +112,286 @@ class dashboard_screens extends StatelessWidget {
                 ),
                 Container(
                   padding: EdgeInsets.only(left: 12, right: 12),
-                  child: GridView.extent(
-                    shrinkWrap: true,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10,
-                    maxCrossAxisExtent: 200.0,
-                    childAspectRatio: 4 / 3,
-                    children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(140, 128, 248, 1),
-                            borderRadius: BorderRadius.circular(15)),
-                        height: 300,
-                        padding: const EdgeInsets.all(5),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('MOOD',
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold)),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Center(child: Image.asset('images/mood.png')),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text('Happy',
-                                style: TextStyle(
-                                    fontSize: 24,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold)),
-                            Text('3 days ago',
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white70,
-                                    fontWeight: FontWeight.w400)),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(175, 142, 255, 1),
-                            borderRadius: BorderRadius.circular(15)),
-                        height: 250,
-                        padding: const EdgeInsets.all(5),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('HEALTH',
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold)),
-                            SizedBox(
-                              height: 25,
-                            ),
-                            ListTile(
-                              contentPadding: EdgeInsets.all(0),
-                              title: Row(
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Color.fromRGBO(140, 128, 248, 1),
+                                borderRadius: BorderRadius.circular(15)),
+                            height: 200,
+                            width: MediaQuery.of(context).size.width * 1.82 / 4,
+                            padding: const EdgeInsets.all(5),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 11),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text(
-                                    '7 ',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.bold),
+                                  Text('MOOD',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    height: 5,
                                   ),
-                                  Text(
-                                    'symptoms ',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w400),
+                                  Center(child: Image.asset('images/mood.png')),
+                                  SizedBox(
+                                    height: 5,
                                   ),
+                                  Text('Happy',
+                                      style: TextStyle(
+                                          fontSize: 24,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  Text('3 days ago',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white70,
+                                          fontWeight: FontWeight.w400)),
                                 ],
                               ),
-                              trailing: Image.asset(
-                                'images/Path 1342.png',
-                                height: 24,
-                              ),
-                              subtitle: Text('7hrs ago',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.white70,
-                                      fontWeight: FontWeight.w400)),
                             ),
-                          ],
-                        ),
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Color.fromRGBO(175, 142, 255, 1),
+                                    borderRadius: BorderRadius.circular(15)),
+                                height: 96,
+                                width: MediaQuery.of(context).size.width *
+                                    1.82 /
+                                    4,
+                                padding: const EdgeInsets.all(5),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text('HEALTH',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold)),
+                                    ListTile(
+                                      contentPadding: EdgeInsets.all(0),
+                                      title: Row(
+                                        children: [
+                                          Text(
+                                            '7 ',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          Text(
+                                            'symptoms ',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                        ],
+                                      ),
+                                      trailing: Image.asset(
+                                        'images/Path 1342.png',
+                                        height: 24,
+                                      ),
+                                      subtitle: Text('7hrs ago',
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.white70,
+                                              fontWeight: FontWeight.w400)),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Color.fromRGBO(31, 135, 254, 1),
+                                    borderRadius: BorderRadius.circular(15)),
+                                height: 96,
+                                width: MediaQuery.of(context).size.width *
+                                    1.82 /
+                                    4,
+                                padding: const EdgeInsets.all(5),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text('WATER',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold)),
+                                    ListTile(
+                                      contentPadding: EdgeInsets.all(0),
+                                      title: Text(
+                                        'Tap here to add',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600),
+                                      ),
+                                      trailing: Image.asset(
+                                        'images/glass.png',
+                                        height: 24,
+                                      ),
+                                      subtitle: Text('Never',
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.white70,
+                                              fontWeight: FontWeight.w400)),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(200, 128, 248, 1),
-                            borderRadius: BorderRadius.circular(15)),
-                        height: 250,
-                        padding: const EdgeInsets.all(5),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Blood PRESSURE',
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold)),
-                            SizedBox(
-                              height: 25,
-                            ),
-                            ListTile(
-                              contentPadding: EdgeInsets.all(0),
-                              title: Text(
-                                '12/7mmHg ',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              trailing: Image.asset(
-                                'images/1.png',
-                                height: 24,
-                              ),
-                              subtitle: Text('7hrs ago',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.white70,
-                                      fontWeight: FontWeight.w400)),
-                            ),
-                          ],
-                        ),
+                      SizedBox(
+                        height: 5,
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(31, 135, 254, 1),
-                            borderRadius: BorderRadius.circular(15)),
-                        height: 250,
-                        padding: const EdgeInsets.all(5),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('WATER',
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold)),
-                            SizedBox(
-                              height: 25,
-                            ),
-                            ListTile(
-                              contentPadding: EdgeInsets.all(0),
-                              title: Text(
-                                'Tap here to add',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Color.fromRGBO(200, 128, 248, 1),
+                                    borderRadius: BorderRadius.circular(15)),
+                                height: 96,
+                                width: MediaQuery.of(context).size.width *
+                                    1.82 /
+                                    4,
+                                padding: const EdgeInsets.all(5),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text('Blood PRESSURE',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold)),
+                                    ListTile(
+                                      contentPadding: EdgeInsets.all(0),
+                                      title: Text(
+                                        '12/7mmHg ',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      trailing: Image.asset(
+                                        'images/1.png',
+                                        height: 24,
+                                      ),
+                                      subtitle: Text('7hrs ago',
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.white70,
+                                              fontWeight: FontWeight.w400)),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              trailing: Image.asset(
-                                'images/glass.png',
-                                height: 24,
+                              SizedBox(
+                                height: 5,
                               ),
-                              subtitle: Text('Never',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.white70,
-                                      fontWeight: FontWeight.w400)),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(128, 176, 248, 1),
-                            borderRadius: BorderRadius.circular(15)),
-                        height: 250,
-                        padding: const EdgeInsets.all(5),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('PULSE',
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold)),
-                            SizedBox(
-                              height: 25,
-                            ),
-                            ListTile(
-                              contentPadding: EdgeInsets.all(0),
-                              title: Text(
-                                '71bpm ',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold),
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Color.fromRGBO(128, 176, 248, 1),
+                                    borderRadius: BorderRadius.circular(15)),
+                                height: 96,
+                                width: MediaQuery.of(context).size.width *
+                                    1.82 /
+                                    4,
+                                padding: const EdgeInsets.all(5),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text('PULSE',
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold)),
+                                    ListTile(
+                                      contentPadding: EdgeInsets.all(0),
+                                      title: Text(
+                                        '71bpm ',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      trailing: Image.asset(
+                                        'images/Path 3565.png',
+                                        height: 24,
+                                      ),
+                                      subtitle: Text('3mins ago',
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.white70,
+                                              fontWeight: FontWeight.w400)),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              trailing: Image.asset(
-                                'images/Path 3565.png',
-                                height: 24,
+                            ],
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Color.fromRGBO(76, 89, 128, 1),
+                                borderRadius: BorderRadius.circular(15)),
+                            height: 200,
+                            width: MediaQuery.of(context).size.width * 1.82 / 4,
+                            padding: const EdgeInsets.all(4),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 11),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('WEIGHT',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    height: 2,
+                                  ),
+                                  Center(
+                                      child:
+                                          Image.asset('images/Group 13.png')),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text('128lbs',
+                                      style: TextStyle(
+                                          fontSize: 24,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                  Text('21sec ago',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white70,
+                                          fontWeight: FontWeight.w400)),
+                                ],
                               ),
-                              subtitle: Text('3mins ago',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.white70,
-                                      fontWeight: FontWeight.w400)),
                             ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(76, 89, 128, 1),
-                            borderRadius: BorderRadius.circular(15)),
-                        height: 250,
-                        padding: const EdgeInsets.all(4),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('WEIGHT',
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold)),
-                            SizedBox(
-                              height: 2,
-                            ),
-                            Center(child: Image.asset('images/Group 13.png')),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text('128lbs',
-                                style: TextStyle(
-                                    fontSize: 24,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold)),
-                            Text('21sec ago',
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white70,
-                                    fontWeight: FontWeight.w400)),
-                          ],
-                        ),
-                      ),
+                          ),
+                        ],
+                      )
                     ],
                   ),
                 ),
@@ -441,7 +473,7 @@ class dashboard_screens extends StatelessWidget {
                                                     CrossAxisAlignment.center,
                                                 children: [
                                                   Image.asset(
-                                                    'images/Avatar-Image.png',
+                                                    'images/Avatar.png',
                                                     height: 24,
                                                   ),
                                                   SizedBox(
@@ -498,8 +530,8 @@ class dashboard_screens extends StatelessWidget {
                         ),
                         dashboard_Widgets().doctorcard('images/prof_deniz.png',
                             'Prof. Dr. Deniz Konya', 'Neurosurgery'),
-                        dashboard_Widgets().doctorcard('images/prof_deniz.png',
-                            'Prof. Dr. Deniz Konya', 'Neurosurgery'),
+                        dashboard_Widgets().doctorcard('assets/girl.png',
+                            'Prof. Dr. Selim İsbira', 'Cardiovasvular Surgery'),
                         Center(
                           child: buttons().largebuttons('See all Doctors', () {
                             Navigator.push(
@@ -545,39 +577,45 @@ class dashboard_screens extends StatelessWidget {
                           SizedBox(
                             height: 15,
                           ),
-                          dashboard_Widgets().moodwidget(() {
-                            Navigator.push(
-                              context,
-                              CupertinoPageRoute(
-                                  builder: (BuildContext context) =>
-                                      Empty_details_screens()),
-                            );
-                          },
-                              context,
-                              'MOOD',
-                              'I feel Great',
-                              'You do not setup a family member profile yet.\nTap the following button to setup one.',
-                              'images/5bb48b07fa6e3840bb3afa2bc821b882.png',
-                              'images/StarEyes.png',
-                              '1h ago'),
+                          dashboard_Widgets().moodwidget(
+                            () {
+                              Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Empty_details_screens()),
+                              );
+                            },
+                            context,
+                            'MOOD',
+                            'I feel Great',
+                            'You do not setup a family member profile yet.\nTap the following button to setup one.',
+                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png',
+                            'images/StarEyes.png',
+                            '1h ago',
+                            'assets/cut.png',
+                          ),
                           SizedBox(
                             height: 15,
                           ),
-                          dashboard_Widgets().moodwidget(() {
-                            Navigator.push(
-                              context,
-                              CupertinoPageRoute(
-                                  builder: (BuildContext context) =>
-                                      Empty_details_screens()),
-                            );
-                          },
-                              context,
-                              'HEALTH',
-                              'Headche ',
-                              'You do not setup a family member profile yet.\nTap the following button to setup one.',
-                              'images/5bb48b07fa6e3840bb3afa2bc821b882.png',
-                              'images/StarEyes.png',
-                              '8h ago'),
+                          dashboard_Widgets().moodwidget(
+                            () {
+                              Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Empty_details_screens()),
+                              );
+                            },
+                            context,
+                            'HEALTH',
+                            'Headche⭐⭐⭐⭐⭐',
+                            'You do not setup a family member profile yet.\nTap the following button to setup one.',
+                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png',
+                            'images/Photo1.png',
+                            '8h ago',
+                            'assets/cut.png',
+                          ),
                           SizedBox(
                             height: 15,
                           ),

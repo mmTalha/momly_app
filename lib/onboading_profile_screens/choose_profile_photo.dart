@@ -21,6 +21,7 @@ class _choose_profile_photoState extends State<choose_profile_photo> {
   Widget build(BuildContext context) {
     final iconsss = Provider.of<providermodel>(context);
     int _index = 0;
+    int _focusedIndex = 0;
     List product = [
       {
         "picture": "images/Emoji.png",
@@ -53,22 +54,22 @@ class _choose_profile_photoState extends State<choose_profile_photo> {
     ];
 
     final List images = [
+      'images/Emoji4.png',
       'images/Emoji.png',
       'images/Emoji4.png',
-      'images/Emoji 02.png',
+      'images/Emoji.png',
+      'images/ghost.png',
+      'images/Emoji4.png',
       'images/Emoji.png',
       'images/Emoji4.png',
-      'images/Emoji 02.png',
       'images/Emoji.png',
-      'images/Emoji4.png',
-      'images/Emoji 02.png',
     ];
     List<int> data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-    int? _selectedIndex = 0;
+    int selectedIndex = 0;
 
     _onSelected(int index) {
-      setState(() => _selectedIndex = index);
+      setState(() => selectedIndex = index);
     }
 
     return Scaffold(
@@ -91,49 +92,58 @@ class _choose_profile_photoState extends State<choose_profile_photo> {
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 15,
             ),
-            Container(
-              height: 100,
-              child: ScrollSnapList(
-                updateOnScroll: true,
-                itemBuilder: (BuildContext context, int index) {
-                  return GestureDetector(
-                    onTap: () {
-                      _onSelected(index);
-                      print('update');
+            Column(
+              children: [
+                Icon(Icons.arrow_drop_down,
+                    size: 35, color: Color.fromRGBO(114, 101, 227, 1)),
+                Container(
+                  height: 98,
+                  child: ScrollSnapList(
+                    updateOnScroll: true,
+                    itemBuilder: (BuildContext context, int index) {
+                      return GestureDetector(
+                        // onTap: () {
+                        //   _onSelected(index);
+                        //   print('update');
+                        // },
+                        child: Container(
+                          height: 110,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: selectedIndex != null && _index == index
+                                ? Color.fromRGBO(114, 101, 227, 1)
+                                : Colors.white,
+                          ),
+                          child: InkWell(
+                              // onTap: () {
+                              //   _onSelected(index);
+                              //   print('update');
+                              // },
+                              child: Image.asset(images[index])),
+                        ),
+                      );
                     },
-                    child: Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: _selectedIndex != null && index == index
-                            ? Color.fromRGBO(114, 101, 227, 1)
-                            : Colors.white,
-                      ),
-                      child: InkWell(
-                          onTap: () {
-                            _onSelected(index);
-                            print('update');
-                          },
-                          child: Image.asset(images[index])),
-                    ),
-                  );
-                },
-                itemSize: 100,
-                dynamicItemSize: true,
-                onReachEnd: () {
-                  print('Done!');
-                },
-                itemCount: images.length,
-                onItemFocus: (int) {
-                  _index = int;
-                  print(_index);
-                },
-              ),
+                    itemSize: 100,
+                    dynamicItemSize: true,
+                    onReachEnd: () {
+                      print('Done!');
+                    },
+                    itemCount: images.length,
+                    onItemFocus: (int) {
+                      // _focusedIndex = _index;
+                      _index = int;
+                      print(_index);
+                    },
+                  ),
+                ),
+                Icon(Icons.arrow_drop_up_outlined,
+                    size: 35, color: Color.fromRGBO(114, 101, 227, 1)),
+              ],
             ),
             SizedBox(
-              height: 40,
+              height: 15,
             ),
             Center(
               child: Text(
