@@ -17,7 +17,7 @@ class _screen18State extends State<screen18> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: CupertinoNavigationBar(
-         padding: EdgeInsetsDirectional.only(top: 30,),
+         padding: EdgeInsetsDirectional.only(top: 25  ,start: 10.0),
           leading: Icon(Icons.arrow_back_ios_outlined,size:21,color: Color(0xff4C5980)),
          automaticallyImplyLeading: false,
            border: Border(bottom: BorderSide(color: Colors.transparent)),
@@ -39,6 +39,7 @@ class _screen18State extends State<screen18> {
         
         ),
           ),
+          SizedBox(height: 20.0,),
           Text("Support Momly\nSupport the Community",style: TextStyle(fontSize: 24,color: Color(0xff2D3142)),textAlign: TextAlign.center,),
              SizedBox(height: 20,),
                 Padding(
@@ -58,7 +59,7 @@ class _screen18State extends State<screen18> {
                     ],
                   ),
                 ),
-                 
+                 SizedBox(height: 10.0,),
                   Padding(
                      padding: const EdgeInsets.only(left:13,right: 13,),
                     child: Column(
@@ -78,17 +79,17 @@ class _screen18State extends State<screen18> {
                                 child: supportmomly().stakeprice(context, "\$400", "\$4.99/month, billed yearly \$60")
                               ),
                               Positioned(
-                                right: 51,
+                                right: 25,top: 15,
                                 child: Container(
-                                  height: 45,
-                                  width: 100,
+                                  height: 34,
+                                  width: 91,
                                   decoration: BoxDecoration(
                                     color: Color(0xff8FACFF),
-                                              borderRadius: BorderRadius.all( Radius.circular(15.0)),
+                                              borderRadius: BorderRadius.all( Radius.circular(12.0)),
                                                  
                                               
                                             ),
-                                            child: Center(child: Text("SAVE 30%")),
+                                            child: Center(child: Text("SAVE 30%",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 12.0),)),
                                   
                                 ),
                               )
@@ -117,9 +118,9 @@ class _screen18State extends State<screen18> {
                                           mainAxisAlignment: MainAxisAlignment.center,
                                           children: [
                                             Text("Watch ad video",  style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
-                      SizedBox(height: 10,),
-                      Text("Watch an ad video (approx. 30 sec) to support Momly.",  style: TextStyle(color: Color(0xff4C5980),fontSize: 14,),),
-                      SizedBox(height: 10,),
+                                            SizedBox(height: 10,),
+                                            Text("Watch an ad video (approx. 30 sec) to support Momly.",  style: TextStyle(color: Color(0xff4C5980),fontSize: 14,),),
+                                            SizedBox(height: 10,),
                                           ],
                                         ),
                                       ),
@@ -129,24 +130,24 @@ class _screen18State extends State<screen18> {
                                  Text("Subscription billed as annual payment.\nRecurring billing. Cancel anytime.",  style: TextStyle(color: Color(0xff9C9EB9),fontSize: 12,),textAlign: TextAlign.center,),
                       SizedBox(height: 30,),
                       Padding(
-                        padding: const EdgeInsets.only(left: 80,right: 80),
+                        padding: const EdgeInsets.only(left: 75,right: 75),
                         child: Center(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                                Text("Term",  style: TextStyle(color: Color(0xff4C5980),fontSize: 17,)),
+                                Text("Term",  style: TextStyle(color: Color(0xff4C5980),fontSize: 14,)),
                                 Icon(
-  Icons.circle,
-  size: 5,
-  color: Color(0xff4C5980)
-),
-                                Text("Privacy",  style: TextStyle(color: Color(0xff4C5980),fontSize: 17,)),
+                                Icons.circle,
+                                size: 5,
+                                color: Color(0xff4C5980)
+                              ),
+                                Text("Privacy",  style: TextStyle(color: Color(0xff4C5980),fontSize: 14,)),
                                  Icon(
-  Icons.circle,
-  size: 5,
-  color: Color(0xff4C5980)
-),
-                                Text("momly.org",  style: TextStyle(color: Color(0xff4C5980),fontSize: 17,)),
+                                    Icons.circle,
+                                    size: 5,
+                                    color: Color(0xff4C5980)
+                                  ),
+                                Text("momly.org",  style: TextStyle(color: Color(0xff4C5980),fontSize: 14,)),
                             ],
                           ),
                         ),

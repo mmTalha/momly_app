@@ -21,10 +21,10 @@ class _screen21State extends State<screen21> {
           top: 30,
         ),
         leading: Icon(Icons.arrow_back_ios_outlined,
-            size: 21, color: Color(0xff4C5980)),
+            size: 24, color: Color(0xff4C5980)),
         automaticallyImplyLeading: false,
         border: Border(bottom: BorderSide(color: Colors.transparent)),
-          middle: Text("SIGN-IN REQUIRED",style: TextStyle(fontSize: 10),),
+          middle: Text("SIGN-IN REQUIRED",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500,letterSpacing: 1.5,),),
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
@@ -92,7 +92,7 @@ class _screen21State extends State<screen21> {
                                     screen22()),
           
                           );},
-                          child: signin().sign(Colors.black,"Sign in With Apple",Colors.white,16.0,FontWeight.bold,'assets/apple.png')),
+                          child: signin().sign(Color(0xff292929),"Sign in With Apple",Colors.white,16.0,FontWeight.bold,'assets/apple.png')),
                         
                          SizedBox(height: 200,),
                        

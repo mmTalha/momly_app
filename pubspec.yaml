@@ -47,6 +47,7 @@ dependencies:
   fl_chart: ^0.45.0
   flutter_rating_bar: ^4.0.0
   scroll_snap_list: ^0.8.4
+  syncfusion_flutter_datepicker: ^19.4.56
 
 
 

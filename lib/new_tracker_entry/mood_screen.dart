@@ -38,7 +38,7 @@ class mood_screen extends StatelessWidget {
         ),
         leading: Material(
           child: IconButton(
-            icon: Icon(CupertinoIcons.back),
+            icon: Icon(CupertinoIcons.back,color: Color(0xff4C5980),),
             onPressed: () => Navigator.pop(context),
             color: Colors.black,
             iconSize: 30,
@@ -119,8 +119,8 @@ class mood_screen extends StatelessWidget {
                             children: [
                               Center(
                                 child: Container(
-                                  width: 275,
-                                  height: 50,
+                                  width: 300,
+                                  height: 47,
                                   decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.all(
@@ -129,11 +129,13 @@ class mood_screen extends StatelessWidget {
                                     textAlign: TextAlign.start,
                                     keyboardType: TextInputType.phone,
                                     decoration: InputDecoration(
-                                        hintText: 'Choose a mood',
+                                        hintText: 'Choose a mood',contentPadding: EdgeInsets.only(left: 20,top: 10),
                                         hintStyle:
                                             TextStyle(color: Color(0xff9C9EB9)),
                                         suffixIcon: Icon(
-                                            Icons.arrow_drop_down_outlined),
+                                          Icons.expand_more_outlined,
+                                        size: 30,color: Color(0xff9C9EB9),
+                                        ),
                                         prefixStyle:
                                             TextStyle(color: Colors.grey),
                                         enabledBorder: OutlineInputBorder(
@@ -168,8 +170,8 @@ class mood_screen extends StatelessWidget {
                               ),
                               Center(
                                 child: Container(
-                                  width: 285,
-                                  height: 45,
+                                  width: 300,
+                                  height: 47,
                                   decoration: BoxDecoration(
                                       color: Color.fromRGBO(228, 223, 255, 1),
                                       borderRadius: BorderRadius.all(
@@ -228,8 +230,8 @@ class mood_screen extends StatelessWidget {
                               ),
                               Center(
                                 child: Container(
-                                  width: 275,
-                                  height: 110,
+                                  width: 325,
+                                  height: 118,
                                   decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.all(
@@ -237,7 +239,7 @@ class mood_screen extends StatelessWidget {
                                   child: TextField(
                                     maxLines: 5,
                                     decoration: InputDecoration(
-                                        hintText: 'Add notes or comments..',
+                                        hintText: '   Add notes or comments..',
                                         hintStyle:
                                             TextStyle(color: Color(0xff9C9EB9)),
                                         prefixStyle:
@@ -270,7 +272,7 @@ class mood_screen extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(
-                                height: 10,
+                                height: 20,
                               ),
                               Text(
                                 'Add Media',
@@ -288,11 +290,20 @@ class mood_screen extends StatelessWidget {
                                   SizedBox(
                                     width: 5,
                                   ),
-                                  Image.asset('images/cock.png'),
+                                  Container(height:58,width: 65,decoration: BoxDecoration(
+                                    image: DecorationImage(image: AssetImage('assets/duck2.png',),fit: BoxFit.fill),
+                                  ), ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Container(height:58,width: 65,decoration: BoxDecoration(
+                                    image: DecorationImage(image: AssetImage('assets/empty.png',),fit: BoxFit.fill),
+                                  ), ),
                                 ],
                               ),
                             ],
                           ),
+
                           Center(
                             child: buttons().largebuttons('Add Mood', () {
                               Navigator.push(

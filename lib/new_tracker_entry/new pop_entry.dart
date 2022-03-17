@@ -14,7 +14,7 @@ class new_pop_entry extends StatelessWidget {
           child: IconButton(
             icon: Icon(CupertinoIcons.back),
             onPressed: () => Navigator.pop(context),
-            color: Colors.black,
+            color: Color(0xff4C5980),
             iconSize: 30,
           ),
         ),
@@ -127,9 +127,10 @@ class new_pop_entry extends StatelessWidget {
                                         ),
                                       ),
                                       Icon(
-                                        Icons.arrow_drop_down,
-                                        color: Color.fromRGBO(228, 223, 255, 1),
+                                        Icons.expand_more_outlined,size: 30,color: Color(0xffE3E3E3),
                                       ),
+
+
                                     ],
                                   ),
                                 ),
@@ -175,9 +176,10 @@ class new_pop_entry extends StatelessWidget {
                                         ),
                                       ),
                                       Icon(
-                                        Icons.arrow_drop_down,
-                                        color: Color.fromRGBO(228, 223, 255, 1),
+                                        Icons.expand_more_outlined,size: 30,color: Color(0xffE3E3E3),
                                       ),
+
+
                                     ],
                                   ),
                                 ),
@@ -258,9 +260,9 @@ class new_pop_entry extends StatelessWidget {
                                   child: TextField(
                                     maxLines: 5,
                                     decoration: InputDecoration(
-                                        hintText: 'Add notes or comments..',
+                                        hintText: '  Add notes or comments..',
                                         hintStyle:
-                                            TextStyle(color: Color(0xff9C9EB9)),
+                                            TextStyle(color: Color(0xff9C9EB9),fontSize: 14.0),
                                         prefixStyle:
                                             TextStyle(color: Colors.grey),
                                         enabledBorder: OutlineInputBorder(
@@ -314,8 +316,18 @@ class new_pop_entry extends StatelessWidget {
                                     SizedBox(
                                       width: 5,
                                     ),
-                                    Image.asset('images/cock.png'),
-                                  ],
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Container(height:58,width: 65,decoration: BoxDecoration(
+                                      image: DecorationImage(image: AssetImage('assets/duck2.png',),fit: BoxFit.fill),
+                                    ), ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Container(height:58,width: 65,decoration: BoxDecoration(
+                                      image: DecorationImage(image: AssetImage('assets/empty.png',),fit: BoxFit.fill),
+                                    ), ),                                  ],
                                 ),
                               ),
                             ],

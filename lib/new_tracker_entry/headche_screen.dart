@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:momly_app/apptheme/buttons.dart';
 import 'package:momly_app/survey_screens/second_screen.dart';
 
@@ -10,11 +11,37 @@ class headchee_screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CupertinoNavigationBar(
+        trailing: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              height: 30,
+              width: 30,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/graph.png'),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Container(
+              height: 30,
+              width: 30,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/i.png'),
+                ),
+              ),
+            ),
+          ],
+        ),
         leading: Material(
           child: IconButton(
             icon: Icon(CupertinoIcons.back),
             onPressed: () => Navigator.pop(context),
-            color: Colors.black,
+            color: Color(0xff4C5980),
             iconSize: 30,
           ),
         ),
@@ -90,10 +117,10 @@ class headchee_screen extends StatelessWidget {
                         Center(
                           child: Container(
                             padding: EdgeInsets.only(
-                              left: 15,
-                              right: 15,
+                              left: 0,
+                              right: 0,
                             ),
-                            width: 285,
+                            width: 319,
                             height: 45,
                             decoration: BoxDecoration(
                                 color: Colors.white,
@@ -110,15 +137,31 @@ class headchee_screen extends StatelessWidget {
                                     color: Color.fromRGBO(76, 89, 128, 1),
                                   ),
                                 ),
-                                Row(
-                                  children: [
-                                    for (var i = 0; i < 4; i++)
-                                      Icon(
-                                        Icons.star,
-                                        color: Colors.orange,
-                                      ),
-                                  ],
-                                )
+                                RatingBar.builder(
+                                  itemSize: 25,
+                                  initialRating: 5,
+                                  minRating: 1,
+                                  direction: Axis.horizontal,
+                                  allowHalfRating: true,
+                                  itemCount: 5,unratedColor: Color(0xffEDF1F7),
+                                  itemPadding:
+                                  EdgeInsets.symmetric(horizontal: 0.0),
+                                  itemBuilder: (context, _) => Icon(
+                                    Icons.star,
+                                    color: Color(0xffFF9D2B),
+                                  ),
+                                  onRatingUpdate: (rating) {},
+                                ),
+
+                                // Row(
+                                //   children: [
+                                //     for (var i = 0; i < 5; i++)
+                                //       Icon(
+                                //         Icons.star,
+                                //         color: Colors.orange,
+                                //       ),
+                                //   ],
+                                // )
                               ],
                             ),
                           ),
@@ -144,8 +187,8 @@ class headchee_screen extends StatelessWidget {
                         ),
                         Center(
                           child: Container(
-                            width: 285,
-                            height: 110,
+                            width: 327,
+                            height: 118,
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
@@ -163,7 +206,9 @@ class headchee_screen extends StatelessWidget {
                             child: TextField(
                               maxLines: 5,
                               decoration: InputDecoration(
-                                  hintText: 'Add notes or comments..',
+                                  hintText: '    Add notes or comments..',
+                                  hintStyle:
+                                  TextStyle(color: Color(0xff9C9EB9),fontSize: 14.0),
                                   prefixStyle: TextStyle(color: Colors.grey),
                                   enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
@@ -205,7 +250,11 @@ class headchee_screen extends StatelessWidget {
                             SizedBox(
                               width: 5,
                             ),
-                            Image.asset('images/cock.png'),
+                            Container(height: 58,width: 65, child: Image.asset('assets/duck2.png')),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Container(height: 58,width: 65, child: Image.asset('assets/empty.png')),
                           ],
                         ),
                       ],

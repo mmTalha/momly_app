@@ -5,7 +5,8 @@ import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart';
 import 'package:intl/intl.dart';
 import 'package:momly_app/period_tracker_screens/period_calendar2_screen.dart';
 import 'package:momly_app/period_tracker_screens/period_calendar_4.dart';
-
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+import 'package:flutter/scheduler.dart';
 import 'widgets/Widgets.dart';
 
 
@@ -17,6 +18,10 @@ class period_calendar_screen_3 extends StatefulWidget {
 }
 
 class _period_calendar_screen_2State extends State<period_calendar_screen_3> {
+  final DateRangePickerController _controller = DateRangePickerController();
+  String headerString = '';
+
+
   DateTime _currentDate = DateTime(2019, 2, 3);
   DateTime _currentDate2 = DateTime(2019, 2, 3);
   String _currentMonth = DateFormat.yMMM().format(DateTime(2022, 2, 3));
@@ -102,6 +107,8 @@ class _period_calendar_screen_2State extends State<period_calendar_screen_3> {
   }
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double cellWidth = width / 9;
     /// Example with custom icon
 
     /// Example Calendar Carousel without header and custom prev & next button
@@ -187,10 +194,10 @@ class _period_calendar_screen_2State extends State<period_calendar_screen_3> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 25,
+              height: 35,
             ),
             Container(
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height*0.96,
               width: MediaQuery.of(context).size.width,
               color: Colors.transparent,
               child: new Container(
@@ -204,82 +211,118 @@ class _period_calendar_screen_2State extends State<period_calendar_screen_3> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Container(
-                            child: new Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          Padding(
+                            padding: const EdgeInsets.only(top: 15.0,bottom: 8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                FlatButton(
-                                  child: Container(
-                                      decoration: BoxDecoration(
+                                // Container(
+                                //   height: cellWidth,
+                                //   width: cellWidth + 10,
+                                // ),
+                                Container(
+                                    decoration: BoxDecoration(
                                         color: Colors.black,
-                                        borderRadius: BorderRadius.circular(20),
+                                        borderRadius: BorderRadius.circular(25)),
+                                    width: 30,
+                                    height: 30,
+                                    //color: Colors.transparent,
+                                    child: Center(
+                                      child: IconButton(
+                                        icon: Icon(
+                                          Icons.chevron_left,size: 16,
+                                          //color: Colors.black,
+                                        ),
+                                        color: Colors.white,
+                                        //iconSize: 20,
+                                        highlightColor: Colors.lightGreen,
+                                        onPressed: () {
+                                          setState(() {
+                                            _controller.backward!();
+                                          });
+                                        },
                                       ),
-                                      width: 30,
-                                      height: 30,
-                                      child: Center(
-                                          child: Icon(
-                                            Icons.chevron_left_sharp,
-                                            color: Colors.white,
-                                          ))),
-                                  onPressed: () {
-                                    setState(() {
-                                      _targetDateTime = DateTime(
-                                          _targetDateTime.year,
-                                          _targetDateTime.month - 1);
-                                      _currentMonth = DateFormat.yMMM()
-                                          .format(_targetDateTime);
-                                    });
-                                  },
-                                ),
-                                Text(
-                                  _currentMonth,
-                                  style: TextStyle(
-                                    fontSize: 16.0,
+                                    )),
+                                Center(
+                                  child: Container(
+                                    color: Colors.transparent,
+                                    //height: cellWidth,
+                                    width: cellWidth * 4,
+                                    child: Text(headerString,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontSize: 16, color: Colors.black,)),
                                   ),
                                 ),
-                                FlatButton(
-                                  child: Container(
-                                      decoration: BoxDecoration(
+                                Container(
+                                  alignment: Alignment.center,
+                                    decoration: BoxDecoration(
                                         color: Colors.black,
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
-                                      width: 30,
-                                      height: 30,
-                                      child: Icon(
-                                        Icons.chevron_right_sharp,
+                                        borderRadius: BorderRadius.circular(25)),
+                                    width: 30,
+                                    height: 30,
+                                    //color: Colors.transparent,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(0.0),
+                                      child: IconButton(
+                                        icon: Icon(
+                                          Icons.navigate_next,size: 16,
+                                          //color: Colors.black,
+                                        ),
                                         color: Colors.white,
-                                      )),
-                                  onPressed: () {
-                                    setState(() {
-                                      _targetDateTime = DateTime(
-                                          _targetDateTime.year,
-                                          _targetDateTime.month + 1);
-                                      _currentMonth = DateFormat.yMMM()
-                                          .format(_targetDateTime);
-                                    });
-                                  },
-                                )
+                                        highlightColor: Colors.lightGreen,
+                                        onPressed: () {
+                                          setState(() {
+                                            _controller.forward!();
+                                          });
+                                        },
+                                      ),
+                                    )),
+                                // Container(
+                                //   height: cellWidth,
+                                //   width: cellWidth,
+                                // )
                               ],
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 15, right: 15),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: Container(
-                                padding: const EdgeInsets.only(
-                                    top: 10, left: 10, right: 10),
-                                height: 250,
-                                margin: EdgeInsets.symmetric(horizontal: 16.0),
-                                child: _calendarCarouselNoHeader,
+                            padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                            child: Container(
+                              height: 295.0,
+                              decoration: BoxDecoration(
+                                  color: Colors.white, borderRadius: BorderRadius.circular(25.0)),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Card(
+                                  elevation: 0.0,
+                                  //margin: const EdgeInsets.fromLTRB(50, 0, 50, 50),
+                                  child: SfDateRangePicker(
+                                      todayHighlightColor: Colors.black,
+                                      controller: _controller,
+                                      selectionMode: DateRangePickerSelectionMode.multiple,
+                                      view: DateRangePickerView.month,
+                                      headerHeight: 0,
+                                      onViewChanged: viewChanged,
+                                      monthViewSettings: DateRangePickerMonthViewSettings(
+                                          showTrailingAndLeadingDates: true,
+                                          dayFormat: 'EEE',
+                                          viewHeaderStyle: DateRangePickerViewHeaderStyle(
+                                              backgroundColor: Colors.white,textStyle: TextStyle(fontWeight: FontWeight.bold,color: Colors.black))),
+                                      monthCellStyle: DateRangePickerMonthCellStyle(
+
+                                          todayTextStyle: TextStyle(color: Colors.black),
+                                          cellDecoration: BoxDecoration(color: Colors.white),
+                                          leadingDatesDecoration:
+                                          BoxDecoration(color: Colors.white),
+                                          // trailingDatesDecoration:
+                                          // BoxDecoration(color: Colors.white)
+                                      )),
+                                ),
                               ),
                             ),
-                          ), //
+                          ),
                           SizedBox(
                             height: 20,
                           ),
@@ -368,5 +411,17 @@ class _period_calendar_screen_2State extends State<period_calendar_screen_3> {
         ),
       ),
     );
+  }
+  void viewChanged(DateRangePickerViewChangedArgs args) {
+    final DateTime visibleStartDate = args.visibleDateRange.startDate!;
+    final DateTime visibleEndDate = args.visibleDateRange.endDate!;
+    final int totalVisibleDays =
+    (visibleStartDate.difference(visibleEndDate).inDays);
+    final DateTime midDate =
+    visibleStartDate.add(Duration(days: totalVisibleDays ~/ 2));
+    headerString = DateFormat('MMMM yyyy').format(midDate).toString();
+    SchedulerBinding.instance!.addPostFrameCallback((duration) {
+      setState(() {});
+    });
   }
 }
