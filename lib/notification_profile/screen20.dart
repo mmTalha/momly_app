@@ -16,13 +16,13 @@ class _screen20State extends State<screen20> {
       backgroundColor: Colors.white,
       appBar: CupertinoNavigationBar(
         padding: EdgeInsetsDirectional.only(
-          top: 30,
+          top: 20,start: 10.0
         ),
         leading: Icon(Icons.arrow_back_ios_outlined,
-            size: 21, color: Color(0xff4C5980)),
+            size: 24, color: Color(0xff4C5980)),
         automaticallyImplyLeading: false,
         border: Border(bottom: BorderSide(color: Colors.transparent)),
-          middle: Text("DIRECT ACCESS",style: TextStyle(fontSize: 10),),
+          middle: Text("DIRECT ACCESS",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500,letterSpacing: 1.5),),
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
@@ -51,6 +51,9 @@ class _screen20State extends State<screen20> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Center(
                       child: Text(
                     "Direct Access",
@@ -61,7 +64,7 @@ class _screen20State extends State<screen20> {
                     height: 20,
                   ),
                   Text(
-                    "Use the following instructions to access your health report through momly.org",
+                    "Use the following instructions to access \nyour health report through momly.org",
                     style: TextStyle(color: Color(0xff4C5980), fontSize: 14),
                   ),
                   SizedBox(
@@ -175,11 +178,7 @@ class _screen20State extends State<screen20> {
                           children: [
                             InkWell(
                               onTap: () {},
-                              child: Icon(
-                                Icons.radio_button_checked,
-                                color: Color(0xffD1CCED),
-                                size: 30,
-                              ),
+                              child: Image(image: AssetImage('images/on.png'),)
                             ),
                             SizedBox(
                               width: 10,
@@ -199,11 +198,7 @@ class _screen20State extends State<screen20> {
                           children: [
                             InkWell(
                               onTap: () {},
-                              child: Icon(
-                                Icons.radio_button_checked,
-                                color: Color(0xffD1CCED),
-                                size: 30,
-                              ),
+                              child: Image(image: AssetImage('images/on.png'),)
                             ),
                             SizedBox(
                               width: 10,
@@ -223,11 +218,7 @@ class _screen20State extends State<screen20> {
                           children: [
                             InkWell(
                               onTap: () {},
-                              child: Icon(
-                                Icons.radio_button_checked,
-                                color: Color(0xffD1CCED),
-                                size: 30,
-                              ),
+                              child: Image(image: AssetImage('images/on.png'),)
                             ),
                             SizedBox(
                               width: 10,
@@ -239,11 +230,15 @@ class _screen20State extends State<screen20> {
                             )
                           ],
                         ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 35, right: 5),
+                          child: Divider(),
+                        ),
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 30,
+                    height: 20,
                   ),
                   Row(
                     children: [
@@ -344,11 +339,17 @@ class _screen20State extends State<screen20> {
                       },
                       child: Center(
                           child: Icon(
-                        Icons.share,
-                        size: 25,
-                        color: Color(
-                          0xff4C5980,
-                        ),
+                            Icons.share_outlined,color: Color(
+                              0xff4C5980,
+                            ),
+
+
+                        //   Icon(
+                        // Icons.share,
+                        // size: 25,
+                        // color: Color(
+                        //   0xff4C5980,
+                        // ),
                       ))),
                   SizedBox(
                     height: 30,

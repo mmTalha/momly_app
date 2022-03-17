@@ -40,7 +40,7 @@ class fever_screen extends StatelessWidget {
           child: IconButton(
             icon: Icon(CupertinoIcons.back),
             onPressed: () => Navigator.pop(context),
-            color: Colors.black,
+            color: Color(0xff4C5980),
             iconSize: 30,
           ),
         ),
@@ -94,7 +94,7 @@ class fever_screen extends StatelessWidget {
               height: 25,
             ),
             Container(
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height*0.78,
               width: MediaQuery.of(context).size.width,
               color: Colors.transparent,
               child: new Container(
@@ -124,11 +124,11 @@ class fever_screen extends StatelessWidget {
                                 textAlign: TextAlign.start,
                                 keyboardType: TextInputType.phone,
                                 decoration: InputDecoration(
-                                    hintText: 'Fever',
+                                    hintText: '  Fever',
                                     hintStyle:
                                         TextStyle(color: Color(0xff9C9EB9)),
                                     suffixIcon: Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(10.0),
                                       child: Container(
                                           height: 30,
                                           width: 45,
@@ -241,9 +241,9 @@ class fever_screen extends StatelessWidget {
                               child: TextField(
                                 maxLines: 5,
                                 decoration: InputDecoration(
-                                    hintText: 'Add notes or comments..',
+                                    hintText: '  Add notes or comments..',
                                     hintStyle:
-                                        TextStyle(color: Color(0xff9C9EB9)),
+                                        TextStyle(color: Color(0xff9C9EB9),fontSize: 14),
                                     prefixStyle: TextStyle(color: Colors.grey),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(10),
@@ -292,7 +292,16 @@ class fever_screen extends StatelessWidget {
                                 SizedBox(
                                   width: 5,
                                 ),
-                                Image.asset('images/cock.png'),
+
+                                Container(height:58,width: 65,decoration: BoxDecoration(
+                                  image: DecorationImage(image: AssetImage('assets/duck2.png',),fit: BoxFit.fill),
+                                ), ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Container(height:58,width: 65,decoration: BoxDecoration(
+                                  image: DecorationImage(image: AssetImage('assets/empty.png',),fit: BoxFit.fill),
+                                ), ),
                               ],
                             ),
                           ),

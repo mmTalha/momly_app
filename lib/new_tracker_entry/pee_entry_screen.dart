@@ -42,7 +42,7 @@ class pee_entry_screen extends StatelessWidget {
           child: IconButton(
             icon: Icon(CupertinoIcons.back),
             onPressed: () => Navigator.pop(context),
-            color: Colors.black,
+            color: Color(0xff4C5980),
             iconSize: 30,
           ),
         ),
@@ -97,12 +97,12 @@ class pee_entry_screen extends StatelessWidget {
                 height: 25,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.87,
+                height: MediaQuery.of(context).size.height * 0.77,
                 width: MediaQuery.of(context).size.width,
                 color: Colors.transparent,
                 child: new Container(
                     padding: EdgeInsets.only(
-                        left: 20, right: 30, top: 15, bottom: 20),
+                        left: 20, right: 30, top: 30, bottom: 20),
                     decoration: new BoxDecoration(
                         color: Color.fromRGBO(244, 246, 250, 1),
                         borderRadius: new BorderRadius.only(
@@ -151,8 +151,7 @@ class pee_entry_screen extends StatelessWidget {
                                       ),
                                     ),
                                     Icon(
-                                      Icons.arrow_drop_down,
-                                      color: Color.fromRGBO(228, 223, 255, 1),
+                                      Icons.expand_more_outlined,size: 30,color: Color(0xffE3E3E3),
                                     ),
                                   ],
                                 ),
@@ -197,8 +196,7 @@ class pee_entry_screen extends StatelessWidget {
                                       ),
                                     ),
                                     Icon(
-                                      Icons.arrow_drop_down,
-                                      color: Color.fromRGBO(228, 223, 255, 1),
+                                      Icons.expand_more_outlined,size: 30,color: Color(0xffE3E3E3),
                                     ),
                                   ],
                                 ),
@@ -277,9 +275,9 @@ class pee_entry_screen extends StatelessWidget {
                                 child: TextField(
                                   maxLines: 5,
                                   decoration: InputDecoration(
-                                      hintText: 'Add notes or comments..',
+                                      hintText: '  Add notes or comments..',
                                       hintStyle:
-                                          TextStyle(color: Color(0xff9C9EB9)),
+                                          TextStyle(color: Color(0xff9C9EB9),fontSize: 14.0),
                                       prefixStyle:
                                           TextStyle(color: Colors.grey),
                                       enabledBorder: OutlineInputBorder(
@@ -333,8 +331,18 @@ class pee_entry_screen extends StatelessWidget {
                                   SizedBox(
                                     width: 5,
                                   ),
-                                  Image.asset('images/cock.png'),
-                                ],
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Container(height:58,width: 65,decoration: BoxDecoration(
+                                    image: DecorationImage(image: AssetImage('assets/duck2.png',),fit: BoxFit.fill),
+                                  ), ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Container(height:58,width: 65,decoration: BoxDecoration(
+                                    image: DecorationImage(image: AssetImage('assets/empty.png',),fit: BoxFit.fill),
+                                  ), ),                                ],
                               ),
                             ),
                           ],

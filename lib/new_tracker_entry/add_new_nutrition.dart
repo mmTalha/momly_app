@@ -39,8 +39,7 @@ class add_new_nutrition_screen extends StatelessWidget {
           child: IconButton(
             icon: Icon(CupertinoIcons.back),
             onPressed: () => Navigator.pop(context),
-            color: Colors.black,
-            iconSize: 30,
+            color: Color(0xff4C5980),            iconSize: 30,
           ),
         ),
         border: Border.all(
@@ -103,7 +102,7 @@ class add_new_nutrition_screen extends StatelessWidget {
                   color: Colors.transparent,
                   child: new Container(
                       padding: EdgeInsets.only(
-                          left: 20, right: 30, top: 15, bottom: 20),
+                          left: 20, right: 30, top: 30, bottom: 20),
                       decoration: new BoxDecoration(
                           color: Color.fromRGBO(244, 246, 250, 1),
                           borderRadius: new BorderRadius.only(
@@ -143,7 +142,7 @@ class add_new_nutrition_screen extends StatelessWidget {
                                 child: Container(
                                   padding: EdgeInsets.only(left: 15, right: 15),
                                   width: 280,
-                                  height: 40,
+                                  height: 48,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius:
@@ -159,14 +158,14 @@ class add_new_nutrition_screen extends StatelessWidget {
                                       Text(
                                         '345',
                                         style: TextStyle(
-                                            fontSize: 20,
+                                            fontSize: 32,
                                             color: Colors.black,
                                             fontWeight: FontWeight.bold),
                                       ),
                                       Text(
                                         'kcal',
                                         style: TextStyle(
-                                            fontSize: 12,
+                                            fontSize: 16,
                                             color:
                                                 Color.fromRGBO(45, 49, 66, 1),
                                             fontWeight: FontWeight.w400),
@@ -199,9 +198,9 @@ class add_new_nutrition_screen extends StatelessWidget {
                                   child: TextField(
                                     maxLines: 5,
                                     decoration: InputDecoration(
-                                        hintText: 'Add notes or comments..',
+                                        hintText: '  Add notes or comments..',
                                         hintStyle:
-                                            TextStyle(color: Color(0xff9C9EB9)),
+                                            TextStyle(color: Color(0xff9C9EB9),fontSize: 14.0),
                                         //prefixStyle: TextStyle(color: Colors.grey),
                                         enabledBorder: OutlineInputBorder(
                                             borderRadius:
@@ -254,8 +253,18 @@ class add_new_nutrition_screen extends StatelessWidget {
                                     SizedBox(
                                       width: 5,
                                     ),
-                                    Image.asset('images/cock.png'),
-                                  ],
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Container(height:58,width: 65,decoration: BoxDecoration(
+                                      image: DecorationImage(image: AssetImage('assets/duck2.png',),fit: BoxFit.fill),
+                                    ), ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Container(height:58,width: 65,decoration: BoxDecoration(
+                                      image: DecorationImage(image: AssetImage('assets/empty.png',),fit: BoxFit.fill),
+                                    ), ),                                  ],
                                 ),
                               ),
                             ],

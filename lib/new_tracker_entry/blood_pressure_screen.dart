@@ -40,7 +40,7 @@ class blood_pressure_screen extends StatelessWidget {
           child: IconButton(
             icon: Icon(CupertinoIcons.back),
             onPressed: () => Navigator.pop(context),
-            color: Colors.black,
+            color: Color(0xff4C5980),
             iconSize: 30,
           ),
         ),
@@ -117,17 +117,23 @@ class blood_pressure_screen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             skilss_screen_widget().skills_textfield(
-                                'Systolic',
-                                Image.asset(
-                                    'images/Bar Chart Up With Border.png'),
+                                '  Systolic',
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 8.0),
+                                  child: Image.asset(
+                                      'images/Bar Chart Up With Border.png'),
+                                ),
                                 null),
                             SizedBox(
                               height: 10,
                             ),
                             skilss_screen_widget().skills_textfield(
-                                'Diastolic',
-                                Image.asset(
-                                    'images/Bar Chart Up With Border.png'),
+                                '  Diastolic',
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 8.0),
+                                  child: Image.asset(
+                                      'images/Bar Chart Up With Border.png'),
+                                ),
                                 null),
                             SizedBox(
                               height: 10,
@@ -149,7 +155,7 @@ class blood_pressure_screen extends StatelessWidget {
                                     Container(
                                       width: 100,
                                       child: Text(
-                                        'Time:',
+                                        '  Time:',
                                         style: TextStyle(
                                           fontSize: 16,
                                           color: Color.fromRGBO(76, 89, 128, 1),
@@ -157,7 +163,7 @@ class blood_pressure_screen extends StatelessWidget {
                                       ),
                                     ),
                                     Container(
-                                      width: 100,
+                                      width: 130  ,
                                       child: Text(
                                         '14:18',
                                         style: TextStyle(
@@ -183,12 +189,12 @@ class blood_pressure_screen extends StatelessWidget {
                             ),
                             Center(
                               child: Container(
-                                width: 285,
-                                height: 110,
+                                width: 300,
+                                height: 118,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(20)),
+                                      BorderRadius.all(Radius.circular(25)),
                                   boxShadow: [
                                     BoxShadow(
                                       color: Colors.white.withOpacity(0.5),
@@ -202,40 +208,40 @@ class blood_pressure_screen extends StatelessWidget {
                                 child: TextField(
                                   maxLines: 5,
                                   decoration: InputDecoration(
-                                      hintText: 'Add notes or comments..',
+                                      hintText: '  Add notes or comments..',
                                       hintStyle:
-                                          TextStyle(color: Color(0xff9C9EB9)),
+                                          TextStyle(color: Color(0xff9C9EB9),fontSize: 14.0),
                                       prefixStyle:
                                           TextStyle(color: Colors.grey),
                                       enabledBorder: OutlineInputBorder(
                                           borderRadius:
-                                              BorderRadius.circular(10),
+                                              BorderRadius.circular(25),
                                           borderSide: BorderSide(
                                             color: Color.fromRGBO(
                                                 242, 242, 242, 1),
                                           )),
                                       focusedBorder: OutlineInputBorder(
                                           borderRadius:
-                                              BorderRadius.circular(10),
+                                              BorderRadius.circular(25),
                                           borderSide: BorderSide(
                                             color: Color.fromRGBO(
                                                 242, 242, 242, 1),
                                           )),
                                       errorBorder: OutlineInputBorder(
                                           borderRadius:
-                                              BorderRadius.circular(10),
+                                              BorderRadius.circular(25),
                                           borderSide:
                                               BorderSide(color: Colors.red)),
                                       focusedErrorBorder: OutlineInputBorder(
                                           borderRadius:
-                                              BorderRadius.circular(10),
+                                              BorderRadius.circular(25),
                                           borderSide:
                                               BorderSide(color: Colors.red))),
                                 ),
                               ),
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 15,
                             ),
                             Padding(
                               padding: const EdgeInsets.only(left: 10.0),
@@ -258,7 +264,18 @@ class blood_pressure_screen extends StatelessWidget {
                                   SizedBox(
                                     width: 5,
                                   ),
-                                  Image.asset('images/cock.png'),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Container(height:58,width: 65,decoration: BoxDecoration(
+                                    image: DecorationImage(image: AssetImage('assets/duck2.png',),fit: BoxFit.fill),
+                                  ), ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Container(height:58,width: 65,decoration: BoxDecoration(
+                                    image: DecorationImage(image: AssetImage('assets/empty.png',),fit: BoxFit.fill),
+                                  ), ),
                                 ],
                               ),
                             ),

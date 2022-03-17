@@ -54,7 +54,7 @@ class head_screen extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 30.0),
@@ -100,7 +100,7 @@ class head_screen extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               color: Colors.transparent,
               child: new Container(
-                padding: EdgeInsets.only(left: 30, right: 30, bottom: 15),
+                padding: EdgeInsets.only(left: 30, right: 30,top: 40.0 ),
                 decoration: new BoxDecoration(
                     color: Color.fromRGBO(244, 246, 250, 1),
                     borderRadius: new BorderRadius.only(
@@ -109,7 +109,7 @@ class head_screen extends StatelessWidget {
                     )),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,7 +126,7 @@ class head_screen extends StatelessWidget {
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
+                              BorderRadius.all(Radius.circular(20)),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.white.withOpacity(0.5),
@@ -140,9 +140,9 @@ class head_screen extends StatelessWidget {
                             child: TextField(
                               maxLines: 5,
                               decoration: InputDecoration(
-                                  hintText: 'Add notes or comments..',
+                                  hintText: '  Add notes or comments..',
                                   hintStyle:
-                                      TextStyle(color: Color(0xff9C9EB9)),
+                                  TextStyle(color: Color(0xff9C9EB9),fontSize: 14.0),
                                   prefixStyle: TextStyle(color: Colors.grey),
                                   enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
@@ -157,11 +157,11 @@ class head_screen extends StatelessWidget {
                                   errorBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
                                       borderSide:
-                                          BorderSide(color: Colors.red)),
+                                      BorderSide(color: Colors.red)),
                                   focusedErrorBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
                                       borderSide:
-                                          BorderSide(color: Colors.red))),
+                                      BorderSide(color: Colors.red))),
                             ),
                           ),
                         ),
@@ -189,26 +189,156 @@ class head_screen extends StatelessWidget {
                               SizedBox(
                                 width: 5,
                               ),
-                              Image.asset('images/cock.png'),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Container(height:58,width: 65,decoration: BoxDecoration(
+                                image: DecorationImage(image: AssetImage('assets/duck2.png',),fit: BoxFit.fill),
+                              ), ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Container(height:58,width: 65,decoration: BoxDecoration(
+                                image: DecorationImage(image: AssetImage('assets/empty.png',),fit: BoxFit.fill),
+                              ), ),
                             ],
                           ),
                         ),
                       ],
                     ),
-                    Center(
-                      child: buttons().largebuttons('Add Symptoms', () {
-                        Navigator.push(
-                            context,
-                            CupertinoPageRoute(
-                                builder: (BuildContext context) =>
-                                    second_screen()));
-                      }),
-                    ),
+
                   ],
                 ),
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20.0,left: 20,right: 20.0),
+            child: Center(
+              child: buttons().largebuttons('Add Symptoms', () {
+                Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                        builder: (BuildContext context) =>
+                            second_screen()));
+              }),
+            ),
+          ),
+          // Expanded(
+          //   child: Container(
+          //     height: MediaQuery.of(context).size.height,
+          //     width: MediaQuery.of(context).size.width,
+          //     color: Colors.transparent,
+          //     child: new Container(
+          //       padding: EdgeInsets.only(left: 30, right: 30, bottom: 15),
+          //       decoration: new BoxDecoration(
+          //           color: Color.fromRGBO(244, 246, 250, 1),
+          //           borderRadius: new BorderRadius.only(
+          //             topLeft: const Radius.circular(40.0),
+          //             topRight: const Radius.circular(40.0),
+          //           )),
+          //       child: Column(
+          //         crossAxisAlignment: CrossAxisAlignment.start,
+          //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //         children: [
+          //           Column(
+          //             crossAxisAlignment: CrossAxisAlignment.start,
+          //             children: [
+          //               head_screen_widget()
+          //                   .head_textfield('Head Circumference', 'ft', null),
+          //               SizedBox(
+          //                 height: 10,
+          //               ),
+          //               Center(
+          //                 child: Container(
+          //                   width: 285,
+          //                   height: 110,
+          //                   decoration: BoxDecoration(
+          //                     color: Colors.white,
+          //                     borderRadius:
+          //                         BorderRadius.all(Radius.circular(20)),
+          //                     boxShadow: [
+          //                       BoxShadow(
+          //                         color: Colors.white.withOpacity(0.5),
+          //                         spreadRadius: 5,
+          //                         blurRadius: 7,
+          //                         offset: Offset(
+          //                             0, 3), // changes position of shadow
+          //                       ),
+          //                     ],
+          //                   ),
+          //                   child: TextField(
+          //                     maxLines: 5,
+          //                     decoration: InputDecoration(
+          //                         hintText: 'Add notes or comments..',
+          //                         hintStyle:
+          //                             TextStyle(color: Color(0xff9C9EB9)),
+          //                         prefixStyle: TextStyle(color: Colors.grey),
+          //                         enabledBorder: OutlineInputBorder(
+          //                             borderRadius: BorderRadius.circular(10),
+          //                             borderSide: BorderSide(
+          //                               color: Color.fromRGBO(242, 242, 242, 1),
+          //                             )),
+          //                         focusedBorder: OutlineInputBorder(
+          //                             borderRadius: BorderRadius.circular(10),
+          //                             borderSide: BorderSide(
+          //                               color: Color.fromRGBO(242, 242, 242, 1),
+          //                             )),
+          //                         errorBorder: OutlineInputBorder(
+          //                             borderRadius: BorderRadius.circular(10),
+          //                             borderSide:
+          //                                 BorderSide(color: Colors.red)),
+          //                         focusedErrorBorder: OutlineInputBorder(
+          //                             borderRadius: BorderRadius.circular(10),
+          //                             borderSide:
+          //                                 BorderSide(color: Colors.red))),
+          //                   ),
+          //                 ),
+          //               ),
+          //               SizedBox(
+          //                 height: 10,
+          //               ),
+          //               Padding(
+          //                 padding: const EdgeInsets.only(left: 10.0),
+          //                 child: Text(
+          //                   'Add Media',
+          //                   style: TextStyle(
+          //                       fontSize: 20,
+          //                       color: Color.fromRGBO(76, 89, 128, 1),
+          //                       fontWeight: FontWeight.bold),
+          //                 ),
+          //               ),
+          //               SizedBox(
+          //                 height: 10,
+          //               ),
+          //               Padding(
+          //                 padding: const EdgeInsets.only(left: 10.0),
+          //                 child: Row(
+          //                   children: [
+          //                     Image.asset('images/cock.png'),
+          //                     SizedBox(
+          //                       width: 5,
+          //                     ),
+          //                     Image.asset('images/cock.png'),
+          //                   ],
+          //                 ),
+          //               ),
+          //             ],
+          //           ),
+          //           Center(
+          //             child: buttons().largebuttons('Add Symptoms', () {
+          //               Navigator.push(
+          //                   context,
+          //                   CupertinoPageRoute(
+          //                       builder: (BuildContext context) =>
+          //                           second_screen()));
+          //             }),
+          //           ),
+          //         ],
+          //       ),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

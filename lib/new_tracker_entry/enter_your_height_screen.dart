@@ -101,7 +101,7 @@ class Enter_your_height_screen extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               color: Colors.transparent,
               child: new Container(
-                padding: EdgeInsets.only(left: 30, right: 30, bottom: 15),
+                padding: EdgeInsets.only(left: 30, right: 30,top: 40.0 ),
                 decoration: new BoxDecoration(
                     color: Color.fromRGBO(244, 246, 250, 1),
                     borderRadius: new BorderRadius.only(
@@ -110,13 +110,13 @@ class Enter_your_height_screen extends StatelessWidget {
                     )),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        height_screen_widget().height_textfield(
-                            'Enter Richard’s height', 'ft', null),
+                        height_screen_widget()
+                           .height_textfield('  Enter Richard’s height', 'ft', null),
                         SizedBox(
                           height: 10,
                         ),
@@ -127,7 +127,7 @@ class Enter_your_height_screen extends StatelessWidget {
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
+                              BorderRadius.all(Radius.circular(20)),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.white.withOpacity(0.5),
@@ -141,9 +141,9 @@ class Enter_your_height_screen extends StatelessWidget {
                             child: TextField(
                               maxLines: 5,
                               decoration: InputDecoration(
-                                  hintText: 'Add notes or comments..',
+                                  hintText: '  Add notes or comments..',
                                   hintStyle:
-                                      TextStyle(color: Color(0xff9C9EB9)),
+                                  TextStyle(color: Color(0xff9C9EB9),fontSize: 14.0),
                                   prefixStyle: TextStyle(color: Colors.grey),
                                   enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
@@ -158,11 +158,11 @@ class Enter_your_height_screen extends StatelessWidget {
                                   errorBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
                                       borderSide:
-                                          BorderSide(color: Colors.red)),
+                                      BorderSide(color: Colors.red)),
                                   focusedErrorBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
                                       borderSide:
-                                          BorderSide(color: Colors.red))),
+                                      BorderSide(color: Colors.red))),
                             ),
                           ),
                         ),
@@ -190,24 +190,39 @@ class Enter_your_height_screen extends StatelessWidget {
                               SizedBox(
                                 width: 5,
                               ),
-                              Image.asset('images/cock.png'),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Container(height:58,width: 65,decoration: BoxDecoration(
+                                image: DecorationImage(image: AssetImage('assets/duck2.png',),fit: BoxFit.fill),
+                              ), ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Container(height:58,width: 65,decoration: BoxDecoration(
+                                image: DecorationImage(image: AssetImage('assets/empty.png',),fit: BoxFit.fill),
+                              ), ),
                             ],
                           ),
                         ),
                       ],
                     ),
-                    Center(
-                      child: buttons().largebuttons('Add Symptoms', () {
-                        Navigator.push(
-                            context,
-                            CupertinoPageRoute(
-                                builder: (BuildContext context) =>
-                                    second_screen()));
-                      }),
-                    ),
+
                   ],
                 ),
               ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20.0,left: 20,right: 20.0),
+            child: Center(
+              child: buttons().largebuttons('Add Symptoms', () {
+                Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                        builder: (BuildContext context) =>
+                            second_screen()));
+              }),
             ),
           ),
         ],

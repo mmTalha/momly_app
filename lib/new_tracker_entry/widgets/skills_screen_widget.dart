@@ -5,7 +5,7 @@ class skilss_screen_widget {
     return Center(
       child: Container(
         width: 285,
-        height: 50,
+        height: 48,
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(20))),
@@ -15,6 +15,7 @@ class skilss_screen_widget {
           keyboardType: TextInputType.phone,
           decoration: InputDecoration(
               hintText: text,
+              contentPadding: EdgeInsets.only(left: 10.0),
               hintStyle: TextStyle(color: Color(0xff9C9EB9)),
               suffixIcon: icons,
               prefixStyle: TextStyle(color: Colors.grey),
