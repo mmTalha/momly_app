@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:momly_app/apptheme/buttons.dart';
 import 'package:momly_app/new_tracker_entry/widgets/skills_screen_widget.dart';
 import 'package:momly_app/survey_screens/second_screen.dart';
+import 'package:momly_app/survey_screens/your_opinioin_matter_screen.dart';
 
 class add_new_skill_screen extends StatelessWidget {
   const add_new_skill_screen({Key? key}) : super(key: key);
@@ -254,7 +255,7 @@ class add_new_skill_screen extends StatelessWidget {
                                 context,
                                 CupertinoPageRoute(
                                     builder: (BuildContext context) =>
-                                        second_screen()));
+                                        opinion_screen()));
                           }),
                         ),
                       ],

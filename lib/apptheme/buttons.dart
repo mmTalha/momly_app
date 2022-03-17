@@ -37,12 +37,12 @@ class buttons {
     );
   }
 
-  Widget largebuttons(text, VoidCallback ontap) {
+  Widget buttonsab(text, VoidCallback ontap) {
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10),
       child: Container(
         width: double.infinity,
-        height: 60,
+        height: 50,
         child: CupertinoButton(
           padding: EdgeInsets.all(10),
           minSize: 2.0,
@@ -57,7 +57,33 @@ class buttons {
           color: Color.fromRGBO(114, 101, 227, 1),
           disabledColor: Colors.grey,
           pressedOpacity: 0.6,
-          borderRadius: BorderRadius.all(Radius.circular(15.0)),
+          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        ),
+      ),
+    );
+  }
+
+  Widget largebuttons(text, VoidCallback ontap) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10),
+      child: Container(
+        width: double.infinity,
+        height: 60,
+        child: CupertinoButton(
+          padding: EdgeInsets.all(15),
+          minSize: 2.0,
+          onPressed: ontap,
+          child: Text(
+            text,
+            style: TextStyle(
+                fontFamily: 'Roboto',
+                color: Colors.white,
+                fontWeight: FontWeight.w700),
+          ),
+          color: Color.fromRGBO(114, 101, 227, 1),
+          disabledColor: Colors.grey,
+          pressedOpacity: 0.6,
+          borderRadius: BorderRadius.all(Radius.circular(18.0)),
         ),
       ),
     );

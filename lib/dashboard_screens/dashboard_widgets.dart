@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class dashboard_Widgets {
   Widget moodwidget(ontap, BuildContext context, mood, fellings, description,
-      images, emojies, time, imagesa) {
+      images, emojies, time, imagesa, wdg, wi, hi) {
     return InkWell(
       onTap: ontap,
       child: Center(
@@ -37,21 +38,29 @@ class dashboard_Widgets {
                           fontWeight: FontWeight.w400)),
                 ],
               ),
+              SizedBox(
+                height: 5,
+              ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(width: 25, height: 25, child: Image.asset(emojies)),
+                  Container(width: wi, height: hi, child: Image.asset(emojies)),
                   SizedBox(
-                    width: 10,
+                    width: 7,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(fellings,
-                          style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600)),
+                      Row(
+                        children: [
+                          Text(fellings,
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w600)),
+                          wdg,
+                        ],
+                      ),
                       Text(description,
                           style: TextStyle(
                               fontSize: 12,

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:momly_app/apptheme/buttons.dart';
@@ -21,12 +22,13 @@ class dashboard_screens extends StatelessWidget {
         new GlobalKey<ScaffoldState>();
 
     return Scaffold(
+      backgroundColor: Colors.white,
       key: _scaffoldKey,
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
         child: SafeArea(
           child: Container(
-            padding: EdgeInsets.only(top: 10, bottom: 10),
+            padding: EdgeInsets.only(top: 30, bottom: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -96,19 +98,16 @@ class dashboard_screens extends StatelessWidget {
                             color: Color(0xff2D3142),
                             fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(
-                        width: 5,
-                      ),
                       Icon(
                         Icons.keyboard_arrow_down,
                         color: Color(0xff4C5980),
-                        size: 30,
+                        size: 40,
                       ),
                     ],
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 8,
                 ),
                 Container(
                   padding: EdgeInsets.only(left: 12, right: 12),
@@ -121,35 +120,41 @@ class dashboard_screens extends StatelessWidget {
                             decoration: BoxDecoration(
                                 color: Color.fromRGBO(140, 128, 248, 1),
                                 borderRadius: BorderRadius.circular(15)),
-                            height: 200,
+                            height: 180,
                             width: MediaQuery.of(context).size.width * 1.82 / 4,
                             padding: const EdgeInsets.all(5),
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 11),
+                              padding: const EdgeInsets.only(left: 11, top: 20),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                // mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text('MOOD',
                                       style: TextStyle(
-                                          fontSize: 12,
+                                          fontSize: 13,
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold)),
                                   SizedBox(
-                                    height: 5,
+                                    height: 10,
                                   ),
-                                  Center(child: Image.asset('images/mood.png')),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 28.0),
+                                    child: Image.asset('assets/love.png'),
+                                  ),
                                   SizedBox(
-                                    height: 5,
+                                    height: 10,
                                   ),
                                   Text('Happy',
                                       style: TextStyle(
                                           fontSize: 24,
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold)),
+                                  SizedBox(
+                                    height: 7,
+                                  ),
                                   Text('3 days ago',
                                       style: TextStyle(
-                                          fontSize: 12,
+                                          fontSize: 13,
                                           color: Colors.white70,
                                           fontWeight: FontWeight.w400)),
                                 ],
@@ -162,23 +167,30 @@ class dashboard_screens extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Color.fromRGBO(175, 142, 255, 1),
                                     borderRadius: BorderRadius.circular(15)),
-                                height: 96,
+                                height: 86,
                                 width: MediaQuery.of(context).size.width *
                                     1.82 /
                                     4,
                                 padding: const EdgeInsets.all(5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text('HEALTH',
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold)),
-                                    ListTile(
-                                      contentPadding: EdgeInsets.all(0),
-                                      title: Row(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      SizedBox(
+                                        height: 3,
+                                      ),
+                                      Text('HEALTH',
+                                          style: TextStyle(
+                                              fontSize: 13,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold)),
+                                      SizedBox(
+                                        height: 6,
+                                      ),
+                                      Row(
                                         children: [
                                           Text(
                                             '7 ',
@@ -196,17 +208,23 @@ class dashboard_screens extends StatelessWidget {
                                           ),
                                         ],
                                       ),
-                                      trailing: Image.asset(
-                                        'images/Path 1342.png',
-                                        height: 24,
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text('7hrs ago',
+                                              style: TextStyle(
+                                                  fontSize: 13,
+                                                  color: Colors.white70,
+                                                  fontWeight: FontWeight.w400)),
+                                          Image.asset(
+                                            'images/Path 1342.png',
+                                            height: 24,
+                                          ),
+                                        ],
                                       ),
-                                      subtitle: Text('7hrs ago',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              color: Colors.white70,
-                                              fontWeight: FontWeight.w400)),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                               SizedBox(
@@ -216,40 +234,50 @@ class dashboard_screens extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Color.fromRGBO(31, 135, 254, 1),
                                     borderRadius: BorderRadius.circular(15)),
-                                height: 96,
+                                height: 86,
                                 width: MediaQuery.of(context).size.width *
                                     1.82 /
                                     4,
                                 padding: const EdgeInsets.all(5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text('WATER',
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold)),
-                                    ListTile(
-                                      contentPadding: EdgeInsets.all(0),
-                                      title: Text(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text('WATER',
+                                          style: TextStyle(
+                                              fontSize: 13,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold)),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Text(
                                         'Tap here to add',
                                         style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w600),
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold),
                                       ),
-                                      trailing: Image.asset(
-                                        'images/glass.png',
-                                        height: 24,
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text('Never',
+                                              style: TextStyle(
+                                                  fontSize: 13,
+                                                  color: Colors.white70,
+                                                  fontWeight: FontWeight.w400)),
+                                          Image.asset(
+                                            'images/glass.png',
+                                            height: 24,
+                                          ),
+                                        ],
                                       ),
-                                      subtitle: Text('Never',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              color: Colors.white70,
-                                              fontWeight: FontWeight.w400)),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
@@ -268,40 +296,50 @@ class dashboard_screens extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Color.fromRGBO(200, 128, 248, 1),
                                     borderRadius: BorderRadius.circular(15)),
-                                height: 96,
+                                height: 86,
                                 width: MediaQuery.of(context).size.width *
                                     1.82 /
                                     4,
                                 padding: const EdgeInsets.all(5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text('Blood PRESSURE',
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold)),
-                                    ListTile(
-                                      contentPadding: EdgeInsets.all(0),
-                                      title: Text(
-                                        '12/7mmHg ',
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text('Blood PRESSURE',
+                                          style: TextStyle(
+                                              fontSize: 13,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold)),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Text(
+                                        '12/7mmHg',
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold),
                                       ),
-                                      trailing: Image.asset(
-                                        'images/1.png',
-                                        height: 24,
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text('7hrs ago',
+                                              style: TextStyle(
+                                                  fontSize: 13,
+                                                  color: Colors.white70,
+                                                  fontWeight: FontWeight.w400)),
+                                          Image.asset(
+                                            'images/1.png',
+                                            height: 24,
+                                          ),
+                                        ],
                                       ),
-                                      subtitle: Text('7hrs ago',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              color: Colors.white70,
-                                              fontWeight: FontWeight.w400)),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                               SizedBox(
@@ -311,40 +349,50 @@ class dashboard_screens extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Color.fromRGBO(128, 176, 248, 1),
                                     borderRadius: BorderRadius.circular(15)),
-                                height: 96,
+                                height: 86,
                                 width: MediaQuery.of(context).size.width *
                                     1.82 /
                                     4,
                                 padding: const EdgeInsets.all(5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text('PULSE',
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold)),
-                                    ListTile(
-                                      contentPadding: EdgeInsets.all(0),
-                                      title: Text(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text('PULSE',
+                                          style: TextStyle(
+                                              fontSize: 13,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold)),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Text(
                                         '71bpm ',
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold),
                                       ),
-                                      trailing: Image.asset(
-                                        'images/Path 3565.png',
-                                        height: 24,
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text('3mins ago',
+                                              style: TextStyle(
+                                                  fontSize: 13,
+                                                  color: Colors.white70,
+                                                  fontWeight: FontWeight.w400)),
+                                          Image.asset(
+                                            'images/Path 3565.png',
+                                            height: 24,
+                                          ),
+                                        ],
                                       ),
-                                      subtitle: Text('3mins ago',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              color: Colors.white70,
-                                              fontWeight: FontWeight.w400)),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
@@ -353,37 +401,52 @@ class dashboard_screens extends StatelessWidget {
                             decoration: BoxDecoration(
                                 color: Color.fromRGBO(76, 89, 128, 1),
                                 borderRadius: BorderRadius.circular(15)),
-                            height: 200,
+                            height: 180,
                             width: MediaQuery.of(context).size.width * 1.82 / 4,
-                            padding: const EdgeInsets.all(4),
+                            padding: const EdgeInsets.all(5),
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 11),
+                              padding: const EdgeInsets.only(left: 11, top: 20),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                // mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text('WEIGHT',
                                       style: TextStyle(
-                                          fontSize: 12,
+                                          fontSize: 13,
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold)),
                                   SizedBox(
-                                    height: 2,
+                                    height: 13,
                                   ),
-                                  Center(
-                                      child:
-                                          Image.asset('images/Group 13.png')),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 40.0),
+                                    child: Image.asset('assets/weight.png'),
+                                  ),
                                   SizedBox(
                                     height: 5,
                                   ),
-                                  Text('128lbs',
+                                  RichText(
+                                    text: TextSpan(
+                                      text: '128',
                                       style: TextStyle(
-                                          fontSize: 24,
+                                          fontSize: 26,
                                           color: Colors.white,
-                                          fontWeight: FontWeight.bold)),
+                                          fontWeight: FontWeight.bold),
+                                      children: [
+                                        TextSpan(
+                                          text: 'lbs',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(height: 9),
                                   Text('21sec ago',
                                       style: TextStyle(
-                                          fontSize: 12,
+                                          fontSize: 13,
                                           color: Colors.white70,
                                           fontWeight: FontWeight.w400)),
                                 ],
@@ -396,30 +459,30 @@ class dashboard_screens extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 35,
                 ),
-                Container(
-                  padding: EdgeInsets.only(left: 10, right: 10),
-                  child: Row(
-                    children: [
-                      Image.asset('images/List.png'),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Text('Momly Academy',
-                          style: TextStyle(
-                              fontSize: 24,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w400)),
-                    ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Container(
+                    padding: EdgeInsets.only(left: 10, right: 10),
+                    child: Row(
+                      children: [
+                        Image.asset('images/List.png'),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text('Momly Academy',
+                            style: TextStyle(
+                                fontSize: 24,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400)),
+                      ],
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 0.0,
                 ),
                 Container(
                     width: MediaQuery.of(context).size.width,
-                    height: 350,
+                    height: 300,
                     child: ListView.builder(
                         physics: BouncingScrollPhysics(
                             parent: AlwaysScrollableScrollPhysics()),
@@ -430,8 +493,17 @@ class dashboard_screens extends StatelessWidget {
                               child: Container(
                                 margin: EdgeInsets.all(15),
                                 height: 290,
-                                width: 350,
+                                width: MediaQuery.of(context).size.width * 0.84,
                                 decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color(0xffF4F6FA).withOpacity(0.5),
+                                      spreadRadius: 5,
+                                      blurRadius: 7,
+                                      offset: Offset(
+                                          0, 3), // changes position of shadow
+                                    ),
+                                  ],
                                   borderRadius: BorderRadius.circular(20),
                                   color: Colors.white,
                                 ),
@@ -458,7 +530,7 @@ class dashboard_screens extends StatelessWidget {
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   color: Colors.black,
-                                                  fontWeight: FontWeight.w600)),
+                                                  fontWeight: FontWeight.w500)),
                                           SizedBox(
                                             height: 20,
                                           ),
@@ -528,20 +600,54 @@ class dashboard_screens extends StatelessWidget {
                                   color: Colors.black,
                                   fontWeight: FontWeight.w600)),
                         ),
-                        dashboard_Widgets().doctorcard('images/prof_deniz.png',
-                            'Prof. Dr. Deniz Konya', 'Neurosurgery'),
-                        dashboard_Widgets().doctorcard('assets/girl.png',
-                            'Prof. Dr. Selim İsbira', 'Cardiovasvular Surgery'),
-                        Center(
-                          child: buttons().largebuttons('See all Doctors', () {
-                            Navigator.push(
-                              context,
-                              CupertinoPageRoute(
-                                  builder: (BuildContext context) =>
-                                      appointments_screens()),
-                            );
-                          }),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 7, right: 7),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 5,
+                                  blurRadius: 7,
+                                  offset: Offset(
+                                      0, 3), // changes position of shadow
+                                ),
+                              ],
+                            ),
+                            child: dashboard_Widgets().doctorcard(
+                                'images/prof_deniz.png',
+                                'Prof. Dr. Deniz Konya',
+                                'Neurosurgery'),
+                          ),
                         ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 7, right: 7),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 5,
+                                  blurRadius: 7,
+                                  offset: Offset(
+                                      0, 3), // changes position of shadow
+                                ),
+                              ],
+                            ),
+                            child: dashboard_Widgets().doctorcard(
+                                'assets/girl.png',
+                                'Prof. Dr. Selim İsbira',
+                                'Cardiovasvular Surgery'),
+                          ),
+                        ),
+                        buttons().largebuttons('See all Doctors', () {
+                          Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                                builder: (BuildContext context) =>
+                                    appointments_screens()),
+                          );
+                        }),
                       ],
                     ),
                   ),
@@ -577,50 +683,69 @@ class dashboard_screens extends StatelessWidget {
                           SizedBox(
                             height: 15,
                           ),
-                          dashboard_Widgets().moodwidget(
-                            () {
-                              Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                    builder: (BuildContext context) =>
-                                        Empty_details_screens()),
-                              );
-                            },
-                            context,
-                            'MOOD',
-                            'I feel Great',
-                            'You do not setup a family member profile yet.\nTap the following button to setup one.',
-                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png',
-                            'images/StarEyes.png',
-                            '1h ago',
-                            'assets/cut.png',
-                          ),
+                          dashboard_Widgets().moodwidget(() {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                  builder: (BuildContext context) =>
+                                      Empty_details_screens()),
+                            );
+                          },
+                              context,
+                              'MOOD',
+                              'I feel Great',
+                              'You do not setup a family member profile yet.\nTap the following button to setup one.',
+                              'images/5bb48b07fa6e3840bb3afa2bc821b882.png',
+                              'images/StarEyes.png',
+                              '1h ago',
+                              'assets/cut.png',
+                              SizedBox(),
+                              50.0,
+                              50.0),
                           SizedBox(
                             height: 15,
                           ),
-                          dashboard_Widgets().moodwidget(
-                            () {
-                              Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                    builder: (BuildContext context) =>
-                                        Empty_details_screens()),
-                              );
-                            },
-                            context,
-                            'HEALTH',
-                            'Headche⭐⭐⭐⭐⭐',
-                            'You do not setup a family member profile yet.\nTap the following button to setup one.',
-                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png',
-                            'images/Photo1.png',
-                            '8h ago',
-                            'assets/cut.png',
-                          ),
+                          dashboard_Widgets().moodwidget(() {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                  builder: (BuildContext context) =>
+                                      Empty_details_screens()),
+                            );
+                          },
+                              context,
+                              'HEALTH',
+                              'Headche',
+                              'You do not setup a family member profile yet.\nTap the following button to setup one.',
+                              'images/5bb48b07fa6e3840bb3afa2bc821b882.png',
+                              'images/Photo1.png',
+                              '8h ago',
+                              'assets/cut.png',
+                              Padding(
+                                padding: const EdgeInsets.only(left: 8.0),
+                                child: RatingBar.builder(
+                                  itemSize: 15,
+                                  initialRating: 5,
+                                  minRating: 1,
+                                  direction: Axis.horizontal,
+                                  allowHalfRating: true,
+                                  itemCount: 5,
+                                  itemPadding:
+                                      EdgeInsets.symmetric(horizontal: 0.0),
+                                  itemBuilder: (context, _) => Icon(
+                                    Icons.star,
+                                    color: Color(0xffFF9D2B),
+                                  ),
+                                  onRatingUpdate: (rating) {},
+                                ),
+                              ),
+                              20.0,
+                              20.0),
                           SizedBox(
                             height: 15,
                           ),
                           Center(
-                            child: buttons().largebuttons('GO TO PROFILE', () {
+                            child: buttons().buttonsab('GO TO PROFILE', () {
                               modelsheet().bottomsheet(context);
                             }),
                           ),

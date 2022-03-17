@@ -36,7 +36,43 @@ class Empty_details_screens extends StatelessWidget {
             children: [
               Center(
                 child: Container(
-                  child: Image.asset('images/Notification.png'),
+                  child: Stack(
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 70,
+                        color: Colors.transparent,
+                      ),
+                      Positioned(
+                        left: 9,
+                        top: 2,
+                        child: Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(
+                                'images/Notification.png',
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        top: 38,
+                        child: Container(
+                          height: 18,
+                          width: 18,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle, color: Color(0xffF4F6FA)),
+                          child: Icon(Icons.expand_more_outlined,
+                              size: 13, color: Colors.black),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               SizedBox(
@@ -53,6 +89,15 @@ class Empty_details_screens extends StatelessWidget {
                     child: Container(
                       margin: EdgeInsets.all(5),
                       decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0xff4075CD).withOpacity(0.1),
+                              spreadRadius: 7,
+                              blurRadius: 5,
+                              offset:
+                                  Offset(4, 8), // changes position of shadow
+                            ),
+                          ],
                           color: Color.fromRGBO(244, 246, 250, 1),
                           borderRadius: BorderRadius.all(Radius.circular(10))),
                       height: 45,
@@ -85,6 +130,15 @@ class Empty_details_screens extends StatelessWidget {
                     child: Container(
                       margin: EdgeInsets.all(5),
                       decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0xff4075CD).withOpacity(0.1),
+                              spreadRadius: 7,
+                              blurRadius: 5,
+                              offset:
+                                  Offset(4, 8), // changes position of shadow
+                            ),
+                          ],
                           color: Color.fromRGBO(244, 246, 250, 1),
                           borderRadius: BorderRadius.all(Radius.circular(10))),
                       height: 45,
@@ -129,6 +183,9 @@ class Empty_details_screens extends StatelessWidget {
                       )),
                   child: Column(
                     children: [
+                      SizedBox(
+                        height: 15,
+                      ),
                       Image.asset('images/Lock (Close).png'),
                       SizedBox(
                         height: 15,
@@ -138,7 +195,7 @@ class Empty_details_screens extends StatelessWidget {
                         textAlign: TextAlign.center,
                         softWrap: true,
                         style: TextStyle(
-                            color: Colors.black,
+                            color: Color(0xff2D3142),
                             fontSize: 24,
                             fontWeight: FontWeight.bold),
                       ),
@@ -150,7 +207,7 @@ class Empty_details_screens extends StatelessWidget {
                         textAlign: TextAlign.center,
                         softWrap: true,
                         style: TextStyle(
-                            color: Color.fromRGBO(76, 89, 128, 1),
+                            color: Color(0xff4C5980),
                             fontSize: 18,
                             fontWeight: FontWeight.w400),
                       ),
@@ -158,7 +215,7 @@ class Empty_details_screens extends StatelessWidget {
                         height: 15,
                       ),
                       Text(
-                        'Tap the button below to create a new tracker entry.',
+                        'Tap the button below to create a\nnew tracker entry.',
                         textAlign: TextAlign.center,
                         softWrap: true,
                         style: TextStyle(
@@ -169,7 +226,8 @@ class Empty_details_screens extends StatelessWidget {
                       SizedBox(
                         height: 100,
                       ),
-                      Align(
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: buttons()
                             .largebuttons('Create New Tracker Entry', () {
                           Navigator.push(

@@ -32,8 +32,8 @@ class _screen3State extends State<screen3> {
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: CupertinoNavigationBar(
                 trailing: Container(
-                  height: 20,
-                  width: 20,
+                  height: 25,
+                  width: 25,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage('assets/i.png'),
@@ -46,57 +46,98 @@ class _screen3State extends State<screen3> {
                 border: Border(bottom: BorderSide(color: Colors.transparent)),
                 backgroundColor: Colors.white,
                 leading: Icon(Icons.arrow_back_ios_outlined,
-                    size: 17, color: Color(0xff4C5980)),
+                    size: 22, color: Color(0xff4C5980)),
                 automaticallyImplyLeading: false,
                 middle: Text(
-                  "PREGNANCY TEST",
-                  style: TextStyle(fontSize: 10),
+                  "PREGNANCY GALLERY",
+                  style: TextStyle(fontSize: 12, letterSpacing: 2.0),
                 ),
               ),
             ),
           ),
         ),
-        body: Container(
-          child: GridView.builder(
-            itemCount: items.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: (2 / 1),
-            ),
-            itemBuilder: (
-              context,
-              index,
-            ) {
-              return Container(
-                decoration: BoxDecoration(
-                    color: Color(0xffF4F6FA),
-                    border: Border.all(
-                      color: Color(0xffE1DDF5),
-                      width: 1,
-                    )),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                          builder: (BuildContext context) => screen4()),
-                    );
-                  },
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Icon(Icons.collections_outlined,
-                          color: Color(0xff4C5980)),
-                      Text(items[index],
-                          style:
-                              TextStyle(fontSize: 15, color: Color(0xff4C5980)),
-                          textAlign: TextAlign.center),
-                    ],
-                  ),
+        body: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    album().Album(context, "1st Month", 0.5),
+                    album().Album(context, "2nd Month", 0.5)
+                  ],
                 ),
-              );
-            },
+                Row(
+                  children: [
+                    album().Album(context, "3rd Month", 0.5),
+                    album().Album(context, "4th Month", 0.5)
+                  ],
+                ),
+                Row(
+                  children: [
+                    album().Album(context, "5th Month", 0.5),
+                    album().Album(context, "6th Month", 0.5)
+                  ],
+                ),
+                Row(
+                  children: [
+                    album().Album(context, "7th Month", 0.5),
+                    album().Album(context, "8th Month", 0.5)
+                  ],
+                ),
+                Row(
+                  children: [
+                    album().Album(context, "9th Month", 0.5),
+                    album().Album(context, "Birth and After", 0.5)
+                  ],
+                ),
+                album().Album(context, "View all", 1),
+              ],
+            ),
           ),
         ));
+  }
+}
+
+class album {
+  Widget Album(BuildContext context, txt, sze) {
+    return Container(
+      width: MediaQuery.of(context).size.width * sze,
+      height: 140,
+      decoration: BoxDecoration(
+          color: Color(0xffF4F6FA),
+          border: Border.all(
+            color: Color(0xffE1DDF5),
+            width: 1,
+          )),
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+            context,
+            CupertinoPageRoute(builder: (BuildContext context) => screen4()),
+          );
+        },
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 35,
+              width: 35,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/Images.png',
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 30),
+            Text(txt,
+                style: TextStyle(fontSize: 16, color: Color(0xff4C5980)),
+                textAlign: TextAlign.center),
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:momly_app/apptheme/modal_sheet.dart';
 
 class mood_details extends StatelessWidget {
@@ -26,7 +27,43 @@ class mood_details extends StatelessWidget {
           children: [
             Center(
               child: Container(
-                child: Image.asset('images/Notification.png'),
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 70,
+                      width: 70,
+                      color: Colors.transparent,
+                    ),
+                    Positioned(
+                      left: 9,
+                      top: 2,
+                      child: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage(
+                              'images/Notification.png',
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 38,
+                      child: Container(
+                        height: 18,
+                        width: 18,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle, color: Color(0xffF4F6FA)),
+                        child: Icon(Icons.expand_more_outlined,
+                            size: 13, color: Colors.black),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -43,6 +80,14 @@ class mood_details extends StatelessWidget {
                   child: Container(
                     margin: EdgeInsets.all(5),
                     decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0xff4075CD).withOpacity(0.1),
+                            spreadRadius: 7,
+                            blurRadius: 5,
+                            offset: Offset(4, 8), // changes position of shadow
+                          ),
+                        ],
                         color: Color.fromRGBO(244, 246, 250, 1),
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                     height: 45,
@@ -75,6 +120,14 @@ class mood_details extends StatelessWidget {
                   child: Container(
                     margin: EdgeInsets.all(5),
                     decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0xff4075CD).withOpacity(0.1),
+                            spreadRadius: 7,
+                            blurRadius: 5,
+                            offset: Offset(4, 8), // changes position of shadow
+                          ),
+                        ],
                         color: Color.fromRGBO(244, 246, 250, 1),
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                     height: 45,
@@ -131,18 +184,15 @@ class mood_details extends StatelessWidget {
                         Image.asset('images/listicon1.png'),
                       ],
                     ),
-                    Center(
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
-                        height: 142,
-                        width: 360,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
-                        ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ExpansionTile(
+                      collapsedBackgroundColor: Colors.white,
+                      backgroundColor: Colors.white,
+                      title: Padding(
+                        padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -161,59 +211,71 @@ class mood_details extends StatelessWidget {
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Image.asset('images/StarEyes.png'),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('I feel Great',
-                                        style: TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w600)),
-                                    SizedBox(
-                                      height: 30,
-                                      child: Text(
-                                          'You do not setup a family member profile yet.\nTap the following button to setup one. ',
-                                          style: TextStyle(
-                                              fontSize: 11,
-                                              color: Color.fromRGBO(
-                                                  76, 89, 128, 1),
-                                              fontWeight: FontWeight.w400)),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Image.asset(
-                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset('assets/cut.png'),
-                                      ],
-                                    )
-                                  ],
+                                Image.asset(
+                                  'images/StarEyes.png',
+                                  height: 30,
+                                  width: 30,
                                 ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text('I feel Great',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w600)),
                               ],
                             ),
                           ],
                         ),
                       ),
-                    ),
-                    Center(
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
-                        height: 142,
-                        width: 360,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
+                      trailing: null,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 25),
+                          child: ListTile(
+                            title: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 30,
+                                  child: Text(
+                                      'You do not setup a family member profile yet.\nTap the following button to setup one. ',
+                                      style: TextStyle(
+                                          fontSize: 11,
+                                          color: Color.fromRGBO(76, 89, 128, 1),
+                                          fontWeight: FontWeight.w400)),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                        'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Image.asset('assets/cut.png'),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
                         ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    ExpansionTile(
+                      collapsedBackgroundColor: Colors.white,
+                      backgroundColor: Colors.white,
+                      title: Padding(
+                        padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -230,44 +292,39 @@ class mood_details extends StatelessWidget {
                                         fontWeight: FontWeight.w400)),
                               ],
                             ),
+                            SizedBox(
+                              height: 5,
+                            ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Image.asset('images/Photo1.png'),
                                 SizedBox(
-                                  width: 10,
+                                  width: 8,
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                Row(
                                   children: [
-                                    Text('Headche⭐⭐⭐⭐⭐',
+                                    Text('Headche',
                                         style: TextStyle(
                                             fontSize: 18,
                                             color: Colors.black,
                                             fontWeight: FontWeight.w600)),
-                                    SizedBox(
-                                      height: 30,
-                                      child: Text(
-                                          'You do not setup a family member profile yet.\nTap the following button to setup one. ',
-                                          style: TextStyle(
-                                              fontSize: 11,
-                                              color: Color.fromRGBO(
-                                                  76, 89, 128, 1),
-                                              fontWeight: FontWeight.w400)),
+                                    RatingBar.builder(
+                                      itemSize: 15,
+                                      initialRating: 5,
+                                      minRating: 1,
+                                      direction: Axis.horizontal,
+                                      allowHalfRating: true,
+                                      itemCount: 5,
+                                      itemPadding:
+                                          EdgeInsets.symmetric(horizontal: 0.0),
+                                      itemBuilder: (context, _) => Icon(
+                                        Icons.star,
+                                        color: Color(0xffFF9D2B),
+                                      ),
+                                      onRatingUpdate: (rating) {},
                                     ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Image.asset(
-                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset('assets/cut.png'),
-                                      ],
-                                    )
                                   ],
                                 ),
                               ],
@@ -275,29 +332,64 @@ class mood_details extends StatelessWidget {
                           ],
                         ),
                       ),
+                      trailing: null,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 25),
+                          child: ListTile(
+                            title: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 30,
+                                  child: Text(
+                                      'You do not setup a family member profile yet.\nTap the following button to setup one. ',
+                                      style: TextStyle(
+                                          fontSize: 11,
+                                          color: Color.fromRGBO(76, 89, 128, 1),
+                                          fontWeight: FontWeight.w400)),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                        'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Image.asset('assets/cut.png'),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
                     ),
                     Text('Yesterday',
                         style: TextStyle(
                             fontSize: 24,
                             color: Color.fromRGBO(76, 89, 128, 1),
                             fontWeight: FontWeight.w400)),
-                    Center(
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
-                        height: 142,
-                        width: 360,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
-                        ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ExpansionTile(
+                      collapsedBackgroundColor: Colors.white,
+                      backgroundColor: Colors.white,
+                      title: Padding(
+                        padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('Weight',
+                                Text('WEIGHT',
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Color.fromRGBO(114, 101, 227, 1),
@@ -309,68 +401,81 @@ class mood_details extends StatelessWidget {
                                         fontWeight: FontWeight.w400)),
                               ],
                             ),
+                            SizedBox(
+                              height: 5,
+                            ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Image.asset(
                                   'images/icon-weight.png',
                                   color: Color(0xff8FACFF),
                                 ),
                                 SizedBox(
-                                  width: 10,
+                                  width: 8,
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('42.8 kg',
-                                        style: TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w600)),
-                                    Text('+1.2kg since your last measurement.',
-                                        style: TextStyle(
-                                            fontSize: 11,
-                                            color:
-                                                Color.fromRGBO(76, 89, 128, 1),
-                                            fontWeight: FontWeight.w400)),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Image.asset(
-                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset('assets/cut.png'),
-                                      ],
-                                    )
-                                  ],
-                                ),
+                                Text('42.8 kg',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w600)),
                               ],
                             ),
                           ],
                         ),
                       ),
-                    ),
-                    Center(
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
-                        height: 142,
-                        width: 360,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
+                      trailing: null,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 25),
+                          child: ListTile(
+                            title: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 30,
+                                  child: Text(
+                                      '+1.2kg since your last measurement.',
+                                      style: TextStyle(
+                                          fontSize: 11,
+                                          fontStyle: FontStyle.italic,
+                                          color: Color.fromRGBO(76, 89, 128, 1),
+                                          fontWeight: FontWeight.w400)),
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                        'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Image.asset('assets/cut.png'),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
                         ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ExpansionTile(
+                      collapsedBackgroundColor: Colors.white,
+                      backgroundColor: Colors.white,
+                      title: Padding(
+                        padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('Water',
+                                Text('WATER',
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Color.fromRGBO(114, 101, 227, 1),
@@ -382,64 +487,73 @@ class mood_details extends StatelessWidget {
                                         fontWeight: FontWeight.w400)),
                               ],
                             ),
+                            SizedBox(
+                              height: 5,
+                            ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Text("💧",
                                     style: TextStyle(
                                       fontSize: 25,
                                     )),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('1x Glass (200ml)',
-                                        style: TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w600)),
-                                    Text(
-                                        "You reached your daily hydration target.",
-                                        style: TextStyle(
-                                            fontSize: 11,
-                                            color:
-                                                Color.fromRGBO(76, 89, 128, 1),
-                                            fontWeight: FontWeight.w400)),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Image.asset(
-                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset('assets/cut.png'),
-                                      ],
-                                    )
-                                  ],
-                                ),
+                                Text('1x Glass (200ml)',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w600)),
                               ],
                             ),
                           ],
                         ),
                       ),
-                    ),
-                    Center(
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
-                        height: 142,
-                        width: 360,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
+                      trailing: null,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 25),
+                          child: ListTile(
+                            title: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 30,
+                                  child: Text(
+                                      "You reached your daily hydration target.",
+                                      style: TextStyle(
+                                          fontSize: 11,
+                                          fontStyle: FontStyle.italic,
+                                          color: Color.fromRGBO(76, 89, 128, 1),
+                                          fontWeight: FontWeight.w400)),
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                        'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Image.asset('assets/cut.png'),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
                         ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ExpansionTile(
+                      collapsedBackgroundColor: Colors.white,
+                      backgroundColor: Colors.white,
+                      title: Padding(
+                        padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -457,66 +571,81 @@ class mood_details extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 5,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Image.asset(
                                   'images/nutrition.png',
                                   color: Colors.grey,
                                 ),
                                 SizedBox(
-                                  width: 10,
+                                  width: 8,
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                        'Salad with wheat and white\negg breakfast',
-                                        style: TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w600)),
-                                    Text('345 kcal',
-                                        style: TextStyle(
-                                            fontSize: 11,
-                                            color:
-                                                Color.fromRGBO(76, 89, 128, 1),
-                                            fontWeight: FontWeight.w400)),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Image.asset(
-                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset('assets/cut.png'),
-                                      ],
-                                    )
-                                  ],
-                                ),
+                                Text(
+                                    'Salad with wheat and white\negg breakfast',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w600)),
                               ],
                             ),
                           ],
                         ),
                       ),
-                    ),
-                    Center(
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
-                        height: 142,
-                        width: 360,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
+                      trailing: null,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 25),
+                          child: ListTile(
+                            title: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 30,
+                                  child: Row(
+                                    children: [
+                                      Image.asset('assets/fire.png'),
+                                      Text('345 kcal',
+                                          style: TextStyle(
+                                              fontSize: 11,
+                                              fontStyle: FontStyle.italic,
+                                              color: Color.fromRGBO(
+                                                  76, 89, 128, 1),
+                                              fontWeight: FontWeight.w400)),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                        'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Image.asset('assets/cut.png'),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
                         ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ExpansionTile(
+                      collapsedBackgroundColor: Colors.white,
+                      backgroundColor: Colors.white,
+                      title: Padding(
+                        padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -534,50 +663,65 @@ class mood_details extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 5,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Image.asset('images/Pill.png',
                                     color: Colors.grey),
                                 SizedBox(
-                                  width: 10,
+                                  width: 8,
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Paracetamol',
-                                        style: TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w600)),
-                                    Text('200mg. Daily intake: 800mg',
-                                        style: TextStyle(
-                                            fontSize: 11,
-                                            color:
-                                                Color.fromRGBO(76, 89, 128, 1),
-                                            fontWeight: FontWeight.w400)),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Image.asset(
-                                            'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset('assets/cut.png'),
-                                      ],
-                                    )
-                                  ],
-                                ),
+                                Text('Paracetamol',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w600)),
                               ],
                             ),
                           ],
                         ),
                       ),
+                      trailing: null,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 25),
+                          child: ListTile(
+                            title: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 30,
+                                  child: Text('200mg. Daily intake: 800mg',
+                                      style: TextStyle(
+                                          fontSize: 11,
+                                          fontStyle: FontStyle.italic,
+                                          color: Color.fromRGBO(76, 89, 128, 1),
+                                          fontWeight: FontWeight.w400)),
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                        'images/5bb48b07fa6e3840bb3afa2bc821b882.png'),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Image.asset('assets/cut.png'),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
                     ),
                   ],
                 ),
