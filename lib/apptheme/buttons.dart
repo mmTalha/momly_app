@@ -41,8 +41,8 @@ class buttons {
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10),
       child: Container(
-        width: double.infinity,
-        height: 60,
+        width: 250,
+        height: 56,
         child: CupertinoButton(
           padding: EdgeInsets.all(10),
           minSize: 2.0,
@@ -67,8 +67,8 @@ class buttons {
     return Padding(
       padding: const EdgeInsets.only(left: 60, right: 60),
       child: Container(
-        width: double.infinity,
-        height: 60,
+        width: 250,
+        height: 56,
         child: CupertinoButton(
           padding: EdgeInsets.all(10),
           minSize: 2.0,

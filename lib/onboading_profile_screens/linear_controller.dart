@@ -50,12 +50,15 @@ class _LinearProgressPageIndicatorDemoState
           color: Colors.black,
         ),
         automaticallyImplyMiddle: true,
-        trailing: Text(
-          value ? 'Skip' : '',
-          style: TextStyle(
-            color: Color.fromRGBO(114, 101, 227, 1),
-            fontSize: 14,
-            fontWeight: FontWeight.w600,
+        trailing: Container(
+          width: 30,
+          child: Text(
+            value ? 'Skip' : '',
+            style: TextStyle(
+              color: Color.fromRGBO(114, 101, 227, 1),
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
         automaticallyImplyLeading: true,
@@ -77,11 +80,12 @@ class _LinearProgressPageIndicatorDemoState
           child: Center(
             child: Padding(
               padding: const EdgeInsets.only(top: 40.0),
-              child: Text(
-                'STEP ${_currentPageNotifier.value}/6',
+              child:_currentPageNotifier.value>5?null :Text(
+                'STEP ${_currentPageNotifier.value==0?1:_currentPageNotifier.value+1}/6',
                 style: TextStyle(
+                  fontWeight: FontWeight.w500,
                   color: Color.fromRGBO(114, 101, 227, 1),
-                  fontSize: 14,
+                  fontSize: 12,
                 ),
               ),
             ),
@@ -169,8 +173,8 @@ class _LinearProgressPageIndicatorDemoState
   _buildLinearProgressIndicator() {
     return Center(
       child: Container(
-        width: 120,
-        height: 10,
+        width: 100,
+        height: 10  ,
         child: ClipRRect(
           borderRadius: BorderRadius.all(Radius.circular(10)),
           child: LinearProgressPageIndicator(

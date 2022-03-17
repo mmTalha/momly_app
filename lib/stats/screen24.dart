@@ -152,22 +152,38 @@ class _screen24State extends State<screen24> {
                       ),
                       Container(
                         height: 200,
-                        child: SfCartesianChart(
-                            primaryXAxis: CategoryAxis(),
-                            series: <LineSeries<SalesData, String>>[
-                              LineSeries<SalesData, String>(
-                                  dataSource: <SalesData>[
-                                    SalesData('20', 20),
-                                    SalesData('21', 28),
-                                    SalesData('22', 34),
-                                    SalesData('23', 32),
-                                    SalesData('24/03', 40)
-                                  ],
-                                  xValueMapper: (SalesData sales, _) =>
-                                      sales.year,
-                                  yValueMapper: (SalesData sales, _) =>
-                                      sales.sales)
-                            ]),
+                        child: Directionality(
+                          textDirection: TextDirection.rtl,
+
+                          child: SfCartesianChart(
+
+                              primaryYAxis: NumericAxis(
+                                  isInversed: true
+                              ),
+                              primaryXAxis: CategoryAxis(
+
+
+                              ),
+                              series: <LineSeries<SalesData, String>>[
+                                LineSeries<SalesData, String>(
+                                  color: Color(0xffAF8EFF),
+
+                                    width: 5,
+
+                                    dataSource: <SalesData>[
+
+                                      SalesData('20', 20),
+                                      SalesData('21', 28),
+                                      SalesData('22', 34),
+                                      SalesData('23', 32),
+                                      SalesData('24/03', 40)
+                                    ],
+                                    xValueMapper: (SalesData sales, _) =>
+                                        sales.year,
+                                    yValueMapper: (SalesData sales, _) =>
+                                        sales.sales)
+                              ]),
+                        ),
                       ),
                       SizedBox(
                         height: 20,

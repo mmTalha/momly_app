@@ -23,9 +23,7 @@ class choose_your_gender extends StatelessWidget {
           children: [
             Column(
               children: [
-                SizedBox(
-                  height: 20,
-                ),
+                
                 Center(
                   child: Text(
                     'Choose your Gender',
@@ -55,75 +53,103 @@ class choose_your_gender extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    InkWell(
-                      onTap: () {
-                        gender.gender();
-                      },
-                      child: Container(
-                        height: 190,
-                        width: 146,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: gender.animation
-                                ? Color.fromRGBO(114, 101, 227, 1)
-                                : Colors.white),
-                        child: Center(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset('assets/male.png'),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Center(
-                                child: Text(
-                                  'Male',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: gender.animation
-                                          ? Colors.white
-                                          : Colors.black,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+                   Container(
+                     height: 100,
+                   ),
+                   InkWell(
+                     onTap: () {
+                       gender.gender();
+                     },
+                     child:
+                     Container(
+                       height: 190,
+                       width: 146,
+                       decoration: BoxDecoration(
+                           borderRadius: BorderRadius.circular(20),
+                           color: gender.animation
+                               ? Color.fromRGBO(114, 101, 227, 1)
+                               : Colors.white),
+                       child: Center(
+                         child: Stack(
+                           overflow: Overflow.visible,
+                          alignment: Alignment.center,
+                           children: [
+                             Container(
+                               height: 190,
+                               width: 190,
+                             ),
+                             Positioned(
+                               left: 5,
+
+                                 child: Image.asset('images/newmale.png',)),
+                             SizedBox(
+                               height: 10,
+                             ),
+                             Positioned(
+                               bottom: 10,
+                               child: Center(
+                                 child: Text(
+                                   'Male',
+                                   textAlign: TextAlign.center,
+                                   style: TextStyle(
+                                       color: gender.animation
+                                           ? Colors.white
+                                           : Colors.black,
+                                       fontSize: 18,
+                                       fontWeight: FontWeight.w500),
+                                 ),
+                               ),
+                             ),
+                           ],
+                         ),
+                       ),
+                     ),
+                   ),
+
                     InkWell(
                       onTap: () {
                         gender.changegender();
                       },
-                      child: Container(
+                      child:
+                      Container(
                         height: 190,
                         width: 146,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: gender.female
                                 ? Color.fromRGBO(114, 101, 227, 1)
-                                : Colors.white),
+                                : Colors.white
+                        ),
                         child: Center(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
+                          child: Stack(
+                            overflow: Overflow.visible,
+                            alignment: Alignment.center,
                             children: [
-                              Image.asset('images/img1.png'),
+                              Container(
+                                height: 190,
+                                width: 190,
+                              ),
+                              Positioned(
+                                top: 35,
+                                  right: 30,
+
+                                  child: Image.asset('assets/img.png',)),
                               SizedBox(
                                 height: 10,
                               ),
-                              Center(
-                                child: Text(
-                                  'Female',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: gender.female
-                                          ? Colors.white
-                                          : Colors.black,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500),
+                              Positioned(
+                                bottom: 10,
+                                child: Center(
+                                  child: Text(
+                                    'Female',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: gender.female
+                                            ? Colors.white
+                                            : Colors.black,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500),
+                                  ),
                                 ),
                               ),
                             ],
@@ -134,7 +160,7 @@ class choose_your_gender extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 buttons,
                 SizedBox(
