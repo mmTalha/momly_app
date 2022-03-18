@@ -7,8 +7,8 @@ class modelsheet {
   bottomsheet(BuildContext context) {
     showMaterialModalBottomSheet(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(25.0),
-      ),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(25), topRight: Radius.circular(25))),
       context: context,
       builder: (context) => Container(
         height: 470,
@@ -49,7 +49,7 @@ class modelsheet {
                 height: 10,
               ),
               Container(
-                padding: EdgeInsets.only(left: 10, right: 10, bottom: 5),
+                padding: EdgeInsets.only(left: 20, right: 20, bottom: 5),
                 height: 347,
                 decoration: new BoxDecoration(
                     color: Color.fromRGBO(244, 246, 250, 1),
@@ -82,7 +82,7 @@ class modelsheet {
                                 fontSize: 16,
                                 color: Colors.black,
                               )),
-                          leading: Image.asset('images/Notification.png'),
+                          leading: Image.asset('assets/girl.png'),
                         )
                       ],
                     ),
@@ -109,17 +109,14 @@ class modelsheet {
                                 fontSize: 16,
                                 color: Colors.black,
                               )),
-                          leading: Image.asset('images/Notification.png'),
+                          leading: Image.asset('assets/girl.png'),
                         )
                       ],
                     ),
                     SizedBox(
-                      height: 50,
+                      height: 70,
                     ),
-                    buttons().largebuttons('Create PROFILE', () {}),
-                    SizedBox(
-                      height: 20,
-                    ),
+                    buttons().buttonsab('CREATE NEW PROFILE', () {}),
                   ],
                 ),
               ),
@@ -334,7 +331,7 @@ class modelsheet {
                                 textAlign: TextAlign.center,
                                 softWrap: true,
                                 style: TextStyle(
-                                    color: Colors.black,
+                                    color: Color(0xffBEBEBE),
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -521,162 +518,171 @@ class modelsheet {
               child: Text('Choose Date Range',
                   style: TextStyle(
                       fontSize: 24,
-                      color: Colors.black,
+                      color: Color(0xff2D3142),
                       fontWeight: FontWeight.bold)),
             ),
             SizedBox(
-              height: 15,
+              height: 35,
             ),
-            Expanded(
-              child: Container(
-                padding:
-                    EdgeInsets.only(left: 10, right: 10, bottom: 5, top: 15),
-                decoration: new BoxDecoration(
-                    color: Color.fromRGBO(244, 246, 250, 1),
-                    borderRadius: new BorderRadius.only(
-                      topLeft: const Radius.circular(40.0),
-                      topRight: const Radius.circular(40.0),
-                    )),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 20,
+            Container(
+              padding: EdgeInsets.only(left: 10, right: 10, bottom: 2, top: 15),
+              decoration: new BoxDecoration(
+                  color: Color.fromRGBO(244, 246, 250, 1),
+                  borderRadius: new BorderRadius.only(
+                    topLeft: const Radius.circular(40.0),
+                    topRight: const Radius.circular(40.0),
+                  )),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    //  margin: EdgeInsets.all(10),
+                    padding: EdgeInsets.only(left: 15, right: 15),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    height: 45,
+                    width: 350,
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Today',
+                        textAlign: TextAlign.center,
+                        softWrap: true,
+                        style: TextStyle(
+                            color: Color(0xff2D3142),
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.only(left: 15, right: 15),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      height: 45,
-                      width: 350,
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Mood',
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    // margin: EdgeInsets.all(10),
+                    padding: EdgeInsets.only(left: 15, right: 15),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    height: 45,
+                    width: 350,
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'This Week',
+                        textAlign: TextAlign.center,
+                        softWrap: true,
+                        style: TextStyle(
+                            color: Color(0xff2D3142),
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    // margin: EdgeInsets.all(10),
+                    padding: EdgeInsets.only(left: 15, right: 15),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    height: 45,
+                    width: 350,
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'This Month',
+                        textAlign: TextAlign.center,
+                        softWrap: true,
+                        style: TextStyle(
+                            color: Color(0xff2D3142),
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    // margin: EdgeInsets.all(10),
+                    padding: EdgeInsets.only(left: 15, right: 15),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    height: 45,
+                    width: 350,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'This Year',
                           textAlign: TextAlign.center,
                           softWrap: true,
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Color(0xff2D3142),
                               fontSize: 14,
                               fontWeight: FontWeight.bold),
                         ),
-                      ),
+                        Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                              //   color: Color.fromRGBO(209, 204, 234, 1),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(20),
+                              ),
+                              image: DecorationImage(
+                                  image: AssetImage('images/lock.png'))),
+                        ),
+                      ],
                     ),
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.only(left: 15, right: 15),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      height: 45,
-                      width: 350,
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'This Week',
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    //   margin: EdgeInsets.all(10),
+                    padding: EdgeInsets.only(left: 15, right: 15),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    height: 45,
+                    width: 350,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'All',
                           textAlign: TextAlign.center,
                           softWrap: true,
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Color(0xff2D3142),
                               fontSize: 14,
                               fontWeight: FontWeight.bold),
                         ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.only(left: 15, right: 15),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      height: 45,
-                      width: 350,
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'This Month',
-                          textAlign: TextAlign.center,
-                          softWrap: true,
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold),
+                        Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                              //   color: Color.fromRGBO(209, 204, 234, 1),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(20),
+                              ),
+                              image: DecorationImage(
+                                  image: AssetImage('images/lock.png'))),
                         ),
-                      ),
+                      ],
                     ),
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.only(left: 15, right: 15),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      height: 45,
-                      width: 350,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'This Year',
-                            textAlign: TextAlign.center,
-                            softWrap: true,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Container(
-                            height: 30,
-                            width: 30,
-                            decoration: BoxDecoration(
-                                //   color: Color.fromRGBO(209, 204, 234, 1),
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(20),
-                                ),
-                                image: DecorationImage(
-                                    image: AssetImage('images/lock.png'))),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.only(left: 15, right: 15),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      height: 45,
-                      width: 350,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'All',
-                            textAlign: TextAlign.center,
-                            softWrap: true,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Container(
-                            height: 30,
-                            width: 30,
-                            decoration: BoxDecoration(
-                                //   color: Color.fromRGBO(209, 204, 234, 1),
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(20),
-                                ),
-                                image: DecorationImage(
-                                    image: AssetImage('images/lock.png'))),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             )
           ],

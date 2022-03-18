@@ -25,13 +25,13 @@ class _screen6State extends State<screen6> {
                 top: 30,
               ),
               leading: Icon(Icons.arrow_back_ios_outlined,
-                  size: 21, color: Color(0xff4C5980)),
+                  size: 22, color: Color(0xff4C5980)),
               automaticallyImplyLeading: false,
               border: Border(bottom: BorderSide(color: Colors.transparent)),
               backgroundColor: Colors.white,
               middle: Text(
                 "PREGNANCY ALBUM",
-                style: TextStyle(fontSize: 12),
+                style: TextStyle(fontSize: 12, letterSpacing: 2.0),
               ),
             ),
           ),
@@ -74,7 +74,7 @@ class _screen6State extends State<screen6> {
                       borderRadius: new BorderRadius.only(
                           topLeft: Radius.circular(40.0),
                           topRight: Radius.circular(40.0))),
-                  height: 500,
+                  height: 610,
                   width: double.infinity,
                   child: Padding(
                     padding: const EdgeInsets.only(
@@ -84,42 +84,45 @@ class _screen6State extends State<screen6> {
                     ),
                     child: Column(
                       children: [
-                        Container(
-                          width: double.infinity,
-                          height: 300,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Color(0xffF4F6FA),
-                              border: Border.all(
-                                color: Color(0xffE1DDF5),
-                                width: 2,
-                              )),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                height: 60,
-                                width: 65,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage('assets/camera.png'),
-                                    fit: BoxFit.fill,
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, right: 15),
+                          child: Container(
+                            width: double.infinity,
+                            height: 280,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Color(0xffF4F6FA),
+                                border: Border.all(
+                                  color: Color(0xffE1DDF5),
+                                  width: 2,
+                                )),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  height: 60,
+                                  width: 65,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage('assets/camera.png'),
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                "Tap to add a photo",
-                                style: TextStyle(
-                                    fontSize: 16, color: Color(0xff4C5980)),
-                              )
-                            ],
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                Text(
+                                  "Tapp to add a photo",
+                                  style: TextStyle(
+                                      fontSize: 16, color: Color(0xff4C5980)),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                         SizedBox(
-                          height: 50,
+                          height: 160,
                         ),
                         InkWell(
                           onTap: () {
@@ -129,21 +132,27 @@ class _screen6State extends State<screen6> {
                                   builder: (BuildContext context) => screen7()),
                             );
                           },
-                          child: Container(
-                              decoration: BoxDecoration(
-                                  color: Color(0xff7265E3),
-                                  borderRadius: BorderRadius.circular(25)),
-                              width: double.infinity,
-                              height: 70,
-                              child: Center(
-                                  child: Text(
-                                "Save Photo",
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ))),
-                        )
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 12, right: 12),
+                            child: Container(
+                                decoration: BoxDecoration(
+                                    color: Color(0xff7265E3),
+                                    borderRadius: BorderRadius.circular(20)),
+                                width: double.infinity,
+                                height: 60,
+                                child: Center(
+                                    child: Text(
+                                  "Save Photo",
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ))),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 40,
+                        ),
                       ],
                     ),
                   ),

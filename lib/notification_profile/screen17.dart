@@ -14,43 +14,56 @@ class _screen17State extends State<screen17> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: CupertinoNavigationBar(
-      trailing: Container(
-                        height: 20,
-                        width: 20,
-                        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-                  'assets/i.png'),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100.0),
+        child: Container(
+          height: 100,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 10.0, right: 10),
+            child: CupertinoNavigationBar(
+              trailing: Container(
+                height: 25,
+                width: 25,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/i.png'),
+                  ),
+                ),
+              ),
+              padding: EdgeInsetsDirectional.only(
+                top: 20,
+              ),
+              border: Border(bottom: BorderSide(color: Colors.transparent)),
+              backgroundColor: Colors.white,
+              leading: Icon(Icons.arrow_back_ios_outlined,
+                  size: 22, color: Color(0xff4C5980)),
+              automaticallyImplyLeading: false,
+              middle: Text(
+                "DEVELOPMENT PROCESS",
+                style: TextStyle(fontSize: 12, letterSpacing: 2.0),
+              ),
+            ),
           ),
-      
+        ),
       ),
-    ),
-      padding: EdgeInsetsDirectional.only(top: 10,),
-      border: Border(bottom: BorderSide(color: Colors.transparent)),
-      backgroundColor: Colors.white,
-       leading: Icon(Icons.arrow_back_ios_outlined,size:17,color: Color(0xff4C5980)),
-         automaticallyImplyLeading: false,
-         
-         middle: Text("DEVELOPMENT PROGRESS",style: TextStyle(fontSize: 10),),
-       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Stack(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 50.0),
+                  padding:
+                      const EdgeInsets.only(top: 65.0, left: 20, right: 20),
                   child: Container(
                     width: double.infinity,
-                    height: 150,
+                    height: 100,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: Color(0xffF4F6FA)),
                   ),
                 ),
                 Positioned(
-                  top: 20,
+                  top: 27,
                   left: 120,
                   child: Column(
                     children: [
@@ -81,11 +94,13 @@ class _screen17State extends State<screen17> {
               height: 10,
             ),
             Container(
-              width: double.infinity,
-              height: 550,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  color: Color(0xffF4F6FA)),
+                  color: Color(0xffF4F6FA),
+                  borderRadius: new BorderRadius.only(
+                      topLeft: const Radius.circular(40.0),
+                      topRight: const Radius.circular(40.0))),
+              height: double.infinity,
+              width: double.infinity,
               child: Padding(
                 padding: const EdgeInsets.only(top: 25, left: 15, right: 15),
                 child: Column(
@@ -97,14 +112,14 @@ class _screen17State extends State<screen17> {
                           text: '1st ',
                           style: TextStyle(
                               color: Color(0xff76265E3),
-                              fontSize: 15,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold),
                           children: [
                             TextSpan(
                               text: 'Month',
                               style: TextStyle(
                                   color: Color(0xff2D3142),
-                                  fontSize: 15,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             )
                           ]),
@@ -113,10 +128,26 @@ class _screen17State extends State<screen17> {
                       height: 10,
                     ),
                     Container(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        child: LinearProgressIndicator(
+                          minHeight: 10,
+                          backgroundColor: Color(0xffE1DDF5),
+                          valueColor:
+                              AlwaysStoppedAnimation<Color>(Color(0xff7265E3)),
+                          value: 0.15,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+
+                    Container(
                       decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(10)),
-                      height: 55,
+                          borderRadius: BorderRadius.circular(15)),
+                      height: 60,
                       width: double.infinity,
                       child: Padding(
                         padding: const EdgeInsets.only(left: 18.0, right: 18),
@@ -124,9 +155,12 @@ class _screen17State extends State<screen17> {
                           children: [
                             InkWell(
                               onTap: () {},
-                              child: Icon(
-                                Icons.radio_button_checked,
-                                color: Color(0xffD1CCED),
+                              child: Container(
+                                height: 35,
+                                width: 35,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage('images/off.png'))),
                               ),
                             ),
                             SizedBox(
@@ -156,18 +190,12 @@ class _screen17State extends State<screen17> {
                       height: 10,
                     ),
                     InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          CupertinoPageRoute(
-                              builder: (BuildContext context) => screen18()),
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(15)),
-                        height: 45,
+                        height: 60,
                         width: double.infinity,
                         child: Padding(
                           padding: const EdgeInsets.only(left: 18.0, right: 18),
@@ -175,9 +203,12 @@ class _screen17State extends State<screen17> {
                             children: [
                               InkWell(
                                 onTap: () {},
-                                child: Icon(
-                                  Icons.radio_button_checked,
-                                  color: Color(0xff7265e3),
+                                child: Container(
+                                  height: 35,
+                                  width: 35,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage('images/on.png'))),
                                 ),
                               ),
                               SizedBox(
@@ -207,19 +238,22 @@ class _screen17State extends State<screen17> {
                     SizedBox(
                       height: 50,
                     ),
+
+                    //2nd month
+
                     RichText(
                       text: TextSpan(
                           text: '2nd ',
                           style: TextStyle(
                               color: Color(0xff76265E3),
-                              fontSize: 15,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold),
                           children: [
                             TextSpan(
                               text: 'Month',
                               style: TextStyle(
                                   color: Color(0xff2D3142),
-                                  fontSize: 15,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             )
                           ]),
@@ -228,10 +262,26 @@ class _screen17State extends State<screen17> {
                       height: 10,
                     ),
                     Container(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        child: LinearProgressIndicator(
+                          minHeight: 10,
+                          backgroundColor: Color(0xffE1DDF5),
+                          valueColor:
+                              AlwaysStoppedAnimation<Color>(Color(0xff7265E3)),
+                          value: 0.56,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+
+                    Container(
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15)),
-                      height: 45,
+                      height: 60,
                       width: double.infinity,
                       child: Padding(
                         padding: const EdgeInsets.only(left: 18.0, right: 18),
@@ -239,9 +289,12 @@ class _screen17State extends State<screen17> {
                           children: [
                             InkWell(
                               onTap: () {},
-                              child: Icon(
-                                Icons.radio_button_checked,
-                                color: Color(0xffD1CCED),
+                              child: Container(
+                                height: 35,
+                                width: 35,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage('images/off.png'))),
                               ),
                             ),
                             SizedBox(
@@ -274,7 +327,7 @@ class _screen17State extends State<screen17> {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15)),
-                      height: 45,
+                      height: 60,
                       width: double.infinity,
                       child: Padding(
                         padding: const EdgeInsets.only(left: 18.0, right: 18),
@@ -282,9 +335,12 @@ class _screen17State extends State<screen17> {
                           children: [
                             InkWell(
                               onTap: () {},
-                              child: Icon(
-                                Icons.radio_button_checked,
-                                color: Color(0xff7265e3),
+                              child: Container(
+                                height: 35,
+                                width: 35,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage('images/on.png'))),
                               ),
                             ),
                             SizedBox(

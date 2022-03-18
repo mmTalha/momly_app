@@ -22,12 +22,15 @@ class _screen7State extends State<screen7> {
           child: Padding(
             padding: const EdgeInsets.only(left: 10.0, right: 10),
             child: CupertinoNavigationBar(
-              trailing: Container(
-                height: 20,
-                width: 20,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/period.png'),
+              trailing: Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: Container(
+                  height: 25,
+                  width: 25,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/Calend.png'),
+                    ),
                   ),
                 ),
               ),
@@ -37,11 +40,11 @@ class _screen7State extends State<screen7> {
               border: Border(bottom: BorderSide(color: Colors.transparent)),
               backgroundColor: Colors.white,
               leading: Icon(Icons.arrow_back_ios_outlined,
-                  size: 17, color: Color(0xff4C5980)),
+                  size: 22, color: Color(0xff4C5980)),
               automaticallyImplyLeading: false,
               middle: Text(
                 "KICK COUNTER",
-                style: TextStyle(fontSize: 10),
+                style: TextStyle(fontSize: 12, letterSpacing: 2.0),
               ),
             ),
           ),
@@ -134,42 +137,42 @@ class _screen7State extends State<screen7> {
                             children: [
                               Column(
                                 children: [
-                                  Icon(
-                                    Icons.pause_outlined,
-                                    color: Colors.grey,
+                                  Container(
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage('assets/Pause.png'),
+                                      ),
+                                    ),
                                   ),
                                   Text(
                                     "Pause",
                                     style: TextStyle(
-                                        fontSize: 13, color: Colors.grey),
+                                        fontSize: 13, color: Color(0xff4C5980)),
                                   ),
                                 ],
                               ),
                               Text(
                                 "00:00",
                                 style: TextStyle(
-                                    fontSize: 48, fontWeight: FontWeight.bold),
+                                    fontSize: 48, fontWeight: FontWeight.w500),
                               ),
                               Column(
                                 children: [
                                   Container(
+                                    height: 40,
+                                    width: 40,
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(50.0)),
-                                      border: Border.all(
-                                        color: Colors.grey,
-                                        width: 2.0,
+                                      image: DecorationImage(
+                                        image: AssetImage('assets/reset.png'),
                                       ),
-                                    ),
-                                    child: Icon(
-                                      Icons.restart_alt_outlined,
-                                      color: Colors.grey,
                                     ),
                                   ),
                                   Text(
                                     "Reset",
                                     style: TextStyle(
-                                        fontSize: 13, color: Colors.grey),
+                                        fontSize: 13, color: Color(0xff4C5980)),
                                   ),
                                 ],
                               ),
@@ -188,14 +191,14 @@ class _screen7State extends State<screen7> {
                     left: 30,
                     right: 20,
                   ),
-                  height: 100,
+                  height: 125,
                   width: 340,
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 2.0,
-                        spreadRadius: 2.0,
+                        color: Colors.grey.withOpacity(0.28),
+                        blurRadius: 2,
+                        spreadRadius: 4,
                         offset: Offset(
                           5.0,
                           5.0,
@@ -207,6 +210,7 @@ class _screen7State extends State<screen7> {
                   ),
                   child: Column(
                     children: [
+                      SizedBox(height: 18),
                       Align(
                         alignment: Alignment.topLeft,
                         child: Text('Get a second opinion',
@@ -215,8 +219,28 @@ class _screen7State extends State<screen7> {
                                 color: Colors.black,
                                 fontWeight: FontWeight.w600)),
                       ),
-                      dashboard_Widgets().doctorcard('images/prof_deniz.png',
-                          'Prof. Dr. Deniz Konya', 'Neurosurgery'),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0xff7265E3).withOpacity(0.1),
+                              blurRadius: 2.0,
+                              spreadRadius: 2.0,
+                              offset: Offset(
+                                1.0,
+                                1.0,
+                              ),
+                            )
+                          ],
+                        ),
+                        child: dashboard_Widgets().doctorcard(
+                            'images/prof_deniz.png',
+                            'Prof. Dr. Deniz Konya',
+                            'Neurosurgery'),
+                      ),
                     ],
                   ),
                 ),

@@ -14,18 +14,27 @@ class _screen16State extends State<screen16> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: CupertinoNavigationBar(
-        padding: EdgeInsetsDirectional.only(
-          top: 10,
-        ),
-        border: Border(bottom: BorderSide(color: Colors.transparent)),
-        backgroundColor: Colors.white,
-        leading: Icon(Icons.arrow_back_ios_outlined,
-            size: 17, color: Color(0xff4C5980)),
-        automaticallyImplyLeading: false,
-        middle: Text(
-          "PROFILE DETAILS",
-          style: TextStyle(fontSize: 10),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100.0),
+        child: Container(
+          height: 100,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 10.0, right: 10),
+            child: CupertinoNavigationBar(
+              padding: EdgeInsetsDirectional.only(
+                top: 20,
+              ),
+              border: Border(bottom: BorderSide(color: Colors.transparent)),
+              backgroundColor: Colors.white,
+              leading: Icon(Icons.arrow_back_ios_outlined,
+                  size: 22, color: Color(0xff4C5980)),
+              automaticallyImplyLeading: false,
+              middle: Text(
+                "PROFILE DETAILS",
+                style: TextStyle(fontSize: 12, letterSpacing: 2.0),
+              ),
+            ),
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -38,13 +47,13 @@ class _screen16State extends State<screen16> {
                     padding: const EdgeInsets.only(top: 50.0),
                     child: Container(
                       width: double.infinity,
-                      height: 350,
+                      height: 370,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           color: Color(0xffF4F6FA)),
                       child: Padding(
                         padding:
-                            const EdgeInsets.only(left: 20, right: 20, top: 60),
+                            const EdgeInsets.only(left: 20, right: 20, top: 80),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -189,9 +198,9 @@ class _screen16State extends State<screen16> {
                 },
                 child: Container(
                   width: double.infinity,
-                  height: 60,
+                  height: 50,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(18),
+                      borderRadius: BorderRadius.circular(15),
                       color: Color(0xffF4F6FA)),
                   child: Center(
                       child: Text(

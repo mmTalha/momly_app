@@ -21,25 +21,25 @@ class _screen4State extends State<screen4> {
             padding: const EdgeInsets.only(left: 10.0, right: 10),
             child: CupertinoNavigationBar(
               trailing: Container(
-                height: 20,
-                width: 20,
+                height: 25,
+                width: 25,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/i.png'),
+                    image: AssetImage('assets/cam.png'),
                   ),
                 ),
               ),
               padding: EdgeInsetsDirectional.only(
-                top: 10,
+                top: 20,
               ),
               border: Border(bottom: BorderSide(color: Colors.transparent)),
               backgroundColor: Colors.white,
               leading: Icon(Icons.arrow_back_ios_outlined,
-                  size: 17, color: Color(0xff4C5980)),
+                  size: 22, color: Color(0xff4C5980)),
               automaticallyImplyLeading: false,
               middle: Text(
                 "1ST MONTH",
-                style: TextStyle(fontSize: 10),
+                style: TextStyle(fontSize: 12, letterSpacing: 2.0),
               ),
             ),
           ),

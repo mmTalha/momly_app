@@ -172,7 +172,7 @@ class _screen22State extends State<screen22> {
                   padding: const EdgeInsets.only(left: 40, top: 40),
                   child: Text(
                     "Logout",
-                    style: TextStyle(fontSize: 24, color: Color(0xff707070)),
+                    style: TextStyle(fontSize: 24, color: Color(0xff525F84)),
                   ),
                 ),
                 Padding(
