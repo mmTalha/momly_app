@@ -394,12 +394,16 @@ class _period_calendar_screen_2State extends State<period_calendar_screen_2> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 period_Screen_widgets().period_buttons(
-                                    'images/diamond.png', 'Start'),
+                                    'images/diamond.png', 'Start',
+                                    (){},
+                                ),
                                 SizedBox(
                                   width: 10,
                                 ),
                                 period_Screen_widgets().period_buttons(
-                                    'images/diamond.png', 'End'),
+                                    'images/diamond.png', 'End',
+                                      (){},
+                                ),
                               ],
                             ),
                             InkWell(

@@ -302,7 +302,7 @@ class _screen15State extends State<screen15> {
                   decoration: BoxDecoration(
                       border: Border.all(
                         color: Color(0xffE8E9EA),
-                        width: 5,
+                        width: 2,
                       ),
                       color: Color(0xffF4F6FA),
                       borderRadius: BorderRadius.circular(40)),
