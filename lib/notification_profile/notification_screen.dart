@@ -49,19 +49,35 @@ class notification_screen extends StatelessWidget {
             ),
             Column(
               children: [
+
                 Container(
                   child: ListTile(
                     contentPadding: EdgeInsets.all(0),
-                    leading: Container(
-                        height: 60,
-                        width: 60,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
+                    leading: Stack(
+                      children: [
+                        Container(
+                          height: 68,
+                          width: 65,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Image.asset(
+                              'images/Avatar.png',
+                              fit: BoxFit.cover,
+                            ),
+                          )),
+                      Positioned(top: 40.0,left: 49.0,
+                        child: Container(height: 20.0,width: 20.0,decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(10)),
+
+                          //child: Container(height: 5,width: 5,decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(10.0)),),
                         ),
-                        child: Image.asset(
-                          'images/Avatar.png',
-                          fit: BoxFit.cover,
-                        )),
+                      ),
+                    Positioned(top: 43,left: 52,
+                      child: Container(height: 12.0,width: 12.0,decoration: BoxDecoration(color: Color(0xff7FE3F0),borderRadius: BorderRadius.circular(10)),
+                      )),
+                      ]),
                     title: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -88,7 +104,7 @@ class notification_screen extends StatelessWidget {
                     ),
                     subtitle: Padding(
                       padding: const EdgeInsets.only(top: 7.0),
-                      child: Text('Congrats you just hit your goal!',
+                      child: Text('commented your post.',
                           style: TextStyle(
                               fontSize: 14,
                               color: Color.fromRGBO(76, 89, 128, 1),
@@ -101,11 +117,60 @@ class notification_screen extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            academy_Widgets().tile(
-                'assets/drop.png',
-                'Drink more',
-                'You drink less than 200ml today',
-                Color.fromRGBO(143, 172, 255, 1)),
+      Row(
+        children: [
+          Container(
+              child: Stack(
+                children:[ Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Container(
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20), color: Color.fromRGBO(143, 172, 255, 1)),
+                      child: Image.asset('assets/drop.png')),
+                ),
+                  Positioned(top: 43.5,left: 49.0,
+                    child: Container(height: 20.0,width: 20.0,decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(10)),
+
+                      //child: Container(height: 5,width: 5,decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(10.0)),),
+                    ),
+                  ),
+                  Positioned(top: 47,left: 52,
+                      child: Container(height: 12.0,width: 12.0,decoration: BoxDecoration(color: Color(0xff7FE3F0),borderRadius: BorderRadius.circular(10)),
+                      )),
+
+                ]
+              )),
+          SizedBox(
+            width: 10,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Drink more',
+                  style: TextStyle(
+                      fontSize: 13,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600)),
+              SizedBox(
+                height: 9,
+              ),
+              Text('You drink less than 200ml today',
+                  style: TextStyle(
+                      fontSize: 14,
+                      color: Color.fromRGBO(76, 89, 128, 1),
+                      fontWeight: FontWeight.w400)),
+            ],
+          )
+        ],
+      ),
+            // academy_Widgets().tile(
+            //     'assets/drop.png',
+            //     'Drink more',
+            //     'You drink less than 200ml today',
+            //     Color.fromRGBO(143, 172, 255, 1)),
             SizedBox(
               height: 30,
             ),

@@ -39,7 +39,7 @@ class pulse_screen extends StatelessWidget {
           child: IconButton(
             icon: Icon(CupertinoIcons.back),
             onPressed: () => Navigator.pop(context),
-            color: Colors.black,
+            color: Color(0xff4C5980),
             iconSize: 30,
           ),
         ),
@@ -126,7 +126,9 @@ class pulse_screen extends StatelessWidget {
                                     textAlign: TextAlign.start,
                                     keyboardType: TextInputType.phone,
                                     decoration: InputDecoration(
-                                        hintText: 'Pulse   (beats per minute)',
+                                        hintText: 'Pulse       '
+                                            '         (beats per minute)',
+
                                         hintStyle:
                                             TextStyle(color: Color(0xff9C9EB9)),
                                         prefixStyle:
@@ -234,7 +236,7 @@ class pulse_screen extends StatelessWidget {
                                   child: TextField(
                                     maxLines: 5,
                                     decoration: InputDecoration(
-                                        hintText: 'Add notes or comments..',
+                                        hintText: '  Add notes or comments..',
                                         hintStyle:
                                             TextStyle(color: Color(0xff9C9EB9)),
                                         prefixStyle:
@@ -290,7 +292,18 @@ class pulse_screen extends StatelessWidget {
                                     SizedBox(
                                       width: 5,
                                     ),
-                                    Image.asset('images/cock.png'),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Container(height:58,width: 65,decoration: BoxDecoration(
+                                      image: DecorationImage(image: AssetImage('assets/duck2.png',),fit: BoxFit.fill),
+                                    ), ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Container(height:58,width: 65,decoration: BoxDecoration(
+                                      image: DecorationImage(image: AssetImage('assets/empty.png',),fit: BoxFit.fill),
+                                    ), ),
                                   ],
                                 ),
                               ),
@@ -298,7 +311,7 @@ class pulse_screen extends StatelessWidget {
                           ),
                           Center(
                             child: buttons()
-                                .largebuttons('Add saturation Level', () {}),
+                                .largebuttons('Add Blood Glucose', () {}),
                           ),
                         ],
                       )),

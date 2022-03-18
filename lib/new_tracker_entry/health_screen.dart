@@ -16,7 +16,7 @@ class health_screen extends StatelessWidget {
           child: IconButton(
             icon: Icon(CupertinoIcons.back),
             onPressed: () => Navigator.pop(context),
-            color: Colors.black,
+            color: Color(0xff4C5980),
             iconSize: 30,
           ),
         ),
@@ -31,6 +31,7 @@ class health_screen extends StatelessWidget {
           //height: MediaQuery.of(context).size.height,
           child: Column(
             children: [
+              SizedBox(height: 20.0,),
               Padding(
                 padding: const EdgeInsets.only(left: 30.0),
                 child: Row(
@@ -97,7 +98,7 @@ class health_screen extends StatelessWidget {
                           padding:
                               EdgeInsets.only(left: 10, right: 10, top: 20),
                           width: 300,
-                          height: 400,
+                          height: 450,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
@@ -132,14 +133,16 @@ class health_screen extends StatelessWidget {
                                       ),
                                       Icon(
                                         Icons.arrow_forward_ios_outlined,
-                                        color: Color.fromRGBO(228, 223, 255, 1),
+                                        color: Color.fromRGBO(228, 223, 255, 1),size: 20,
                                       ),
                                     ],
                                   ),
                                 ),
+                                SizedBox(height: 5.0,),
                                 Divider(
                                   thickness: 0.2,
                                 ),
+                                SizedBox(height: 5.0,),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment:
@@ -154,13 +157,15 @@ class health_screen extends StatelessWidget {
                                     ),
                                     Icon(
                                       Icons.arrow_forward_ios_outlined,
-                                      color: Color.fromRGBO(228, 223, 255, 1),
+                                      color: Color.fromRGBO(228, 223, 255, 1),size: 20,
                                     ),
                                   ],
                                 ),
+                                SizedBox(height: 5.0,),
                                 Divider(
                                   thickness: 0.2,
                                 ),
+                                SizedBox(height: 5.0,),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment:
@@ -175,13 +180,15 @@ class health_screen extends StatelessWidget {
                                     ),
                                     Icon(
                                       Icons.arrow_forward_ios_outlined,
-                                      color: Color.fromRGBO(228, 223, 255, 1),
+                                      color: Color.fromRGBO(228, 223, 255, 1),size: 20,
                                     ),
                                   ],
                                 ),
+                                SizedBox(height: 5.0,),
                                 Divider(
                                   thickness: 0.2,
                                 ),
+                                SizedBox(height: 5.0,),
                               ],
                             ),
                           )),

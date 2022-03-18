@@ -81,7 +81,7 @@ class supportmomly {
 class signin {
   Widget sign(coolor, text, Color txtclr, size, wght, assets) {
     return Container(
-      height: 60,
+      height: 45,
       width: double.infinity,
       decoration:
           BoxDecoration(color: coolor, borderRadius: BorderRadius.circular(30)),

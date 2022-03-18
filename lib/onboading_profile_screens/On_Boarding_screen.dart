@@ -24,9 +24,15 @@ class on_boarding_screen extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Align(
-                        alignment: Alignment.topRight,
-                        child: Container(
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          height: 30,
+                          width: 30,
+                        ),
+                        Image.asset('images/Icon1.png'),
+                        Container(
                           height: 35,
                           width: 35,
                           decoration: BoxDecoration(
@@ -46,10 +52,9 @@ class on_boarding_screen extends StatelessWidget {
                                   fontWeight: FontWeight.bold),
                             ),
                           ),
-                        )),
-                    Align(
-                        alignment: Alignment.topCenter,
-                        child: Image.asset('images/Icon1.png')),
+                        ),
+                      ],
+                    ),
                     Text(
                       'Momly',
                       style: TextStyle(

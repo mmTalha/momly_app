@@ -78,6 +78,7 @@ class appointments_screens extends StatelessWidget {
                               'Momly Consultıng servıces',
                               style: TextStyle(
                                   fontSize: 12,
+                                  letterSpacing: 2,
                                   color: Color.fromRGBO(114, 101, 227, 1),
                                   fontWeight: FontWeight.w600),
                             ),
@@ -137,13 +138,18 @@ class appointments_screens extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'TELEMEDICINE',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: Color.fromRGBO(114, 101, 227, 1),
-                                      fontWeight: FontWeight.w600),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 8.0),
+                                  child: Text(
+                                    'TELEMEDICINE',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: Color.fromRGBO(114, 101, 227, 1),
+                                        fontWeight: FontWeight.w600),
+                                  ),
                                 ),
+                                SizedBox(height: 10.0,),
+
                                 widgets_appointmentscreen().doctorcard(
                                     Container(
                                         height: 25,

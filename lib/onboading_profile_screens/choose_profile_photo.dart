@@ -111,9 +111,9 @@ class _choose_profile_photoState extends State<choose_profile_photo> {
                         child: Container(
                           height: 110,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(30),
                             color: selectedIndex != null && _index == index
-                                ? Color.fromRGBO(114, 101, 227, 1)
+                                ? Color.fromRGBO(143, 172, 255, 1)
                                 : Colors.white,
                           ),
                           child: InkWell(

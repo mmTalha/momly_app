@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:momly_app/notification_profile/screen14.dart';
+import 'package:country_code_picker/country_code_picker.dart';
 
 class screen13 extends StatefulWidget {
   const screen13({Key? key}) : super(key: key);
@@ -16,11 +17,8 @@ class _screen13State extends State<screen13> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: CupertinoNavigationBar(
-        padding: EdgeInsetsDirectional.only(
-          top: 30,
-        ),
         leading: Padding(
-          padding: const EdgeInsets.only(left: 15.0),
+          padding: const EdgeInsets.only(left: 5.0),
           child: Icon(Icons.arrow_back_ios_outlined,
               size: 25, color: Color(0xff4C5980)),
         ),
@@ -75,10 +73,10 @@ class _screen13State extends State<screen13> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 100,
+                      height: 110,
                       decoration: BoxDecoration(
                           color: Color(0xff8C80F8),
-                          borderRadius: BorderRadius.circular(28)),
+                          borderRadius: BorderRadius.circular(24)),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: Row(
@@ -91,6 +89,9 @@ class _screen13State extends State<screen13> {
                                   "Balance",
                                   style: TextStyle(
                                       fontSize: 14, color: Colors.white),
+                                ),
+                                SizedBox(
+                                  height: 8,
                                 ),
                                 Text(
                                   "\$1200.00",
@@ -117,6 +118,9 @@ class _screen13State extends State<screen13> {
                                     style: TextStyle(
                                         fontSize: 14, color: Colors.white),
                                   ),
+                                  SizedBox(
+                                    height: 8,
+                                  ),
                                   Text(
                                     "1280",
                                     style: TextStyle(
@@ -137,9 +141,11 @@ class _screen13State extends State<screen13> {
               ),
               Container(
                 width: double.infinity,
-                height: 460,
+                height: 470,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40)),
                     color: Color(0xffF4F6FA)),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
@@ -147,7 +153,7 @@ class _screen13State extends State<screen13> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
-                        height: 30,
+                        height: 15,
                       ),
                       Text(
                         "Profile Information",
@@ -160,7 +166,7 @@ class _screen13State extends State<screen13> {
                         height: 30,
                       ),
                       Container(
-                        height: 60,
+                        height: 55,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white),
@@ -173,7 +179,7 @@ class _screen13State extends State<screen13> {
                                 style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(
-                                width: 50,
+                                width: 90,
                               ),
                               Text(
                                 "Candece Beck",
@@ -188,7 +194,7 @@ class _screen13State extends State<screen13> {
                         height: 15,
                       ),
                       Container(
-                        height: 60,
+                        height: 55,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white),
@@ -201,7 +207,7 @@ class _screen13State extends State<screen13> {
                                 style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(
-                                width: 45,
+                                width: 85,
                               ),
                               Text(
                                 "Female",
@@ -216,25 +222,31 @@ class _screen13State extends State<screen13> {
                         height: 15,
                       ),
                       Container(
-                        height: 60,
+                        height: 55,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 30, right: 30),
+                          padding: const EdgeInsets.only(left: 15, right: 30),
                           child: Row(
                             children: [
-                              Text(
-                                "+92:",
-                                style: TextStyle(fontSize: 16),
+                              CountryCodePicker(
+                                flagWidth: 25.0,
+                                showDropDownButton: true,
+                                onChanged: print,
+                                initialSelection: '+62',
+                                favorite: ['+62', 'PO'],
+                                showCountryOnly: false,
+                                showOnlyCountryWhenClosed: false,
+                                alignLeft: false,
                               ),
                               SizedBox(
-                                width: 35,
+                                width: 20,
                               ),
                               Text(
-                                "33334444",
-                                style:
-                                    TextStyle(fontSize: 16, color: Colors.red),
+                                "82227580727",
+                                style: TextStyle(
+                                    fontSize: 16, color: Color(0xff7265E3)),
                               ),
                             ],
                           ),
@@ -244,7 +256,7 @@ class _screen13State extends State<screen13> {
                         height: 15,
                       ),
                       Container(
-                        height: 60,
+                        height: 55,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white),
@@ -257,7 +269,7 @@ class _screen13State extends State<screen13> {
                                 style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(
-                                width: 5,
+                                width: 45,
                               ),
                               Text(
                                 "July 28, 1981",
@@ -272,7 +284,7 @@ class _screen13State extends State<screen13> {
                         height: 15,
                       ),
                       Container(
-                        height: 60,
+                        height: 55,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white),
@@ -285,7 +297,7 @@ class _screen13State extends State<screen13> {
                                 style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(
-                                width: 35,
+                                width: 65,
                               ),
                               Text(
                                 "English",
@@ -301,13 +313,13 @@ class _screen13State extends State<screen13> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 40,
               ),
               Container(
                 width: double.infinity,
                 height: 270,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(40),
                     color: Color(0xffF4F6FA)),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 30, right: 20, top: 30),
@@ -359,7 +371,16 @@ class _screen13State extends State<screen13> {
                         ],
                       ),
                       SizedBox(
-                        height: 15,
+                        height: 3,
+                      ),
+                      Divider(
+                        color: Color(0xffD8D8D8),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 40),
+                        child: SizedBox(
+                          height: 3,
+                        ),
                       ),
                       Row(
                         children: [
@@ -406,9 +427,11 @@ class _screen13State extends State<screen13> {
                                   color: Color(0xff4C5980), fontSize: 16),
                               children: [
                                 TextSpan(
-                                  text: 'Tap Here',
+                                  text: 'tap here',
                                   style: TextStyle(
-                                      color: Color(0xff7265E3), fontSize: 16),
+                                      color: Color(0xff7265E3),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w700),
                                 ),
                               ]),
                         ),
@@ -432,9 +455,9 @@ class _screen13State extends State<screen13> {
                   },
                   child: Container(
                     width: double.infinity,
-                    height: 60,
+                    height: 50,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(18),
+                        borderRadius: BorderRadius.circular(15),
                         color: Color(0xffF4F6FA)),
                     child: Center(
                         child: Text(

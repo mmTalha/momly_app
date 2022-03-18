@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:momly_app/apptheme/buttons.dart';
 import 'package:momly_app/new_tracker_entry/widgets/skills_screen_widget.dart';
 import 'package:momly_app/survey_screens/second_screen.dart';
@@ -72,20 +73,20 @@ class add_new_skill_screen extends StatelessWidget {
                     ),
                     RichText(
                       text: TextSpan(
-                        text: 'How is your ',
+                        text: 'Add new ',
                         style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.w600,
                             color: Colors.black),
                         children: const <TextSpan>[
                           TextSpan(
-                              text: 'Skill\n',
+                              text: ' Skill ',
                               style: TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.w600,
                                   color: Color.fromRGBO(114, 101, 227, 1))),
                           TextSpan(
-                            text: 'today?',
+                            text: 'for \nRichard',
                             style: TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.w600,
@@ -122,14 +123,17 @@ class add_new_skill_screen extends StatelessWidget {
                           children: [
                             skilss_screen_widget().skills_textfield(
                                 'Choose a skill',
-                                Icon(Icons.arrow_drop_down),
+                                Icon(
+                                  Icons.expand_more_outlined,
+                                  size: 30,color: Color(0xff9C9EB9),
+                                ),
                                 null),
                             SizedBox(
-                              height: 10,
+                              height: 15,
                             ),
                             skilss_screen_widget().learnmore(),
                             SizedBox(
-                              height: 10,
+                              height: 15,
                             ),
                             Center(
                               child: Container(
@@ -145,8 +149,8 @@ class add_new_skill_screen extends StatelessWidget {
                                         BorderRadius.all(Radius.circular(10))),
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
+                                  //mainAxisAlignment:
+                                      //MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Text(
                                       'Skill level: ',
@@ -155,13 +159,24 @@ class add_new_skill_screen extends StatelessWidget {
                                         color: Color.fromRGBO(76, 89, 128, 1),
                                       ),
                                     ),
+                                    SizedBox(width: 5.0,),
                                     Row(
                                       children: [
-                                        for (var i = 0; i < 4; i++)
-                                          Icon(
+                                        RatingBar.builder(
+                                          itemSize: 25,
+                                          initialRating: 5,
+                                          minRating: 1,
+                                          direction: Axis.horizontal,
+                                          allowHalfRating: true,
+                                          itemCount: 5,unratedColor: Color(0xffEDF1F7),
+                                          itemPadding:
+                                          EdgeInsets.symmetric(horizontal: 0.0),
+                                          itemBuilder: (context, _) => Icon(
                                             Icons.star,
-                                            color: Colors.orange,
+                                            color: Color(0xffFF9D2B),
                                           ),
+                                          onRatingUpdate: (rating) {},
+                                        ),
                                       ],
                                     )
                                   ],
@@ -169,12 +184,12 @@ class add_new_skill_screen extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 15,
                             ),
                             Center(
                               child: Container(
-                                width: 285,
-                                height: 110,
+                                width: 327,
+                                height: 118,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius:
@@ -244,7 +259,18 @@ class add_new_skill_screen extends StatelessWidget {
                                 SizedBox(
                                   width: 5,
                                 ),
-                                Image.asset('images/cock.png'),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Container(height:58,width: 65,decoration: BoxDecoration(
+                                  image: DecorationImage(image: AssetImage('assets/duck2.png',),fit: BoxFit.fill),
+                                ), ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Container(height:58,width: 65,decoration: BoxDecoration(
+                                  image: DecorationImage(image: AssetImage('assets/empty.png',),fit: BoxFit.fill),
+                                ), ),
                               ],
                             ),
                           ],

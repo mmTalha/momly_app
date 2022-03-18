@@ -7,8 +7,8 @@ class modelsheet {
   bottomsheet(BuildContext context) {
     showMaterialModalBottomSheet(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(25.0),
-      ),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(25), topRight: Radius.circular(25))),
       context: context,
       builder: (context) => Container(
         height: 470,
@@ -116,7 +116,7 @@ class modelsheet {
                     SizedBox(
                       height: 70,
                     ),
-                    buttons().largebuttons('CREATE NEW PROFILE', () {}),
+                    buttons().buttonsab('CREATE NEW PROFILE', () {}),
                   ],
                 ),
               ),

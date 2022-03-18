@@ -18,13 +18,13 @@ class _screen19State extends State<screen19> {
       backgroundColor: Colors.white,
       appBar: CupertinoNavigationBar(
         padding: EdgeInsetsDirectional.only(
-          top: 30,
+          top: 20,start: 10.0,
         ),
         leading: Icon(Icons.arrow_back_ios_outlined,
-            size: 21, color: Color(0xff4C5980)),
+            size: 24, color: Color(0xff4C5980)),
         automaticallyImplyLeading: false,
         border: Border(bottom: BorderSide(color: Colors.transparent)),
-          middle: Text("DIRECT ACCESS",style: TextStyle(fontSize: 10),),
+          middle: Text("DIRECT ACCESS",style: TextStyle(fontSize: 12,letterSpacing: 1.5),),
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
@@ -50,6 +50,10 @@ class _screen19State extends State<screen19> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
+
                   Text(
                     "Direct Access",
                     style: TextStyle(fontSize: 24, color: Color(0xff2D3142)),
@@ -59,7 +63,7 @@ class _screen19State extends State<screen19> {
                     height: 20,
                   ),
                   Text(
-                    "Use the following instructions to access your health report through momly.org",
+                    "Use the following instructions to access \nyour health report through momly.org",
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Color(0xff4C5980), fontSize: 14),
                   ),
@@ -128,7 +132,7 @@ class _screen19State extends State<screen19> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Row(
                     children: [
@@ -174,11 +178,7 @@ class _screen19State extends State<screen19> {
                           children: [
                             InkWell(
                               onTap: () {},
-                              child: Icon(
-                                Icons.radio_button_checked,
-                                color: Color(0xffD1CCED),
-                                size: 30,
-                              ),
+                              child: Image(image: AssetImage('images/on.png'),)
                             ),
                             SizedBox(
                               width: 10,
@@ -198,11 +198,7 @@ class _screen19State extends State<screen19> {
                           children: [
                             InkWell(
                               onTap: () {},
-                              child: Icon(
-                                Icons.radio_button_checked,
-                                color: Color(0xffD1CCED),
-                                size: 30,
-                              ),
+                              child: Image(image: AssetImage('images/on.png'),)
                             ),
                             SizedBox(
                               width: 10,
@@ -222,11 +218,7 @@ class _screen19State extends State<screen19> {
                           children: [
                             InkWell(
                               onTap: () {},
-                              child: Icon(
-                                Icons.radio_button_checked,
-                                color: Color(0xffD1CCED),
-                                size: 30,
-                              ),
+                              child: Image(image: AssetImage('images/on.png'),)
                             ),
                             SizedBox(
                               width: 10,
@@ -237,6 +229,10 @@ class _screen19State extends State<screen19> {
                                   color: Color(0xff2D3142), fontSize: 17),
                             )
                           ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 35, right: 5),
+                          child: Divider(),
                         ),
                       ],
                     ),
@@ -253,7 +249,7 @@ class _screen19State extends State<screen19> {
                       );
                     },
                     child: Container(
-                      height: 70,
+                      height: 56,
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(20.0)),
@@ -262,7 +258,7 @@ class _screen19State extends State<screen19> {
                       child: Center(
                           child: Text(
                         "Generate Direct Access Code",
-                        style: TextStyle(fontSize: 16, color: Colors.white),
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500,color: Colors.white),
                       )),
                     ),
                   )
