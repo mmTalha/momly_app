@@ -9,10 +9,13 @@ import 'package:intl/intl.dart';
 import 'package:momly_app/apptheme/buttons.dart';
 import 'package:momly_app/period_tracker_screens/period_calendar2_screen.dart';
 import 'package:momly_app/period_tracker_screens/widgets/Widgets.dart';
+import 'package:momly_app/provider/provider.dart';
+import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);final String title;
+  MyHomePage({Key? key, required this.title}) : super(key: key);
+  final String title;
 
   @override
   _MyHomePageState createState() => new _MyHomePageState();
@@ -21,7 +24,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final DateRangePickerController _controller = DateRangePickerController();
   String headerString = '';
-
+  var color;
 
   DateTime _currentDate = DateTime(2019, 2, 3);
   DateTime _currentDate2 = DateTime(2019, 2, 3);
@@ -111,6 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     final double cellWidth = width / 9;
+
     /// Example with custom icon
 
     /// Example Calendar Carousel without header and custom prev & next button
@@ -168,6 +172,7 @@ class _MyHomePageState extends State<MyHomePage> {
         print('long pressed date $date');
       },
     );
+    final provider = Provider.of<providermodel>(context);
 
     return Scaffold(
       appBar: CupertinoNavigationBar(
@@ -201,7 +206,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 25,
               ),
               Container(
-                height: MediaQuery.of(context).size.height*0.96,
+                height: MediaQuery.of(context).size.height * 0.96,
                 width: MediaQuery.of(context).size.width,
                 color: Colors.transparent,
                 child: new Container(
@@ -217,12 +222,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 15.0,bottom: 8.0),
+                                  padding: const EdgeInsets.only(
+                                      top: 15.0, bottom: 8.0),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
@@ -233,14 +238,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                       Container(
                                           decoration: BoxDecoration(
                                               color: Colors.black,
-                                              borderRadius: BorderRadius.circular(25)),
+                                              borderRadius:
+                                                  BorderRadius.circular(25)),
                                           width: 30,
                                           height: 30,
                                           //color: Colors.transparent,
                                           child: Center(
                                             child: IconButton(
                                               icon: Icon(
-                                                Icons.chevron_left,size: 16,
+                                                Icons.chevron_left, size: 16,
                                                 //color: Colors.black,
                                               ),
                                               color: Colors.white,
@@ -261,14 +267,17 @@ class _MyHomePageState extends State<MyHomePage> {
                                           child: Text(headerString,
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                fontSize: 16, color: Colors.black,)),
+                                                fontSize: 16,
+                                                color: Colors.black,
+                                              )),
                                         ),
                                       ),
                                       Container(
                                           alignment: Alignment.center,
                                           decoration: BoxDecoration(
                                               color: Colors.black,
-                                              borderRadius: BorderRadius.circular(25)),
+                                              borderRadius:
+                                                  BorderRadius.circular(25)),
                                           width: 30,
                                           height: 30,
                                           //color: Colors.transparent,
@@ -276,7 +285,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             padding: const EdgeInsets.all(0.0),
                                             child: IconButton(
                                               icon: Icon(
-                                                Icons.navigate_next,size: 16,
+                                                Icons.navigate_next, size: 16,
                                                 //color: Colors.black,
                                               ),
                                               color: Colors.white,
@@ -296,34 +305,53 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                                  padding: const EdgeInsets.only(
+                                      left: 30.0, right: 30.0),
                                   child: Container(
                                     height: 295.0,
                                     decoration: BoxDecoration(
-                                        color: Colors.white, borderRadius: BorderRadius.circular(25.0)),
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(25.0)),
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Card(
                                         elevation: 0.0,
                                         //margin: const EdgeInsets.fromLTRB(50, 0, 50, 50),
                                         child: SfDateRangePicker(
+                                            selectionColor: color,
                                             todayHighlightColor: Colors.black,
                                             controller: _controller,
-                                            selectionMode: DateRangePickerSelectionMode.multiple,
+                                            selectionMode:
+                                                DateRangePickerSelectionMode
+                                                    .multiple,
                                             view: DateRangePickerView.month,
                                             headerHeight: 0,
                                             onViewChanged: viewChanged,
-                                            monthViewSettings: DateRangePickerMonthViewSettings(
-                                                showTrailingAndLeadingDates: true,
-                                                dayFormat: 'EEE',
-                                                viewHeaderStyle: DateRangePickerViewHeaderStyle(
-                                                    backgroundColor: Colors.white,textStyle: TextStyle(fontWeight: FontWeight.bold,color: Colors.black))),
-                                            monthCellStyle: DateRangePickerMonthCellStyle(
-
-                                              todayTextStyle: TextStyle(color: Colors.black),
-                                              cellDecoration: BoxDecoration(color: Colors.white),
+                                            monthViewSettings:
+                                                DateRangePickerMonthViewSettings(
+                                                    showTrailingAndLeadingDates:
+                                                        true,
+                                                    dayFormat: 'EEE',
+                                                    viewHeaderStyle:
+                                                        DateRangePickerViewHeaderStyle(
+                                                            backgroundColor:
+                                                                Colors.white,
+                                                            textStyle: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                color: Colors
+                                                                    .black))),
+                                            monthCellStyle:
+                                                DateRangePickerMonthCellStyle(
+                                              todayTextStyle: TextStyle(
+                                                  color: Colors.black),
+                                              cellDecoration: BoxDecoration(
+                                                  color: Colors.white),
                                               leadingDatesDecoration:
-                                              BoxDecoration(color: Colors.white),
+                                                  BoxDecoration(
+                                                      color: Colors.white),
                                               // trailingDatesDecoration:
                                               // BoxDecoration(color: Colors.white)
                                             )),
@@ -334,7 +362,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                 // SizedBox(
                                 //   height: 10,
                                 // ),
-
                               ],
                             ),
                             SizedBox(
@@ -344,8 +371,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                period_Screen_widgets()
-                                    .period_name(Color(0xffF91A6C), 'Pre-Period'),
+                                period_Screen_widgets().period_name(
+                                    Color(0xffF91A6C), 'Pre-Period'),
                                 SizedBox(
                                   width: 10,
                                 ),
@@ -400,12 +427,23 @@ class _MyHomePageState extends State<MyHomePage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   period_Screen_widgets().period_buttons(
-                                      'images/diamond.png', 'Light'),
+                                    'images/diamond.png',
+                                    'Light',
+                                    () {
+                                      setState(() {
+                                        color = Colors.blue;
+                                      });
+                                    },
+                                  ),
                                   SizedBox(
                                     width: 10,
                                   ),
                                   period_Screen_widgets().period_buttons(
-                                      'images/diamond.png', 'Medium'),
+                                      'images/diamond.png', 'Medium', () {
+                                    setState(() {
+                                      color = Colors.yellow;
+                                    });
+                                  }),
                                 ],
                               ),
                               InkWell(
@@ -422,11 +460,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                     height: 45,
                                     decoration: BoxDecoration(
                                         color: Colors.white,
-                                        borderRadius:
-                                            BorderRadius.all(Radius.circular(10))),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10))),
                                     child: Row(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         Container(
                                             child: Image.asset(
@@ -465,13 +505,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+
   void viewChanged(DateRangePickerViewChangedArgs args) {
     final DateTime visibleStartDate = args.visibleDateRange.startDate!;
     final DateTime visibleEndDate = args.visibleDateRange.endDate!;
     final int totalVisibleDays =
-    (visibleStartDate.difference(visibleEndDate).inDays);
+        (visibleStartDate.difference(visibleEndDate).inDays);
     final DateTime midDate =
-    visibleStartDate.add(Duration(days: totalVisibleDays ~/ 2));
+        visibleStartDate.add(Duration(days: totalVisibleDays ~/ 2));
     headerString = DateFormat('MMMM yyyy').format(midDate).toString();
     SchedulerBinding.instance!.addPostFrameCallback((duration) {
       setState(() {});

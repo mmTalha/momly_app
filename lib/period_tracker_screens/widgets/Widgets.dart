@@ -25,34 +25,37 @@ Widget period_name(color,name){
    ),
  );
 }
-Widget period_buttons(img,name){
+Widget period_buttons(img,name,ontap){
   return   Center(
-    child: Container(
+    child: InkWell(
+      onTap: ontap,
+      child: Container(
 
-      width: 150,
-      height: 45,
-      decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(10))),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
+        width: 150,
+        height: 45,
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(10))),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
 
-              child: Image.asset(
-                img,
+                child: Image.asset(
+                  img,
 
-              )),
-          SizedBox(
-            width: 5,
-          ),
-          Text(name,
-              style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xff8C80F8),
-                  fontWeight: FontWeight.w600)),
-        ],
+                )),
+            SizedBox(
+              width: 5,
+            ),
+            Text(name,
+                style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xff8C80F8),
+                    fontWeight: FontWeight.w600)),
+          ],
+        ),
       ),
     ),
   );

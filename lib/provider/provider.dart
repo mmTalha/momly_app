@@ -34,4 +34,8 @@ class providermodel with ChangeNotifier {
     animation = true;
     notifyListeners();
   }
+  periodcolours(int colour) {
+
+    notifyListeners();
+  }
 }
