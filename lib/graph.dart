@@ -16,7 +16,7 @@ class _profile_tabState extends State<profile_tab> {
       appBar: AppBar(),
       body: Container(
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.only(top: 100),
           child: Column(
             children: [
               Stack(
